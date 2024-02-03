@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Data Analytics in Football: Pitch Control and Beyond"
+author: "Álvaro Novillo Correas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
