@@ -18,7 +18,7 @@ abstract: |
 \listoffigures
 
 
-# Down the rabbit-hole
+# Dedication
 
 
 <!--chapter:end:index.Rmd-->
