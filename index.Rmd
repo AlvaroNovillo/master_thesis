@@ -18,5 +18,5 @@ abstract: |
 \listoffigures
 
 
-# Down the rabbit-hole
+# Dedication
 
