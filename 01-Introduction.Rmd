@@ -1,0 +1,42 @@
+# Introduction
+
+# Data Analytics in football
+
+The digital revolution is currently one of the most significant
+challenges of our time, altering numerous aspects of society. Football,
+in particular, has also been influenced by this transformation.
+Technological advancements and digitalization have resulted in a swift
+upsurge in the number of measuring devices, data collection and volumes
+of data. The leading data companies worldwide, including IBM, Intel, SAP
+and Microsoft, are vying for superior data analytics tools and
+leveraging sports as an example domain to showcase their products and
+brand power [@1].
+
+The practice of data analytics in football has a long history, dating
+back to the post-World War II era, when data collection and analysis was
+undertaken manually using pencil and paper [@1]. It wasn't until
+Moneyball was published in 2003 that significant progress began to
+emerge: The book, \"The Art of Winning an Unfair Game\" introduced
+sports analytics to a broader audience. It illustrated the use of data
+analytics in identifying undervalued players and constructing a
+successful team. Since then, data analytics has become an integral
+component of sport, football inclusive [@1].
+
+One of the best examples of data analytics being applied to sports is
+basketball. Teams use data to analyze player performance, identify
+strengths and weaknesses, and develop strategies to win games [@2]. They
+use in-memory analytics, visualization, the cloud, mobility, camera
+footage, and sensors to transform their game. This performance analyses
+are of vital importance to a team, aiming to reduce expenditure, enhance
+team worth and refine processes across all levels and segments of
+operations. The German Football Association (DFB) and the National
+Basketball Association (NBA) are two unique cases of digital
+transformation from the sports world. Successful teams turn player
+performance data into action and gain a competitive advantage.
+
+Over the last years, football analytics has gained significant
+popularity, aiming to delve deeper into the game by utilizing advanced
+data analysis techniques to optimize team and player performance. This
+chapter examines the various areas of football where data can be used
+for analysis, alongside the commonly found data types within this
+industry.

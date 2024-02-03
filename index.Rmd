@@ -15,8 +15,6 @@ abstract: |
   
   `r tufte::newthought("Mobile user devices'")` TODOTODO
 ---
-\listoffigures
 
 
-# Dedication
 
