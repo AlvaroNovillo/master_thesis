@@ -10,10 +10,8 @@ biblio-style: abbrvnat
 link-citations: yes
 description: |
   Master Thesis. Universidad Carlos III de Madrid. 
-abstract: |
-  `r if (knitr::is_latex_output()) '\\colchunk{'`
-  
-  `r tufte::newthought("Mobile user devices'")` TODOTODO
+
+
 ---
 
 

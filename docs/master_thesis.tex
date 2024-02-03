@@ -1,0 +1,143 @@
+\documentclass[twoside,nohyper]{tufte-book}
+
+% ams
+\usepackage{amssymb,amsmath}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \makeatletter
+  \@ifpackageloaded{fontspec}{}{\usepackage{fontspec}}
+  \makeatother
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \makeatletter
+  \@ifpackageloaded{soul}{
+     \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+     \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+   }{}
+  \makeatother
+
+\fi
+
+% graphix
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+
+% booktabs
+\usepackage{booktabs}
+
+% url
+\usepackage{url}
+
+% hyperref
+\usepackage{hyperref}
+
+% units.
+\usepackage{units}
+
+
+\setcounter{secnumdepth}{2}
+
+% citations
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+
+
+% pandoc syntax highlighting
+
+% table with pandoc
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+% multiplecol
+\usepackage{multicol}
+
+% strikeout
+\usepackage[normalem]{ulem}
+
+% morefloats
+\usepackage{morefloats}
+
+
+% tightlist macro required by pandoc >= 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% title / author / date
+\title{Data Analytics in Football: Pitch Control and Beyond}
+\author{Álvaro Novillo Correas}
+\date{2024-02-03}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+\hypertarget{data-analytics-in-football}{%
+\chapter{Data Analytics in football}\label{data-analytics-in-football}}
+
+The digital revolution is currently one of the most significant
+challenges of our time, altering numerous aspects of society. Football,
+in particular, has also been influenced by this transformation.
+Technological advancements and digitalization have resulted in a swift
+upsurge in the number of measuring devices, data collection and volumes
+of data. The leading data companies worldwide, including IBM, Intel, SAP
+and Microsoft, are vying for superior data analytics tools and
+leveraging sports as an example domain to showcase their products and
+brand power \citep{1}.
+
+The practice of data analytics in football has a long history, dating
+back to the post-World War II era, when data collection and analysis was
+undertaken manually using pencil and paper \citep{1}. It wasn't until
+Moneyball was published in 2003 that significant progress began to
+emerge: The book, "The Art of Winning an Unfair Game" introduced
+sports analytics to a broader audience. It illustrated the use of data
+analytics in identifying undervalued players and constructing a
+successful team. Since then, data analytics has become an integral
+component of sport, football inclusive \citep{1}.
+
+One of the best examples of data analytics being applied to sports is
+basketball. Teams use data to analyze player performance, identify
+strengths and weaknesses, and develop strategies to win games \citep{2}. They
+use in-memory analytics, visualization, the cloud, mobility, camera
+footage, and sensors to transform their game. This performance analyses
+are of vital importance to a team, aiming to reduce expenditure, enhance
+team worth and refine processes across all levels and segments of
+operations. The German Football Association (DFB) and the National
+Basketball Association (NBA) are two unique cases of digital
+transformation from the sports world. Successful teams turn player
+performance data into action and gain a competitive advantage.
+
+Over the last years, football analytics has gained significant
+popularity, aiming to delve deeper into the game by utilizing advanced
+data analysis techniques to optimize team and player performance. This
+chapter examines the various areas of football where data can be used
+for analysis, alongside the commonly found data types within this
+industry.
+
+\bibliography{bibliografia.bib}
+
+
+
+\end{document}
