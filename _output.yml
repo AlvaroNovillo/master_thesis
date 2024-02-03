@@ -6,7 +6,6 @@ bookdown::tufte_book2:
   toc: true
   includes:
     in_header: 00-preamble.tex
-    after_body: 00-after_body.tex
 
 bookdown::gitbook:
   css: style.css
