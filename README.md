@@ -9,12 +9,12 @@ Published with [bookdown](https://github.com/rstudio/bookdown).
 To cite this thesis in publications use:
 
 ```
-@phdthesis{ucar2018energy,
+@phdthesis{a.novillo2024oc,
   author    = {Álvaro Novillo},
   title     = {Data Analytics in Football: Pitch Control and Beyond},
   school    = {Universidad Carlos III de Madrid},
   year      = {2024},
-  url       = {https://alvaronovillo.github.io/master_thesis/}
+  url       = {http://hdl.handle.net/10016/27448}
 }
 ```
 
