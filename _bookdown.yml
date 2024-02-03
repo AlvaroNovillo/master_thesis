@@ -3,6 +3,4 @@ output_dir: docs
 delete_merged_file: true
 edit: https://github.com/alvaronovillo/master_thesis/edit/main/%s
 view: https://github.com/alvaronovillo/master_thesis/blob/main/%s
-language:
-  ui:
-    chapter_name: "Chapter "
+
