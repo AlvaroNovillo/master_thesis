@@ -1,0 +1,1575 @@
+--- 
+title: "Data Analytics in Football: Pitch Control and Beyond"
+author: "Álvaro Novillo Correas"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+classoption: twoside,nohyper
+bibliography: bibliografia.bib
+biblio-style: abbrvnat
+link-citations: yes
+description: |
+  Master Thesis. Universidad Carlos III de Madrid. 
+abstract: |
+  `r if (knitr::is_latex_output()) '\\colchunk{'`
+  
+  `r tufte::newthought("Mobile user devices'")` TODOTODO
+---
+\listoffigures
+
+
+# Dedication
+
+
+<!--chapter:end:index.Rmd-->
+
+# The pool of tears
+
+
+<!--chapter:end:02-tears.Rmd-->
+
+# A caucus-race and a long tale
+
+<!--chapter:end:03-race.Rmd-->
+
+--- 
+title: "Data Analytics in Football: Pitch Control and Beyond"
+author: "Álvaro Novillo Correas"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+classoption: twoside,nohyper
+bibliography: bibliografia.bib
+biblio-style: abbrvnat
+link-citations: yes
+description: |
+  Master Thesis. Universidad Carlos III de Madrid. 
+abstract: |
+  `r if (knitr::is_latex_output()) '\\colchunk{'`
+  
+  `r tufte::newthought("Mobile user devices'")` TODOTODO
+---
+\listoffigures
+
+
+# Dedication
+
+
+<!--chapter:end:index.Rmd-->
+
+# The pool of tears
+
+
+<!--chapter:end:02-tears.Rmd-->
+
+# A caucus-race and a long tale
+
+<!--chapter:end:03-race.Rmd-->
+
+::: titlepage
+::: sffamily
+::: center
+<figure>
+
+</figure>
+
+::: Large
+Master Degree in\...\
+Academic Year (e.g. 2018-2019)\
+*Master Thesis*
+:::
+
+Data Analytics in Football: Pitch Control and Beyond\
+
+------------------------------------------------------------------------
+
+\
+Author's complete name\
+
+::: Large
+1st Tutor complete name\
+2nd Tutor complete name\
+Place and date\
+:::
+:::
+
+::: footnotesize
+\
+![image](imagenes/creativecommons.png){width="4.2cm"}\
+*\[Include this code in case you want your Master Thesis published in
+Open Access University Repository\]*\
+This work is licensed under Creative Commons **Attribution -- Non
+Commercial -- Non Derivatives**
+:::
+:::
+:::
+
+# Dedication {#dedication .unnumbered}
+
+# Introduction
+
+# Data Analytics in football
+
+The digital revolution is currently one of the most significant
+challenges of our time, altering numerous aspects of society. Football,
+in particular, has also been influenced by this transformation.
+Technological advancements and digitalization have resulted in a swift
+upsurge in the number of measuring devices, data collection and volumes
+of data. The leading data companies worldwide, including IBM, Intel, SAP
+and Microsoft, are vying for superior data analytics tools and
+leveraging sports as an example domain to showcase their products and
+brand power [@1].
+
+The practice of data analytics in football has a long history, dating
+back to the post-World War II era, when data collection and analysis was
+undertaken manually using pencil and paper [@1]. It wasn't until
+Moneyball was published in 2003 that significant progress began to
+emerge: The book, \"The Art of Winning an Unfair Game\" introduced
+sports analytics to a broader audience. It illustrated the use of data
+analytics in identifying undervalued players and constructing a
+successful team. Since then, data analytics has become an integral
+component of sport, football inclusive [@1].
+
+One of the best examples of data analytics being applied to sports is
+basketball. Teams use data to analyze player performance, identify
+strengths and weaknesses, and develop strategies to win games [@2]. They
+use in-memory analytics, visualization, the cloud, mobility, camera
+footage, and sensors to transform their game. This performance analyses
+are of vital importance to a team, aiming to reduce expenditure, enhance
+team worth and refine processes across all levels and segments of
+operations. The German Football Association (DFB) and the National
+Basketball Association (NBA) are two unique cases of digital
+transformation from the sports world. Successful teams turn player
+performance data into action and gain a competitive advantage.
+
+Over the last years, football analytics has gained significant
+popularity, aiming to delve deeper into the game by utilizing advanced
+data analysis techniques to optimize team and player performance. This
+chapter examines the various areas of football where data can be used
+for analysis, alongside the commonly found data types within this
+industry.
+
+## Statistical analysis in football
+
+When discussing sports analytics in football, the first metric that
+often springs to mind is the Expected Goals (xG) ratio. This statistical
+indicator is a predictive Machine Learning (ML) model used to assess the
+likelihood of scoring for every shot made in the game. In the context of
+each shot, the xG model computes the scoring probability, leveraging a
+set of event parameters.
+
+Wyscout xG model, for example, encompass the shot's spatial coordinates,
+the assisting player's position, the striking player's use of foot or
+head, the type of assist involved, the occurrence of a dribble by either
+a field player or the goalkeeper immediately preceding the shot, whether
+the shot arises from a set piece, whether it transpires during a
+counterattack or in a transitional phase of play, and the subjective
+assessment of shot danger as determined by a designated tagger. The
+amalgamation of these parameters serves as the foundation for training
+the xG model using historical Wyscout data, culminating in the
+prediction of the likelihood of a given shot resulting in a goal
+[@wyscout].
+
+The probabilities range from 0 to 1. Thus, a shot with an xG value of
+0.1 has a 10% chance of being scored. Penalties have a fixed xG value of
+0.76.
+
+Fig. [2.1](#f2.1){reference-type="ref" reference="f2.1"} provides a
+visual representation of the cumulative development of expected goals
+(xG) during the Eibar - Malaga match, which took place on January 15th,
+2023 in Spain's second division. Each data point on the graph
+corresponds to a shot made by both teams over the course of the game,
+offering a comprehensive overview of the evolving scoring opportunities
+and outcomes throughout the duration of the game.
+
+We can also make a shot map of each shot, to illustrates the spatial
+distribution of shot locations taken by both teams during the game. Fig.
+[2.2](#f2.2){reference-type="ref" reference="f2.2"}. The size of each
+data point corresponds to the expected goals (xG) generated for the
+respective shots, providing insights into the perceived scoring
+potential. Goals scored are visually highlighted with straight lines,
+indicating the trajectory the ball followed as it found its way into the
+opponent's net.
+
+<figure id="f2.1">
+<img src="Plantilla_TFM_ingles_2019/imagenes/xg_evol.png" />
+<figcaption>Cumulative development of expected goals (xG) during the
+Eibar-Malaga match, held on January 15th in Spain’s second division.
+Each point denotes a shot made by both teams throughout the game.
+Vertical dashed lines indicate the goal scored, displaying the player
+and the corresponding score at that specific moment of the match.
+</figcaption>
+</figure>
+
+<figure id="f2.2">
+<p><img src="Plantilla_TFM_ingles_2019/imagenes/home_shot_map.png"
+alt="image" /> <img
+src="Plantilla_TFM_ingles_2019/imagenes/away_shot_map.png"
+alt="image" /></p>
+<figcaption>Shot map of the Eibar (blue, left) - Malaga (red, right)
+football match. The locations of the points indicate where shots were
+taken. The size of each point is proportional to the expected goals (xG)
+generated. Shots that resulted in goals are depicted with a straight
+line, representing the path the ball took to enter the opponent’s
+net.</figcaption>
+</figure>
+
+Analyses such as the one above are carried out using the most common
+source of data in football: **Events** datasets.
+
+### Events data
+
+Event data describes specific, human-defined events during a match,
+including passes, shots, and fouls. It is captured by human annotators
+from various providers. However, this manual process is time-consuming
+and typically requires three individuals:
+
+The data collection process is carried out by professional video
+analysts (known as operators), who are specialists in football data
+collection, using proprietary software (the tagger). The tagger has
+undergone several years of development and improvement and is regularly
+updated to ensure the highest level of performance is achieved. To
+ensure accurate data collection when tagging events in soccer matches,
+three operators are assigned: one per team and one supervising the
+output of the entire match. This process is based on analysis of the
+tagger and soccer match videos. When near-live data delivery is
+necessary, a team of four operators may be utilized, with one operator
+dedicated to hastening the collection of complex events that require
+additional, specific attributes or a quick review [@3].
+
+This type of data structure can be used in a number of ways: it can be
+used to measure team performance through general statistics extracted
+from event datasets, such as goals, fouls, xG, etc. It can also be used
+to create advanced analysis of the team using ensembles of mathematical
+tools.
+
+The analysis of the match is furthered through the use of graph theory,
+Buldú et,al [@Buldu], A. Novillo et. al [@NOVILLO2024114355]. Combining
+different elements of the events dataset, we can create a graph
+corresponding to the passing network of each team, allowing us to
+understand the passing structure of both teams.
+
+Figs. [2.3](#f2.3){reference-type="ref" reference="f2.3"} and
+[2.4](#f2.4){reference-type="ref" reference="f2.4"} illustrate the
+passing networks observed in the Eibar versus Málaga football match,
+providing insight into the passing interactions and tactical strategies
+used by both teams. The nodes in the graphs represent individual players
+who participated in the match for each team. The nodes are sized
+according to their degree, which represents the amount of ingoing and
+outgoing passes. The node position corresponds to the average passing
+position of each player. Substitutes are represented by yellow nodes,
+and links are created if there have been at least 5 passes made in that
+direction between two players. The edge's width corresponds to the
+amount of passes made in that direction between the two players.
+
+<figure id="f2.3">
+<img src="Plantilla_TFM_ingles_2019/imagenes/home_pass_network.jpg" />
+<figcaption>Representation of the Eibar passing networks of the match
+Eibar - Málaga. Nodes represent players, edges represent passes between
+players. The position of the players in the field is their average
+passing position. The size of the nodes reflects the number of ingoing
+and outgoing passes (i.e. node’s degree), while the size of the edges is
+proportional to the number of passes between the players. Substitutes
+are represented in yellow. A connection is set if those players share at
+least 5 passes. The edge’s width is proportional to the amount of passes
+made in that direction between the two players. </figcaption>
+</figure>
+
+<figure id="f2.4">
+<img src="Plantilla_TFM_ingles_2019/imagenes/away_pass_network.jpg" />
+<figcaption>Representation of the Málaga passing networks of the match
+Eibar - Málaga. Nodes represent players, edges represent passes between
+players. The position of the players in the field is their average
+passing position. The size of the nodes reflects the number of ingoing
+and outgoing passes (i.e. node’s degree), while the size of the edges is
+proportional to the number of passes between the players. Substitutes
+are represented in yellow. A connection is set if those players share at
+least 5 passes. The edge’s width is proportional to the amount of passes
+made in that direction between the two players. </figcaption>
+</figure>
+
+Analysis as the former can be conducted *in real-time*[^1] during the
+match using appropriate data sources. Additionally, we could examine
+Eibar's macro situation during the 2022-2023 season to better comprehend
+how this micro-statistics contribute to the overall perception of the
+team.
+
+Fig. [2.5](#f2.5){reference-type="ref" reference="f2.5"} presents the
+expected goals (xG) produced by Eibar in all matches played against
+their opponents. It is noticeable that Eibar has generated a higher xG
+when playing at their Home stadium, on average. In Fig.
+[2.6](#f2.6){reference-type="ref" reference="f2.6"} an overview of
+Eibar's performance against other teams in the Second Division is
+presented. It can be observed that Eibar ranks third in generating xGs
+against their opponents.
+
+<figure id="f2.5">
+<img src="Plantilla_TFM_ingles_2019/imagenes/scat-xG-xGa.png" />
+<figcaption>Expected Goals (xG) and Expected Goals Against (xGA) per
+match. Codes: Home Matches (Diamonds), Away Matches (Circles), Wins
+(Green), Draws (Blue), Losses (Red). Matches above the dashed lines
+represent those matches where Eibar has generated more xG than the
+opponent.</figcaption>
+</figure>
+
+<figure id="f2.6">
+<img src="Plantilla_TFM_ingles_2019/imagenes/xG-xGa.png" />
+<figcaption>Ranking of the average differences in Expected Goals Scored
+(xG) Minus Expected Goals Conceded by Opponents (xGa) per
+team.</figcaption>
+</figure>
+
+We've just discussed some of the many statistics that can be inferred
+from this data sources to characterize the team performance, such as
+possession, pressure, duels, fouls, etc. Due to limitations in space and
+scope, however, we are unable to provide a more in-depth analysis of
+these measures[^2].
+
+Although event datasets supply beneficial information regarding the
+team's overall performance, deeper scrutiny can be conducted via
+tracking data, which consists of the players' and ball's position and
+movement during the match. Tracking data can offer additional insight
+into both the physical and tactical aspects of the game.
+
+### Tracking
+
+Tracking data offers a more comprehensive perspective than event data by
+providing access to information on all players, their trajectories, and
+velocities. This allows for the analysis of off-ball players and team
+dynamics, resulting in a more nuanced understanding of the game.
+
+There are two main techniques for obtaining tracking data, which decide
+its classification: Image detection algorithms extract players'
+positions from the match broadcast and infer locations of concealed
+players, whereas optical tracking employs a specialized camera system
+installed on the field to record players' data. Our research will
+concentrate on the latter method, as it offers more precise and
+statistically informative data.
+
+Mediacoach® utilises the Tracab Optical Tracking system to obtain
+on-the-pitch player positions. This multi-camera system captures each
+player's position at 25 frames per second. The system consists of three
+units, each with a resolution of 1920x1080 pixels, producing a panoramic
+picture that generates a stereoscopic view for triangulating the players
+and ball. In case of a temporary loss of any location, a skilled
+operator adjusts the players' positions. The datasets obtained by the
+Mediacoach® system have been validated in advance using GPS
+[@Felipe2019ValidationOA].
+
+As a demonstration of the amount of information this kind of data can
+provide us, we have painted a frame from Atlético de Madrid (Blue) -
+Getafe (Red) game from the Spanish 2019 League. Fig.
+[2.7](#f2.7){reference-type="ref" reference="f2.7"}. The ball is shown
+as a black dot. Referees are shown as yellow squares. Purple arrows
+represent the speed vectors of the players.
+
+As a first approach, we can see where the players have moved during the
+game by plotting the heat map of the ball over the whole game. Note that
+we always keep the direction of play from left to right, so the home
+team will always be placed on the left side of the field and the away
+team on the right. Fig. [2.8](#f2.8){reference-type="ref"
+reference="f2.8"}.
+
+<figure id="f2.7">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Frame.png" />
+<figcaption>A frame of tracking data from a football match. The home
+team is shown in blue, the away team in red. The ball is shown as a
+black dot. Referees are shown as yellow squares. Purple arrows represent
+the speed vectors of the players. </figcaption>
+</figure>
+
+<figure id="f2.8">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Heatmap.jpg"
+style="width:85.0%" />
+<figcaption>Heatmap of the ball position during the Atlético de Madrid -
+Getafe game under study. Note that we always keep the direction of play
+from left to right, so the home team will always be placed on the left
+side of the field and the away team on the right. </figcaption>
+</figure>
+
+Heatmaps such as the one shown in Fig. [2.8](#f2.8){reference-type="ref"
+reference="f2.8"} have proved useful to a wide range of stakeholders,
+including technical staff, journalists and passionate fans, who have all
+sought to gain insight into the positioning of players during matches.
+Such granular information about a player's spatial occupation of the
+pitch serves as a valuable resource for technical staff, both in match
+preparation by analysing the expected positions of opponents, and in
+post-match evaluation to assess the extent to which the tactical game
+plan has been adhered to. [@Garrido_2022].
+
+This data-driven approach enhances the understanding of the sport and
+its strategic nuances, fostering a deeper appreciation of the game's
+intricacies. For this reason, tracking data has gained popularity as a
+valuable tool in football analysis, providing insights into player
+performance and team strategy. These advanced metrics can be applied to
+specific games, as in the analysis presented earlier (Fig.
+[2.8](#f2.8){reference-type="ref" reference="f2.8"}), or to an ensemble
+of them to provide a comprehensive view of general player behavior under
+different parameters. In the following sections, we present a selection
+of these metrics, both physical and tactical, to provide context for our
+proposed Offside Control metric across multiple games.
+
+### Physical metrics
+
+The analysis of player speed in football is a topic of great interest in
+sports science and performance analysis. Understanding the role and
+development of sprinting speed in football is crucial to optimizing
+player performance. Using tracking data, we can make general statistics
+about the patterns that are evident in the speed of football players. In
+Fig. [2.9](#f2.9){reference-type="ref" reference="f2.9"} we analyzed 362
+players in 100 matches with a total of 1,502,560 frames. To ensure the
+interpretability of the results, we only included player data for those
+matches in which that particular player played the entire match. The
+resulting speed data showed a bimodal distribution that can be
+identified with the two main actions performed by the players during the
+game: walking and jogging.
+
+<figure id="f2.9">
+<embed src="imagenes/General_speed_distributions.eps"
+style="width:80.0%" />
+<figcaption>Probability distribution function of the velocities for
+<strong>(A)</strong> all different field players and
+<strong>(B)</strong> referees during a match. Values are averaged over
+<span class="math inline">100</span> matches</figcaption>
+</figure>
+
+Having characterized the general distributions underlying on players'
+movement, we can delve into more particular investigations that offer
+significant viewpoints on game strategy and player effectiveness.
+
+One such question may be to check if players' performance is consistent
+across the entire game. That is, if there are no significant differences
+between the games' first and second halves.
+
+In the hypothesis contrast carried out in Fig.
+[2.10](#f2.10){reference-type="ref" reference="f2.10"}, significant
+variations are evident between the average speeds during the yellow
+regime (walking) and green regime (jogging) for all positions, between
+the first and second halves of the game. This leads to the conclusion
+that the average speed is lower in the latter phase. It is noteworthy
+that there was a higher occurrence of values within the walking regime
+in the second half compared to the first, as evidenced by the
+distribution difference.
+
+We can also observe the same outcome by analysing the mean distance
+covered by each player in each half, as measured in
+[2.11](#f2.11){reference-type="ref" reference="f2.11"}. The graphs
+illustrate that most players remain below the diagonal dashed black
+line, suggesting that the distance covered during the first part of the
+game is generally grater than the one covered in the second half
+
+<figure id="f2.10">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/Differences_Speed_Parts.png"
+style="width:100.0%" />
+<figcaption> Speed distribution difference between the first and second
+half of the game. <strong>(A)</strong> Goalkeeper. <strong>(B)</strong>
+Defender <strong>(C)</strong> Midfielder. <strong>(D)</strong> Forward.
+Yellow-shadowed areas represent the values taken for the first peak.
+Green-shadowed areas for the second. For each position and peak, the
+average speed is smaller in the second half, with a <span
+class="math inline"><em>p</em><sub><em>v</em><em>a</em><em>l</em><em>u</em><em>e</em></sub><em>p</em> &lt; 0.001</span>.
+<strong>*</strong> Average speed is greater in the first
+half.</figcaption>
+</figure>
+
+<figure id="f2.11">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Distance_walking.png"
+style="width:90.0%" />
+<figcaption> Distance covered in the first and second half of the game
+by the players (while walking). <strong>(A)</strong> Goalkeeper.
+<strong>(B)</strong> Defender <strong>(C)</strong> Midfielder.
+<strong>(D)</strong> Forward. The percentages shown account for the
+number of points that lie below/above the diagonal line</figcaption>
+</figure>
+
+### Tactical metrics
+
+After analysing the physics of player movement, a sophisticated
+framework is needed to decode how the intricate movements of players
+translate to the soccer field.
+
+These models provide a scientific perspective for analysing player
+positioning, decision-making, and team dynamics, illuminating the
+complex interactions that occur during a match.
+
+**Pitch control** models [@Spearman] in soccer are an essential tool for
+researchers, coaches, and analysts who aim to understand the game's
+nuances at a granular level.
+
+#### Pitch Control
+
+The Pitch Control (PC) at a given location represents the probability of
+a player or team gaining control of the ball if it moves directly to
+that location. PC models simulate the dynamics of the ball and the
+players to evaluate which player would control the ball if it moves to
+any location on the pitch at any moment. The model captures not only the
+players' current positionbut also their movement. When players are
+running at high speeds, they are more likely to control the space they
+are moving into rather than the space they currently occupy.
+
+To construct this model, we must calculate the following for a given
+location on the pitch:
+
+-   How long it would take for the ball to reach to the position of
+    interest (from its starting position).
+
+-   How long would it take for each player to get to that position.
+
+-   What is the total *probability* that each team will control the ball
+    *after* both the players and the ball have arrived at the desired
+    position?
+
+The ball is set to move at a constant speed of $v_b = 54$ $km/h$.
+Therefore, the time taken to arrive at the location of interest can be
+easily calculated as $t_{b,arr} = \Delta x_b/v_b$, where $\Delta x_b$ is
+the distance between the initial and final positions of the ball.
+
+When considering how long it will take the players to reach the target
+position, given their initial position and speed, players are assumed to
+only have a maximum speed of $v_{max,p} = 18$ $km/h$. This upper limit
+should not be misunderstood as the maximum speed at which players can
+move, but rather as an estimate of the maximum speed at which they are
+likely to move when trying to control the ball.
+
+To compute the player's expected arrival time,
+$\tau_{exp}(\vec{r} ; t_r)$, we use a simple approximation consisting of
+a two-step process:
+
+-   There is an initial *reaction time* of $t_{r} = 0.7$ seconds. This
+    is approximately the time it takes a player moving at maximum speed
+    to come to a complete stop. During this reaction time, we assume
+    that players continue to move along their current trajectory without
+    changing speed or direction (reaching a position $\vec{r}_{react}$).
+
+-   After this time, we assume that the player runs directly towards the
+    ball at his maximum speed of $v_{max,p}$.
+
+$$\tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
+    \label{exp_arr_time}$$
+
+Once we computed the time it takes for the ball and the players to get
+to the target location, we need to look at how long it will take each
+player to control the ball. To do so, we will assume that controlling
+the ball is a stochastic process that follows an exponential
+distribution with a fixed rate $\lambda$, with units of $1/s$. Thus, for
+any differential time $\Delta t$ that a player is near the ball, he has
+a probability of $\lambda \cdot \Delta t$ of controlling the ball.
+
+<figure id="fig:my_label">
+<img src="Plantilla_TFM_ingles_2019/imagenes/exp_poster.png"
+style="width:50.0%" />
+<figcaption>Cumulative distribution function of the time to control the
+ball. The parameters choice is based on <span class="citation"
+data-cites="Spearman"></span> </figcaption>
+</figure>
+
+So far, the model assumes that we know exactly when each player will
+arrive at the target location. However, we introduce some uncertainty,
+labelled $\sigma$, in the arrival time of the players. The reason for
+including such temporal variability in our model is to account for some
+effects that have not been explicitly modelled, such as player effort.
+Thus, the probability of a player intercepting the ball at time T is
+given by the cumulative distribution function of the sigmoid
+distribution:
+
+$$F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
+    \label{sigmoid}$$
+
+<figure id="fig:my_label">
+<img src="Plantilla_TFM_ingles_2019/imagenes/sigmoid_poster.png"
+style="width:50.0%" />
+<figcaption>Cumulative distribution function of the probability to
+intercept the ball at a certain time T <a href="#sigmoid"
+data-reference-type="ref" data-reference="sigmoid">[sigmoid]</a>. <span
+class="citation" data-cites="Spearman"></span>.</figcaption>
+</figure>
+
+Finally, the differential equation used to compute the control
+probability for each player at a given location $r$, at time t is
+[@Spearman]:
+$$\frac{d P P C F_j}{d t}\left(T, \vec{r} , \sigma, \lambda_j, t_r\right)=\left(1-\sum_k P P C F_k\left(t, \vec{r} , \sigma, \lambda_k\right)\right) F_{int,j}(t, \vec{r}  , \sigma, t_r) \lambda_j
+\label{PC_eq}$$ where $PPCF_j$ is the Potential Pitch Control Field of
+player $j$. $F_{int,j}(t, \vec{r}, T ; \sigma, t_r)$ is the probability
+that player $j$ can reach the target location $r$ in a given time $t$,
+and $\lambda_j$ is the control rate of such a player. We assign the
+goalkeepers to have a higher control rate, $\lambda_{GK} = 12.9$
+$s^{-1}$, to ensure that they are likely to claim the ball if it is near
+them and also to account for the ability of grabbing the ball with their
+hands. Importantly, note that
+$\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)$ accounts
+for the sum of the Potential Pitch Control Field of the rest of the $k$
+players on the pitch at time $t$.
+
+By integrating Eq. [\[PC_eq\]](#PC_eq){reference-type="ref"
+reference="PC_eq"} over $t \in \left[ t_{ball},t_{ball} + 10 \right]$s
+and taking $P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0$ at
+the beginning of the integration, the probability of control per player
+is obtained. This probability is then extracted along all the pitch,
+obtaining a pitch control surface, which can be plot and interpreted by
+scientists, technical staff or players.
+
+# Offside Control
+
+This study introduces the Offside Control (OC) parameter, which is
+derived from a modification of the Potential Pitch Control Field to
+analyse the pitch control generated by teams/players beyond the offside
+line. The offside line is identified as the location of the
+second-to-last defender, and the attacking players in both valid and
+offside positions are detected at every frame. The OC is calculated as
+the pitch control generated by the attacking team/player after the
+offside line. Additionally, if a player is in an offside position, their
+contribution is quantified as Ineffective Offside Control (IOC).
+Conversely, when a player is before the offside line and generates pitch
+control after it, it is referred to as Effective Offside Control (EOC).
+
+Fig. [3.1](#f3.1){reference-type="ref" reference="f3.1"} illustrates the
+concept of effective and ineffective Offside Control. The players of
+both teams are represented in cyan (attacking from left to right) and
+red (attacking from right to left), corresponding to the home and away
+team, respectively. The regions of the pitch controlled by the home team
+are indicated in blue, while the red regions are controlled by the away
+team. The offside position is indicated by the vertical dashed line. The
+wide grey line surrounds the areas controlled by the attacking team at
+the back of the offside line. Player $11$, is located behind the offside
+line, which is an invalid position and generates an offside infraction.
+In contrast, player $18$ is in a correct position, and the offside
+control generated behind the offside line is classified as effective
+(EOC).
+
+In the study, we computed the Offside Control (both effective and
+ineffective) at a rate of 2 frames per second for each of the 100
+matches analyzed, resulting in a total of 1,251,934 frames analysed.
+Doing so, we managed to characterize the Offside Control of 442 players
+in total. To efficiently discretize the space, the computations of the
+Offside Control were confined to the attacking half of the pitch of the
+team in possession of the ball. This method considerably decreased the
+model's computation time while maintaining a high spatial resolution of
+50 by 32 divisions of the attacking half of the pitch.
+
+<figure id="f3.1">
+<img src="Plantilla_TFM_ingles_2019/imagenes/eff_inef_OC.png"
+style="width:50.0%" />
+<figcaption>Example of effective (EOC) and ineffective (IOC) Offside
+Control (areas surrounded by a wide grey line). The offside line is the
+vertical dashed line. Note that player <span
+class="math inline">11</span> is offside (generating IOC), while player
+<span class="math inline">18</span> is not (creating EOC). </figcaption>
+</figure>
+
+To obtain the OC generated by the team, simply sum the individual
+contributions of the players during the match. Figure 3.2 shows two
+examples of the different spatial distribution of the EOC in two
+different matches of the same team (Team 1). In MATCH A, we can see how
+the exerted EOC by Team 1 is deep and close to the opponent's area (Team
+2), whereas in the second match, MATCH B, the EOC is longitudinal across
+the side lanes. The bar chart on the right-hand side of each plot
+displays the average EOC generated by each team per unit of effective
+time, considering only instances where the ball was in play. In both
+cases, Team 1 created more pressure after the offside lane than their
+opponents.
+
+<figure id="f3.2">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Games_OC.png"
+style="width:50.0%" />
+<figcaption>Cumulative Effective Offside Control distribution over the
+course of two matches. The same team (Team 1) (left) generates offside
+control in two different ways at two different matches (A,B). Bars on
+right-hand side show the average effective offside control generated by
+each team per unit of effective time. <span>ºbf (cambiar numeros por
+letras y viceversa, segun texto principal)</span></figcaption>
+</figure>
+
+The correlation between the average OC per unit of effective time and
+the final classification following the tenth match of the season is
+shown in Fig. [3.3](#f3.3){reference-type="ref" reference="f3.3"}. The
+scatter plot shows both the generated and received average OC per unit
+of effective time, with each label and point size representing the
+team's classification after the tenth match of the season. Teams above
+the diagonal black dashed line have generated more OC than their
+opponents.
+
+<figure id="f3.3">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/Mean_rival_OC_vs_team_norm_efftime.png"
+style="width:60.0%" />
+<figcaption>Average generated Offside Control vs the received one. The
+values correspond to the average accumulated OC per effective unit of
+time. The labels and the size of each point correspond to their final
+classification after the tenth match of the season. Teams above the dark
+dashed line have accumulated more offside control than the one generated
+by their rivals. The fitted equation is <span
+class="math inline"><em>y</em> =  − 0.86<em>x</em> + 285.42</span>, with
+an <span class="math inline"><em>R</em><sup>2</sup> = 0.48</span> and
+<span
+class="math inline"><em>R</em><em>M</em><em>S</em><em>E</em> = 14.96</span></figcaption>
+</figure>
+
+The distribution of pressure among teams in the league is heterogeneous,
+with some higher-ranking teams exerting more pressure than their
+opponents. There are some exceptions, with lower-ranking teams also
+exerting more pressure than their opponents. However, it is clear that
+OC alone cannot fully explain team rankings. A more comprehensive study
+is needed to include additional variables that could better explain the
+rankings.
+
+Fig. [3.4](#f3.4){reference-type="ref" reference="f3.4"} illustrates the
+progression of Cumulative Offside Control during a match. The cumulative
+sum is calculated using a centered moving window comprising 600 frames.
+The blue line represents the total offside control of the home team,
+including both effective and ineffective contributions, per unit of
+effective time.
+
+The cumulative rate of the OC decreases towards the latter half of the
+game, resulting in the home team losing pressure on the opponent and
+conceding a couple of goals.
+
+<figure id="f3.4">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/cumulative_OC_evolution.png"
+style="width:50.0%" />
+<figcaption>Cumulative Offside Control evolution over the course of a
+match. Cumulative evolution of offside control over the course of a
+match. The cumulative sum has been taken using a centered moving window
+of 600 frames. the total offside control of the home team is represented
+in blue (including both effective/ineffective contributions) per unit of
+effective time.</figcaption>
+</figure>
+
+By examining the spatial distribution of the total OC generated across
+all matches played and studying the forwards' positions relative to the
+offside line, we find that OC is contingent on the forwards' position
+relative to the offside line, thus proving useful in characterising
+different forward playstyles. Figure [3.5](#f3.5){reference-type="ref"
+reference="f3.5"} shows that Forward A spends more time preceding the
+offside line (negative values) than Forward B. The EOC is normalised by
+the time played and encompasses a minimum of 6 matches.
+
+<figure id="f3.5">
+<img src="Plantilla_TFM_ingles_2019/imagenes/forwards_OC.png"
+style="width:50.0%" />
+<figcaption>Effective Offside Control of two different forwards A/B. On
+the left, positions of the pitch where two different forward players A/B
+generate Effective Offside Control (EOC). On the right, a probability
+distribution function of the distance to the offside line for the two
+different forwards. EOC is normalized by the time played, containing at
+least 6 matches. Note how the spatial distribution of the EOC depends on
+their position with respect to the offside line. We can see of forward A
+spends more time before the offside line (negative values) than forward
+B.</figcaption>
+</figure>
+
+# Conclusion
+
+Data-driven approaches for analysing football performance using event
+and tracking data have gained popularity in the last decade. In this
+project, we previously discussed how metrics such as Expected Goals
+(xG), derived from events datasets, have impacted our understanding of
+the game, becoming an essential tool for evaluating team performance.
+
+However, tracking datasets allow us to develop advanced physical and
+tactical metrics that capture the aspects of player and team
+performance. In this context, Pitch Control arises as sophisticated
+approach to quantifying and analyzing the intricate dynamics of soccer
+from a scientific perspective. Pitch control models aim to provide a
+quantitative framework for assessing player movements, spatial control,
+and decision-making on the field. They utilize positional data of
+players and the ball to determine the likelihood of a player gaining
+control. At any given moment, the position of the ball can be determined
+by taking into account variables such as player speed, direction, and
+relative positioning to their opponents and teammates. This modelling
+approach provides tactical insights and spatial relationships between
+players, the ball, and the field. By studying how players' movements
+affect pitch control, teams can optimize their formations, pressing
+patterns, and passing strategies.
+
+From these models, metrics such as the one presented in this project,
+Offside Control, quantify a player's pitch control contributions locally
+(in this case, after the offside line). This makes it possible to
+identify strengths and weaknesses in team pressure, track improvements
+over time, and make data-driven decisions regarding player selection and
+development. Clubs and talent scouts can use these metrics derived from
+Pitch Control models to evaluate potential signings. In the case of
+Offside Control, these models can aid in identifying talented players by
+quantifying their ability to control space and make effective decisions.
+
+Currently, tracking dataset approaches are not measured in real-time,
+unlike events dataset. The development of new technologies for football
+analytics, such as the recently announced TRACAB Optical system, shows
+promise for research in this area [@TRACAB]. The system uses advanced AI
+to provide live in-game tracking data and unprecedented levels of
+precision to identify and track players' body parts. This technology can
+power new categories of performance analysis and skeletal modeling for
+exciting new applications. As the industry evolves, so will the
+sophistication of these models, offering a deeper understanding of the
+game and enhancing its scientific appeal.
+
+[^1]: Opta uses a combination of human annotation, computer vision, and
+    AI modelling to offer real-time data at various levels of detail
+    based on customer requirements. In our situation, the data feed
+    updates itself when an event such as a goal, foul or pass occurs;
+    otherwise, it updates every 90 seconds. [@opta]
+
+[^2]: For additional information regarding this type of analysis, we
+    have included two reports outlining Eibar's performance during the
+    2022/2023 season in the annex. In these reports, an array of metrics
+    is presented to appraise team performance relative to other teams in
+    the league, as well as each individual player's performance.
+
+<!--chapter:end:plantilla_tfm_ingles_2019.rmd-->
+
+
+<!--chapter:end:bookdownproj.Rmd-->
+
+::: titlepage
+::: sffamily
+::: center
+<figure>
+
+</figure>
+
+::: Large
+Master Degree in\...\
+Academic Year (e.g. 2018-2019)\
+*Master Thesis*
+:::
+
+Data Analytics in Football: Pitch Control and Beyond\
+
+------------------------------------------------------------------------
+
+\
+Author's complete name\
+
+::: Large
+1st Tutor complete name\
+2nd Tutor complete name\
+Place and date\
+:::
+:::
+
+::: footnotesize
+\
+![image](imagenes/creativecommons.png){width="4.2cm"}\
+*\[Include this code in case you want your Master Thesis published in
+Open Access University Repository\]*\
+This work is licensed under Creative Commons **Attribution -- Non
+Commercial -- Non Derivatives**
+:::
+:::
+:::
+
+# Dedication {#dedication .unnumbered}
+
+# Introduction
+
+# Data Analytics in football
+
+The digital revolution is currently one of the most significant
+challenges of our time, altering numerous aspects of society. Football,
+in particular, has also been influenced by this transformation.
+Technological advancements and digitalization have resulted in a swift
+upsurge in the number of measuring devices, data collection and volumes
+of data. The leading data companies worldwide, including IBM, Intel, SAP
+and Microsoft, are vying for superior data analytics tools and
+leveraging sports as an example domain to showcase their products and
+brand power [@1].
+
+The practice of data analytics in football has a long history, dating
+back to the post-World War II era, when data collection and analysis was
+undertaken manually using pencil and paper [@1]. It wasn't until
+Moneyball was published in 2003 that significant progress began to
+emerge: The book, \"The Art of Winning an Unfair Game\" introduced
+sports analytics to a broader audience. It illustrated the use of data
+analytics in identifying undervalued players and constructing a
+successful team. Since then, data analytics has become an integral
+component of sport, football inclusive [@1].
+
+One of the best examples of data analytics being applied to sports is
+basketball. Teams use data to analyze player performance, identify
+strengths and weaknesses, and develop strategies to win games [@2]. They
+use in-memory analytics, visualization, the cloud, mobility, camera
+footage, and sensors to transform their game. This performance analyses
+are of vital importance to a team, aiming to reduce expenditure, enhance
+team worth and refine processes across all levels and segments of
+operations. The German Football Association (DFB) and the National
+Basketball Association (NBA) are two unique cases of digital
+transformation from the sports world. Successful teams turn player
+performance data into action and gain a competitive advantage.
+
+Over the last years, football analytics has gained significant
+popularity, aiming to delve deeper into the game by utilizing advanced
+data analysis techniques to optimize team and player performance. This
+chapter examines the various areas of football where data can be used
+for analysis, alongside the commonly found data types within this
+industry.
+
+## Statistical analysis in football
+
+When discussing sports analytics in football, the first metric that
+often springs to mind is the Expected Goals (xG) ratio. This statistical
+indicator is a predictive Machine Learning (ML) model used to assess the
+likelihood of scoring for every shot made in the game. In the context of
+each shot, the xG model computes the scoring probability, leveraging a
+set of event parameters.
+
+Wyscout xG model, for example, encompass the shot's spatial coordinates,
+the assisting player's position, the striking player's use of foot or
+head, the type of assist involved, the occurrence of a dribble by either
+a field player or the goalkeeper immediately preceding the shot, whether
+the shot arises from a set piece, whether it transpires during a
+counterattack or in a transitional phase of play, and the subjective
+assessment of shot danger as determined by a designated tagger. The
+amalgamation of these parameters serves as the foundation for training
+the xG model using historical Wyscout data, culminating in the
+prediction of the likelihood of a given shot resulting in a goal
+[@wyscout].
+
+The probabilities range from 0 to 1. Thus, a shot with an xG value of
+0.1 has a 10% chance of being scored. Penalties have a fixed xG value of
+0.76.
+
+Fig. [2.1](#f2.1){reference-type="ref" reference="f2.1"} provides a
+visual representation of the cumulative development of expected goals
+(xG) during the Eibar - Malaga match, which took place on January 15th,
+2023 in Spain's second division. Each data point on the graph
+corresponds to a shot made by both teams over the course of the game,
+offering a comprehensive overview of the evolving scoring opportunities
+and outcomes throughout the duration of the game.
+
+We can also make a shot map of each shot, to illustrates the spatial
+distribution of shot locations taken by both teams during the game. Fig.
+[2.2](#f2.2){reference-type="ref" reference="f2.2"}. The size of each
+data point corresponds to the expected goals (xG) generated for the
+respective shots, providing insights into the perceived scoring
+potential. Goals scored are visually highlighted with straight lines,
+indicating the trajectory the ball followed as it found its way into the
+opponent's net.
+
+<figure id="f2.1">
+<img src="Plantilla_TFM_ingles_2019/imagenes/xg_evol.png" />
+<figcaption>Cumulative development of expected goals (xG) during the
+Eibar-Malaga match, held on January 15th in Spain’s second division.
+Each point denotes a shot made by both teams throughout the game.
+Vertical dashed lines indicate the goal scored, displaying the player
+and the corresponding score at that specific moment of the match.
+</figcaption>
+</figure>
+
+<figure id="f2.2">
+<p><img src="Plantilla_TFM_ingles_2019/imagenes/home_shot_map.png"
+alt="image" /> <img
+src="Plantilla_TFM_ingles_2019/imagenes/away_shot_map.png"
+alt="image" /></p>
+<figcaption>Shot map of the Eibar (blue, left) - Malaga (red, right)
+football match. The locations of the points indicate where shots were
+taken. The size of each point is proportional to the expected goals (xG)
+generated. Shots that resulted in goals are depicted with a straight
+line, representing the path the ball took to enter the opponent’s
+net.</figcaption>
+</figure>
+
+Analyses such as the one above are carried out using the most common
+source of data in football: **Events** datasets.
+
+### Events data
+
+Event data describes specific, human-defined events during a match,
+including passes, shots, and fouls. It is captured by human annotators
+from various providers. However, this manual process is time-consuming
+and typically requires three individuals:
+
+The data collection process is carried out by professional video
+analysts (known as operators), who are specialists in football data
+collection, using proprietary software (the tagger). The tagger has
+undergone several years of development and improvement and is regularly
+updated to ensure the highest level of performance is achieved. To
+ensure accurate data collection when tagging events in soccer matches,
+three operators are assigned: one per team and one supervising the
+output of the entire match. This process is based on analysis of the
+tagger and soccer match videos. When near-live data delivery is
+necessary, a team of four operators may be utilized, with one operator
+dedicated to hastening the collection of complex events that require
+additional, specific attributes or a quick review [@3].
+
+This type of data structure can be used in a number of ways: it can be
+used to measure team performance through general statistics extracted
+from event datasets, such as goals, fouls, xG, etc. It can also be used
+to create advanced analysis of the team using ensembles of mathematical
+tools.
+
+The analysis of the match is furthered through the use of graph theory,
+Buldú et,al [@Buldu], A. Novillo et. al [@NOVILLO2024114355]. Combining
+different elements of the events dataset, we can create a graph
+corresponding to the passing network of each team, allowing us to
+understand the passing structure of both teams.
+
+Figs. [2.3](#f2.3){reference-type="ref" reference="f2.3"} and
+[2.4](#f2.4){reference-type="ref" reference="f2.4"} illustrate the
+passing networks observed in the Eibar versus Málaga football match,
+providing insight into the passing interactions and tactical strategies
+used by both teams. The nodes in the graphs represent individual players
+who participated in the match for each team. The nodes are sized
+according to their degree, which represents the amount of ingoing and
+outgoing passes. The node position corresponds to the average passing
+position of each player. Substitutes are represented by yellow nodes,
+and links are created if there have been at least 5 passes made in that
+direction between two players. The edge's width corresponds to the
+amount of passes made in that direction between the two players.
+
+<figure id="f2.3">
+<img src="Plantilla_TFM_ingles_2019/imagenes/home_pass_network.jpg" />
+<figcaption>Representation of the Eibar passing networks of the match
+Eibar - Málaga. Nodes represent players, edges represent passes between
+players. The position of the players in the field is their average
+passing position. The size of the nodes reflects the number of ingoing
+and outgoing passes (i.e. node’s degree), while the size of the edges is
+proportional to the number of passes between the players. Substitutes
+are represented in yellow. A connection is set if those players share at
+least 5 passes. The edge’s width is proportional to the amount of passes
+made in that direction between the two players. </figcaption>
+</figure>
+
+<figure id="f2.4">
+<img src="Plantilla_TFM_ingles_2019/imagenes/away_pass_network.jpg" />
+<figcaption>Representation of the Málaga passing networks of the match
+Eibar - Málaga. Nodes represent players, edges represent passes between
+players. The position of the players in the field is their average
+passing position. The size of the nodes reflects the number of ingoing
+and outgoing passes (i.e. node’s degree), while the size of the edges is
+proportional to the number of passes between the players. Substitutes
+are represented in yellow. A connection is set if those players share at
+least 5 passes. The edge’s width is proportional to the amount of passes
+made in that direction between the two players. </figcaption>
+</figure>
+
+Analysis as the former can be conducted *in real-time*[^1] during the
+match using appropriate data sources. Additionally, we could examine
+Eibar's macro situation during the 2022-2023 season to better comprehend
+how this micro-statistics contribute to the overall perception of the
+team.
+
+Fig. [2.5](#f2.5){reference-type="ref" reference="f2.5"} presents the
+expected goals (xG) produced by Eibar in all matches played against
+their opponents. It is noticeable that Eibar has generated a higher xG
+when playing at their Home stadium, on average. In Fig.
+[2.6](#f2.6){reference-type="ref" reference="f2.6"} an overview of
+Eibar's performance against other teams in the Second Division is
+presented. It can be observed that Eibar ranks third in generating xGs
+against their opponents.
+
+<figure id="f2.5">
+<img src="Plantilla_TFM_ingles_2019/imagenes/scat-xG-xGa.png" />
+<figcaption>Expected Goals (xG) and Expected Goals Against (xGA) per
+match. Codes: Home Matches (Diamonds), Away Matches (Circles), Wins
+(Green), Draws (Blue), Losses (Red). Matches above the dashed lines
+represent those matches where Eibar has generated more xG than the
+opponent.</figcaption>
+</figure>
+
+<figure id="f2.6">
+<img src="Plantilla_TFM_ingles_2019/imagenes/xG-xGa.png" />
+<figcaption>Ranking of the average differences in Expected Goals Scored
+(xG) Minus Expected Goals Conceded by Opponents (xGa) per
+team.</figcaption>
+</figure>
+
+We've just discussed some of the many statistics that can be inferred
+from this data sources to characterize the team performance, such as
+possession, pressure, duels, fouls, etc. Due to limitations in space and
+scope, however, we are unable to provide a more in-depth analysis of
+these measures[^2].
+
+Although event datasets supply beneficial information regarding the
+team's overall performance, deeper scrutiny can be conducted via
+tracking data, which consists of the players' and ball's position and
+movement during the match. Tracking data can offer additional insight
+into both the physical and tactical aspects of the game.
+
+### Tracking
+
+Tracking data offers a more comprehensive perspective than event data by
+providing access to information on all players, their trajectories, and
+velocities. This allows for the analysis of off-ball players and team
+dynamics, resulting in a more nuanced understanding of the game.
+
+There are two main techniques for obtaining tracking data, which decide
+its classification: Image detection algorithms extract players'
+positions from the match broadcast and infer locations of concealed
+players, whereas optical tracking employs a specialized camera system
+installed on the field to record players' data. Our research will
+concentrate on the latter method, as it offers more precise and
+statistically informative data.
+
+Mediacoach® utilises the Tracab Optical Tracking system to obtain
+on-the-pitch player positions. This multi-camera system captures each
+player's position at 25 frames per second. The system consists of three
+units, each with a resolution of 1920x1080 pixels, producing a panoramic
+picture that generates a stereoscopic view for triangulating the players
+and ball. In case of a temporary loss of any location, a skilled
+operator adjusts the players' positions. The datasets obtained by the
+Mediacoach® system have been validated in advance using GPS
+[@Felipe2019ValidationOA].
+
+As a demonstration of the amount of information this kind of data can
+provide us, we have painted a frame from Atlético de Madrid (Blue) -
+Getafe (Red) game from the Spanish 2019 League. Fig.
+[2.7](#f2.7){reference-type="ref" reference="f2.7"}. The ball is shown
+as a black dot. Referees are shown as yellow squares. Purple arrows
+represent the speed vectors of the players.
+
+As a first approach, we can see where the players have moved during the
+game by plotting the heat map of the ball over the whole game. Note that
+we always keep the direction of play from left to right, so the home
+team will always be placed on the left side of the field and the away
+team on the right. Fig. [2.8](#f2.8){reference-type="ref"
+reference="f2.8"}.
+
+<figure id="f2.7">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Frame.png" />
+<figcaption>A frame of tracking data from a football match. The home
+team is shown in blue, the away team in red. The ball is shown as a
+black dot. Referees are shown as yellow squares. Purple arrows represent
+the speed vectors of the players. </figcaption>
+</figure>
+
+<figure id="f2.8">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Heatmap.jpg"
+style="width:85.0%" />
+<figcaption>Heatmap of the ball position during the Atlético de Madrid -
+Getafe game under study. Note that we always keep the direction of play
+from left to right, so the home team will always be placed on the left
+side of the field and the away team on the right. </figcaption>
+</figure>
+
+Heatmaps such as the one shown in Fig. [2.8](#f2.8){reference-type="ref"
+reference="f2.8"} have proved useful to a wide range of stakeholders,
+including technical staff, journalists and passionate fans, who have all
+sought to gain insight into the positioning of players during matches.
+Such granular information about a player's spatial occupation of the
+pitch serves as a valuable resource for technical staff, both in match
+preparation by analysing the expected positions of opponents, and in
+post-match evaluation to assess the extent to which the tactical game
+plan has been adhered to. [@Garrido_2022].
+
+This data-driven approach enhances the understanding of the sport and
+its strategic nuances, fostering a deeper appreciation of the game's
+intricacies. For this reason, tracking data has gained popularity as a
+valuable tool in football analysis, providing insights into player
+performance and team strategy. These advanced metrics can be applied to
+specific games, as in the analysis presented earlier (Fig.
+[2.8](#f2.8){reference-type="ref" reference="f2.8"}), or to an ensemble
+of them to provide a comprehensive view of general player behavior under
+different parameters. In the following sections, we present a selection
+of these metrics, both physical and tactical, to provide context for our
+proposed Offside Control metric across multiple games.
+
+### Physical metrics
+
+The analysis of player speed in football is a topic of great interest in
+sports science and performance analysis. Understanding the role and
+development of sprinting speed in football is crucial to optimizing
+player performance. Using tracking data, we can make general statistics
+about the patterns that are evident in the speed of football players. In
+Fig. [2.9](#f2.9){reference-type="ref" reference="f2.9"} we analyzed 362
+players in 100 matches with a total of 1,502,560 frames. To ensure the
+interpretability of the results, we only included player data for those
+matches in which that particular player played the entire match. The
+resulting speed data showed a bimodal distribution that can be
+identified with the two main actions performed by the players during the
+game: walking and jogging.
+
+<figure id="f2.9">
+<embed src="imagenes/General_speed_distributions.eps"
+style="width:80.0%" />
+<figcaption>Probability distribution function of the velocities for
+<strong>(A)</strong> all different field players and
+<strong>(B)</strong> referees during a match. Values are averaged over
+<span class="math inline">100</span> matches</figcaption>
+</figure>
+
+Having characterized the general distributions underlying on players'
+movement, we can delve into more particular investigations that offer
+significant viewpoints on game strategy and player effectiveness.
+
+One such question may be to check if players' performance is consistent
+across the entire game. That is, if there are no significant differences
+between the games' first and second halves.
+
+In the hypothesis contrast carried out in Fig.
+[2.10](#f2.10){reference-type="ref" reference="f2.10"}, significant
+variations are evident between the average speeds during the yellow
+regime (walking) and green regime (jogging) for all positions, between
+the first and second halves of the game. This leads to the conclusion
+that the average speed is lower in the latter phase. It is noteworthy
+that there was a higher occurrence of values within the walking regime
+in the second half compared to the first, as evidenced by the
+distribution difference.
+
+We can also observe the same outcome by analysing the mean distance
+covered by each player in each half, as measured in
+[2.11](#f2.11){reference-type="ref" reference="f2.11"}. The graphs
+illustrate that most players remain below the diagonal dashed black
+line, suggesting that the distance covered during the first part of the
+game is generally grater than the one covered in the second half
+
+<figure id="f2.10">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/Differences_Speed_Parts.png"
+style="width:100.0%" />
+<figcaption> Speed distribution difference between the first and second
+half of the game. <strong>(A)</strong> Goalkeeper. <strong>(B)</strong>
+Defender <strong>(C)</strong> Midfielder. <strong>(D)</strong> Forward.
+Yellow-shadowed areas represent the values taken for the first peak.
+Green-shadowed areas for the second. For each position and peak, the
+average speed is smaller in the second half, with a <span
+class="math inline"><em>p</em><sub><em>v</em><em>a</em><em>l</em><em>u</em><em>e</em></sub><em>p</em> &lt; 0.001</span>.
+<strong>*</strong> Average speed is greater in the first
+half.</figcaption>
+</figure>
+
+<figure id="f2.11">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Distance_walking.png"
+style="width:90.0%" />
+<figcaption> Distance covered in the first and second half of the game
+by the players (while walking). <strong>(A)</strong> Goalkeeper.
+<strong>(B)</strong> Defender <strong>(C)</strong> Midfielder.
+<strong>(D)</strong> Forward. The percentages shown account for the
+number of points that lie below/above the diagonal line</figcaption>
+</figure>
+
+### Tactical metrics
+
+After analysing the physics of player movement, a sophisticated
+framework is needed to decode how the intricate movements of players
+translate to the soccer field.
+
+These models provide a scientific perspective for analysing player
+positioning, decision-making, and team dynamics, illuminating the
+complex interactions that occur during a match.
+
+**Pitch control** models [@Spearman] in soccer are an essential tool for
+researchers, coaches, and analysts who aim to understand the game's
+nuances at a granular level.
+
+#### Pitch Control
+
+The Pitch Control (PC) at a given location represents the probability of
+a player or team gaining control of the ball if it moves directly to
+that location. PC models simulate the dynamics of the ball and the
+players to evaluate which player would control the ball if it moves to
+any location on the pitch at any moment. The model captures not only the
+players' current positionbut also their movement. When players are
+running at high speeds, they are more likely to control the space they
+are moving into rather than the space they currently occupy.
+
+To construct this model, we must calculate the following for a given
+location on the pitch:
+
+-   How long it would take for the ball to reach to the position of
+    interest (from its starting position).
+
+-   How long would it take for each player to get to that position.
+
+-   What is the total *probability* that each team will control the ball
+    *after* both the players and the ball have arrived at the desired
+    position?
+
+The ball is set to move at a constant speed of $v_b = 54$ $km/h$.
+Therefore, the time taken to arrive at the location of interest can be
+easily calculated as $t_{b,arr} = \Delta x_b/v_b$, where $\Delta x_b$ is
+the distance between the initial and final positions of the ball.
+
+When considering how long it will take the players to reach the target
+position, given their initial position and speed, players are assumed to
+only have a maximum speed of $v_{max,p} = 18$ $km/h$. This upper limit
+should not be misunderstood as the maximum speed at which players can
+move, but rather as an estimate of the maximum speed at which they are
+likely to move when trying to control the ball.
+
+To compute the player's expected arrival time,
+$\tau_{exp}(\vec{r} ; t_r)$, we use a simple approximation consisting of
+a two-step process:
+
+-   There is an initial *reaction time* of $t_{r} = 0.7$ seconds. This
+    is approximately the time it takes a player moving at maximum speed
+    to come to a complete stop. During this reaction time, we assume
+    that players continue to move along their current trajectory without
+    changing speed or direction (reaching a position $\vec{r}_{react}$).
+
+-   After this time, we assume that the player runs directly towards the
+    ball at his maximum speed of $v_{max,p}$.
+
+$$\tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
+    \label{exp_arr_time}$$
+
+Once we computed the time it takes for the ball and the players to get
+to the target location, we need to look at how long it will take each
+player to control the ball. To do so, we will assume that controlling
+the ball is a stochastic process that follows an exponential
+distribution with a fixed rate $\lambda$, with units of $1/s$. Thus, for
+any differential time $\Delta t$ that a player is near the ball, he has
+a probability of $\lambda \cdot \Delta t$ of controlling the ball.
+
+<figure id="fig:my_label">
+<img src="Plantilla_TFM_ingles_2019/imagenes/exp_poster.png"
+style="width:50.0%" />
+<figcaption>Cumulative distribution function of the time to control the
+ball. The parameters choice is based on <span class="citation"
+data-cites="Spearman"></span> </figcaption>
+</figure>
+
+So far, the model assumes that we know exactly when each player will
+arrive at the target location. However, we introduce some uncertainty,
+labelled $\sigma$, in the arrival time of the players. The reason for
+including such temporal variability in our model is to account for some
+effects that have not been explicitly modelled, such as player effort.
+Thus, the probability of a player intercepting the ball at time T is
+given by the cumulative distribution function of the sigmoid
+distribution:
+
+$$F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
+    \label{sigmoid}$$
+
+<figure id="fig:my_label">
+<img src="Plantilla_TFM_ingles_2019/imagenes/sigmoid_poster.png"
+style="width:50.0%" />
+<figcaption>Cumulative distribution function of the probability to
+intercept the ball at a certain time T <a href="#sigmoid"
+data-reference-type="ref" data-reference="sigmoid">[sigmoid]</a>. <span
+class="citation" data-cites="Spearman"></span>.</figcaption>
+</figure>
+
+Finally, the differential equation used to compute the control
+probability for each player at a given location $r$, at time t is
+[@Spearman]:
+$$\frac{d P P C F_j}{d t}\left(T, \vec{r} , \sigma, \lambda_j, t_r\right)=\left(1-\sum_k P P C F_k\left(t, \vec{r} , \sigma, \lambda_k\right)\right) F_{int,j}(t, \vec{r}  , \sigma, t_r) \lambda_j
+\label{PC_eq}$$ where $PPCF_j$ is the Potential Pitch Control Field of
+player $j$. $F_{int,j}(t, \vec{r}, T ; \sigma, t_r)$ is the probability
+that player $j$ can reach the target location $r$ in a given time $t$,
+and $\lambda_j$ is the control rate of such a player. We assign the
+goalkeepers to have a higher control rate, $\lambda_{GK} = 12.9$
+$s^{-1}$, to ensure that they are likely to claim the ball if it is near
+them and also to account for the ability of grabbing the ball with their
+hands. Importantly, note that
+$\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)$ accounts
+for the sum of the Potential Pitch Control Field of the rest of the $k$
+players on the pitch at time $t$.
+
+By integrating Eq. [\[PC_eq\]](#PC_eq){reference-type="ref"
+reference="PC_eq"} over $t \in \left[ t_{ball},t_{ball} + 10 \right]$s
+and taking $P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0$ at
+the beginning of the integration, the probability of control per player
+is obtained. This probability is then extracted along all the pitch,
+obtaining a pitch control surface, which can be plot and interpreted by
+scientists, technical staff or players.
+
+# Offside Control
+
+This study introduces the Offside Control (OC) parameter, which is
+derived from a modification of the Potential Pitch Control Field to
+analyse the pitch control generated by teams/players beyond the offside
+line. The offside line is identified as the location of the
+second-to-last defender, and the attacking players in both valid and
+offside positions are detected at every frame. The OC is calculated as
+the pitch control generated by the attacking team/player after the
+offside line. Additionally, if a player is in an offside position, their
+contribution is quantified as Ineffective Offside Control (IOC).
+Conversely, when a player is before the offside line and generates pitch
+control after it, it is referred to as Effective Offside Control (EOC).
+
+Fig. [3.1](#f3.1){reference-type="ref" reference="f3.1"} illustrates the
+concept of effective and ineffective Offside Control. The players of
+both teams are represented in cyan (attacking from left to right) and
+red (attacking from right to left), corresponding to the home and away
+team, respectively. The regions of the pitch controlled by the home team
+are indicated in blue, while the red regions are controlled by the away
+team. The offside position is indicated by the vertical dashed line. The
+wide grey line surrounds the areas controlled by the attacking team at
+the back of the offside line. Player $11$, is located behind the offside
+line, which is an invalid position and generates an offside infraction.
+In contrast, player $18$ is in a correct position, and the offside
+control generated behind the offside line is classified as effective
+(EOC).
+
+In the study, we computed the Offside Control (both effective and
+ineffective) at a rate of 2 frames per second for each of the 100
+matches analyzed, resulting in a total of 1,251,934 frames analysed.
+Doing so, we managed to characterize the Offside Control of 442 players
+in total. To efficiently discretize the space, the computations of the
+Offside Control were confined to the attacking half of the pitch of the
+team in possession of the ball. This method considerably decreased the
+model's computation time while maintaining a high spatial resolution of
+50 by 32 divisions of the attacking half of the pitch.
+
+<figure id="f3.1">
+<img src="Plantilla_TFM_ingles_2019/imagenes/eff_inef_OC.png"
+style="width:50.0%" />
+<figcaption>Example of effective (EOC) and ineffective (IOC) Offside
+Control (areas surrounded by a wide grey line). The offside line is the
+vertical dashed line. Note that player <span
+class="math inline">11</span> is offside (generating IOC), while player
+<span class="math inline">18</span> is not (creating EOC). </figcaption>
+</figure>
+
+To obtain the OC generated by the team, simply sum the individual
+contributions of the players during the match. Figure 3.2 shows two
+examples of the different spatial distribution of the EOC in two
+different matches of the same team (Team 1). In MATCH A, we can see how
+the exerted EOC by Team 1 is deep and close to the opponent's area (Team
+2), whereas in the second match, MATCH B, the EOC is longitudinal across
+the side lanes. The bar chart on the right-hand side of each plot
+displays the average EOC generated by each team per unit of effective
+time, considering only instances where the ball was in play. In both
+cases, Team 1 created more pressure after the offside lane than their
+opponents.
+
+<figure id="f3.2">
+<img src="Plantilla_TFM_ingles_2019/imagenes/Games_OC.png"
+style="width:50.0%" />
+<figcaption>Cumulative Effective Offside Control distribution over the
+course of two matches. The same team (Team 1) (left) generates offside
+control in two different ways at two different matches (A,B). Bars on
+right-hand side show the average effective offside control generated by
+each team per unit of effective time. <span>ºbf (cambiar numeros por
+letras y viceversa, segun texto principal)</span></figcaption>
+</figure>
+
+The correlation between the average OC per unit of effective time and
+the final classification following the tenth match of the season is
+shown in Fig. [3.3](#f3.3){reference-type="ref" reference="f3.3"}. The
+scatter plot shows both the generated and received average OC per unit
+of effective time, with each label and point size representing the
+team's classification after the tenth match of the season. Teams above
+the diagonal black dashed line have generated more OC than their
+opponents.
+
+<figure id="f3.3">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/Mean_rival_OC_vs_team_norm_efftime.png"
+style="width:60.0%" />
+<figcaption>Average generated Offside Control vs the received one. The
+values correspond to the average accumulated OC per effective unit of
+time. The labels and the size of each point correspond to their final
+classification after the tenth match of the season. Teams above the dark
+dashed line have accumulated more offside control than the one generated
+by their rivals. The fitted equation is <span
+class="math inline"><em>y</em> =  − 0.86<em>x</em> + 285.42</span>, with
+an <span class="math inline"><em>R</em><sup>2</sup> = 0.48</span> and
+<span
+class="math inline"><em>R</em><em>M</em><em>S</em><em>E</em> = 14.96</span></figcaption>
+</figure>
+
+The distribution of pressure among teams in the league is heterogeneous,
+with some higher-ranking teams exerting more pressure than their
+opponents. There are some exceptions, with lower-ranking teams also
+exerting more pressure than their opponents. However, it is clear that
+OC alone cannot fully explain team rankings. A more comprehensive study
+is needed to include additional variables that could better explain the
+rankings.
+
+Fig. [3.4](#f3.4){reference-type="ref" reference="f3.4"} illustrates the
+progression of Cumulative Offside Control during a match. The cumulative
+sum is calculated using a centered moving window comprising 600 frames.
+The blue line represents the total offside control of the home team,
+including both effective and ineffective contributions, per unit of
+effective time.
+
+The cumulative rate of the OC decreases towards the latter half of the
+game, resulting in the home team losing pressure on the opponent and
+conceding a couple of goals.
+
+<figure id="f3.4">
+<img
+src="Plantilla_TFM_ingles_2019/imagenes/cumulative_OC_evolution.png"
+style="width:50.0%" />
+<figcaption>Cumulative Offside Control evolution over the course of a
+match. Cumulative evolution of offside control over the course of a
+match. The cumulative sum has been taken using a centered moving window
+of 600 frames. the total offside control of the home team is represented
+in blue (including both effective/ineffective contributions) per unit of
+effective time.</figcaption>
+</figure>
+
+By examining the spatial distribution of the total OC generated across
+all matches played and studying the forwards' positions relative to the
+offside line, we find that OC is contingent on the forwards' position
+relative to the offside line, thus proving useful in characterising
+different forward playstyles. Figure [3.5](#f3.5){reference-type="ref"
+reference="f3.5"} shows that Forward A spends more time preceding the
+offside line (negative values) than Forward B. The EOC is normalised by
+the time played and encompasses a minimum of 6 matches.
+
+<figure id="f3.5">
+<img src="Plantilla_TFM_ingles_2019/imagenes/forwards_OC.png"
+style="width:50.0%" />
+<figcaption>Effective Offside Control of two different forwards A/B. On
+the left, positions of the pitch where two different forward players A/B
+generate Effective Offside Control (EOC). On the right, a probability
+distribution function of the distance to the offside line for the two
+different forwards. EOC is normalized by the time played, containing at
+least 6 matches. Note how the spatial distribution of the EOC depends on
+their position with respect to the offside line. We can see of forward A
+spends more time before the offside line (negative values) than forward
+B.</figcaption>
+</figure>
+
+# Conclusion
+
+Data-driven approaches for analysing football performance using event
+and tracking data have gained popularity in the last decade. In this
+project, we previously discussed how metrics such as Expected Goals
+(xG), derived from events datasets, have impacted our understanding of
+the game, becoming an essential tool for evaluating team performance.
+
+However, tracking datasets allow us to develop advanced physical and
+tactical metrics that capture the aspects of player and team
+performance. In this context, Pitch Control arises as sophisticated
+approach to quantifying and analyzing the intricate dynamics of soccer
+from a scientific perspective. Pitch control models aim to provide a
+quantitative framework for assessing player movements, spatial control,
+and decision-making on the field. They utilize positional data of
+players and the ball to determine the likelihood of a player gaining
+control. At any given moment, the position of the ball can be determined
+by taking into account variables such as player speed, direction, and
+relative positioning to their opponents and teammates. This modelling
+approach provides tactical insights and spatial relationships between
+players, the ball, and the field. By studying how players' movements
+affect pitch control, teams can optimize their formations, pressing
+patterns, and passing strategies.
+
+From these models, metrics such as the one presented in this project,
+Offside Control, quantify a player's pitch control contributions locally
+(in this case, after the offside line). This makes it possible to
+identify strengths and weaknesses in team pressure, track improvements
+over time, and make data-driven decisions regarding player selection and
+development. Clubs and talent scouts can use these metrics derived from
+Pitch Control models to evaluate potential signings. In the case of
+Offside Control, these models can aid in identifying talented players by
+quantifying their ability to control space and make effective decisions.
+
+Currently, tracking dataset approaches are not measured in real-time,
+unlike events dataset. The development of new technologies for football
+analytics, such as the recently announced TRACAB Optical system, shows
+promise for research in this area [@TRACAB]. The system uses advanced AI
+to provide live in-game tracking data and unprecedented levels of
+precision to identify and track players' body parts. This technology can
+power new categories of performance analysis and skeletal modeling for
+exciting new applications. As the industry evolves, so will the
+sophistication of these models, offering a deeper understanding of the
+game and enhancing its scientific appeal.
+
+[^1]: Opta uses a combination of human annotation, computer vision, and
+    AI modelling to offer real-time data at various levels of detail
+    based on customer requirements. In our situation, the data feed
+    updates itself when an event such as a goal, foul or pass occurs;
+    otherwise, it updates every 90 seconds. [@opta]
+
+[^2]: For additional information regarding this type of analysis, we
+    have included two reports outlining Eibar's performance during the
+    2022/2023 season in the annex. In these reports, an array of metrics
+    is presented to appraise team performance relative to other teams in
+    the league, as well as each individual player's performance.
+
+<!--chapter:end:plantilla_tfm_ingles_2019.rmd-->
+

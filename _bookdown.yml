@@ -1,4 +1,4 @@
-book_filename: "bookdownproj"
+book_filename: "master_thesis"
 output_dir: docs
 delete_merged_file: true
 edit: https://github.com/alvaronovillo/master_thesis/edit/main/%s

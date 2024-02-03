@@ -1,303 +1,214 @@
-\usepackage[hyperpageref]{backref}
-\usepackage[nottoc]{tocbibind}
-\usepackage{bibentry,bookmark,hyperxmp}
-\usepackage{etoolbox,xstring}
-\usepackage{algorithm,algpseudocode}
-\usepackage{multirow,tabu,rotating}
-\usepackage{parcolumns}
-\usepackage{pdfpages}
-%\usepackage{makeidx}
-%\makeindex
+%----------
+%   IMPORTANTE
+%----------
 
-\DeclareGraphicsExtensions{.pdf}
+% Si nunca has utilizado LaTeX es conveniente que aprendas una serie de conceptos básicos antes de utilizar esta plantilla. Te aconsejamos que leas previamente algún tutorial (puedes encontar muchos en Internet).
 
-\hypersetup{
-  pdfauthor         = {Iñaki Úcar Marqués},
-  pdfcopyright      = {© The author. Some rights reserved. This document is under terms of Creative Commons license Attribution - Non Commercial - Non Derivatives.},
-  pdflicenseurl     = {http://creativecommons.org/licenses/by-nc-nd/3.0/es/},
-  pdfkeywords       = {Energy Efficiency, Wireless Networks, User Device},
-  pdfsubject        = {Tesis doctoral. Universidad Carlos III de Madrid. Departamento de Ingeniería Telemática.},
-  pdfencoding       = auto,
-  bookmarksnumbered = true,
-  bookmarksdepth    = 3,
-  pdfborder         = {0 0 0},
-  colorlinks        = true,
-  citecolor         = DarkGreen,
-  linkcolor         = DarkBlue,
-  urlcolor          = DarkGreen
+% Esta plantilla está basada en las recomendaciones de la guía "Trabajo fin de Máster: Escribir el TFM", que encontrarás en http://uc3m.libguides.com/TFM/escribir
+% contiene recomendaciones de la Biblioteca basadas principalmente en estilos APA e IEEE, pero debes seguir siempre las orientaciones de tu Tutor de TFM y la normativa de TFM para tu titulación.
+
+% Encontrarás un ejemplo de TFM realizado con esta misma plantilla en la carpeta "_ejemplo_TFM_2019". Consúltalo porque contiene ejemplos útiles para incorporar tablas, figuras, listados de código, bibliografía, etc.
+
+
+%----------
+%	CONFIGURACIÓN DEL DOCUMENTO
+%----------
+
+% Definimos las características del documento y añadimos una serie de paquetes (\usepackage{package}) que agregan funcionalidades a LaTeX.
+
+\documentclass[12pt]{report} %fuente a 12pt
+
+% MÁRGENES: 2,5 cm sup. e inf.; 3 cm izdo. y dcho.
+\usepackage[
+a4paper,
+vmargin=2.5cm,
+hmargin=3cm
+]{geometry}
+
+% INTERLINEADO: Estrecho (6 ptos./interlineado 1,15) o Moderado (6 ptos./interlineado 1,5)
+\renewcommand{\baselinestretch}{1.15}
+\parskip=6pt
+
+% DEFINICIÓN DE COLORES para portada y listados de código
+\usepackage[table]{xcolor}
+\definecolor{azulUC3M}{RGB}{0,0,102}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+% Soporte para GENERAR PDF/A --es importante de cara a su inclusión en e-Archivo porque es el formato óptimo de preservación y a la generación de metadatos, tal y como se describe en http://uc3m.libguides.com/ld.php?content_id=31389625. En la carpeta incluímos el archivo plantilla_tfg_2017.xmpdata en el que puedes incluir los metadatos que se incorporarán al archivo PDF cuando lo compiles. Ese archivo debe llamarse igual que tu archivo .tex. Puedes ver un ejemplo en esta misma carpeta.
+\usepackage[a-1b]{pdfx}
+
+% ENLACES
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+	linkcolor=black, % enlaces a partes del documento (p.e. índice) en color negro
+	urlcolor=blue} % enlaces a recursos fuera del documento en azul
+
+% EXPRESIONES MATEMATICAS
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage{txfonts} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel} 
+\usepackage[babel, english=american]{csquotes}
+\AtBeginEnvironment{quote}{\small}
+
+% diseño de PIE DE PÁGINA
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\thepage}
+\fancypagestyle{plain}{\pagestyle{fancy}}
+
+% DISEÑO DE LOS TÍTULOS de las partes del trabajo (capítulos y epígrafes o subcapítulos)
+\usepackage{titlesec}
+\usepackage{titletoc}
+\titleformat{\chapter}[block]
+{\large\bfseries\filcenter}
+{\thechapter.}
+{5pt}
+{\MakeUppercase}
+{}
+\titlespacing{\chapter}{0pt}{0pt}{*3}
+\titlecontents{chapter}
+[0pt]                                               
+{}
+{\contentsmargin{0pt}\thecontentslabel.\enspace\uppercase}
+{\contentsmargin{0pt}\uppercase}                        
+{\titlerule*[.7pc]{.}\contentspage}                 
+
+\titleformat{\section}
+{\bfseries}
+{\thesection.}
+{5pt}
+{}
+\titlecontents{section}
+[5pt]                                               
+{}
+{\contentsmargin{0pt}\thecontentslabel.\enspace}
+{\contentsmargin{0pt}}
+{\titlerule*[.7pc]{.}\contentspage}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{\thesubsection.}
+{5pt}
+{}
+\titlecontents{subsection}
+[10pt]                                               
+{}
+{\contentsmargin{0pt}                          
+	\thecontentslabel.\enspace}
+{\contentsmargin{0pt}}                        
+{\titlerule*[.7pc]{.}\contentspage}  
+
+
+% DISEÑO DE TABLAS. Puedes elegir entre el estilo para ingeniería o para ciencias sociales y humanidades. Por defecto, está activado el estilo de ingeniería. Si deseas utilizar el otro, comenta las líneas del diseño de ingeniería y descomenta las del diseño de ciencias sociales y humanidades
+\usepackage{multirow} %permite combinar celdas 
+\usepackage{caption} %para personalizar el título de tablas y figuras
+\usepackage{floatrow} %utilizamos este paquete y sus macros \ttabbox y \ffigbox para alinear los nombres de tablas y figuras de acuerdo con el estilo definido. Para su uso ver archivo de ejemplo 
+\usepackage{array} % con este paquete podemos definir en la siguiente línea un nuevo tipo de columna para tablas: ancho personalizado y contenido centrado
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{\verb|#|1}}
+\DeclareCaptionFormat{upper}{\verb|#|1\verb|#|2\uppercase{\verb|#|3}\par}
+
+% Diseño de tabla para ingeniería
+\captionsetup[table]{
+	format=upper,
+	justification=centering,
+	labelsep=period,
+	width=.75\linewidth,
+	labelfont=small,
+	font=small,
 }
 
-\renewcommand{\bibname}{References}
-\def\HighlightName#1{\IfSubStr{#1}{Ucar}{\textbf{#1}}{#1}}
-\renewcommand*{\backref}[1]{}
-\renewcommand*{\backrefalt}[4]{\marginnote{\ifcase #1 No citations\or p. #2\else pp. #2\fi}}
-\renewcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{\smallcaps{DOI}: #1}}
-\publisher{Universidad Carlos III de Madrid}
-\definecolor{uc3m}{cmyk}{0.9827, 1, 0.2624, 0.1077}
+%Diseño de tabla para ciencias sociales y humanidades
+%\captionsetup[table]{
+%	justification=raggedright,
+%	labelsep=period,
+%	labelfont=small,
+%	singlelinecheck=false,
+%	font={small,bf}
+%}
 
-% \RequirePackage[letterpaper,left=1in,top=1in,headsep=2\baselineskip,textwidth=26pc,marginparsep=2pc,marginparwidth=12pc,textheight=44\baselineskip,headheight=\baselineskip]{geometry}
-% therefore, margins for letter paper are: 1 in left, 1-0.142 in right
-\newcommand{\increaseinnermargin}{
-  \setlength{\evensidemargin}{-0.242in} %twoside
-  %\setlength{\evensidemargin}{\evensidemargin-0.1in} %symmetric
-  \setlength{\oddsidemargin}{0.1in}
-}
-\increaseinnermargin
 
-\newcommand{\restorefullwidth}{
-  \newgeometry{
-    left = 1in, top = 1in, headsep = 2\baselineskip,
-    textwidth = 40pc, marginparsep = 0pc, marginparwidth = 0pc,
-    textheight = 44\baselineskip, headheight = \baselineskip
-  }
-  \fancyhfoffset[RO]{0pt}
-  \increaseinnermargin
+% DISEÑO DE FIGURAS. Puedes elegir entre el estilo para ingeniería o para ciencias sociales y humanidades. Por defecto, está activado el estilo de ingeniería. Si deseas utilizar el otro, comenta las líneas del diseño de ingeniería y descomenta las del diseño de ciencias sociales y humanidades
+\usepackage{graphicx}
+\graphicspath{{imagenes/}} %ruta a la carpeta de imágenes
+
+% Diseño de figuras para ingeniería
+\captionsetup[figure]{
+	format=hang,
+	name=Fig.,
+	singlelinecheck=off,
+	labelsep=period,
+	labelfont=small,
+	font=small		
 }
 
-\newcommand{\restorewidth}{
-  \restoregeometry
-  \fancyhfoffset[RO]{{\marginparsep+\marginparwidth}}
+% Diseño de figuras para ciencias sociales y humanidades
+%\captionsetup[figure]{
+%	format=hang,
+%	name=Figure,
+%	singlelinecheck=off,
+%	labelsep=period,
+%	labelfont=small,
+%	font=small		
+%}
+
+
+% NOTAS A PIE DE PÁGINA
+\usepackage{chngcntr} %para numeración contínua de las notas al pie
+\counterwithout{footnote}{chapter}
+
+% LISTADOS DE CÓDIGO
+% soporte y estilo para listados de código. Más información en https://es.wikibooks.org/wiki/Manual_de_LaTeX/Listados_de_código/Listados_con_listings
+\usepackage{listings}
+
+% definimos un estilo de listings
+\lstdefinestyle{estilo}{ frame=Ltb,
+	framerule=0pt,
+	aboveskip=0.5cm,
+	framextopmargin=3pt,
+	framexbottommargin=3pt,
+	framexleftmargin=0.4cm,
+	framesep=0pt,
+	rulesep=.4pt,
+	backgroundcolor=\color{gray97},
+	rulesepcolor=\color{black},
+	%
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\bfseries,
+	stringstyle=\ttfamily,
+	showstringspaces = false,
+	commentstyle=\color{gray45},     
+	%
+	numbers=left,
+	numbersep=15pt,
+	numberstyle=\tiny,
+	numberfirstline = false,
+	breaklines=true,
+	xleftmargin=\parindent
 }
 
-% patch part toc line; hackish, but it works: don't touch it
-\makeatletter
-\let\oldcontentsline\contentsline
-\def\contentsline#1#2{%
-  \expandafter\ifx\csname l@#1\endcsname\l@part
-    \expandafter\@firstoftwo \else \expandafter\@secondoftwo \fi
-  {\oldcontentsline{#1}{\allcaps{Part\quad#2}}}
-  {\oldcontentsline{#1}{#2}}
-}
-\makeatother
+\captionsetup[lstlisting]{font=small, labelsep=period}
+% fijamos el estilo a utilizar 
+\lstset{style=estilo}
+\renewcommand{\lstlistingname}{\uppercase{Código}}
 
-\newcommand{\partseparator}{
-  \noindent\leavevmode\leaders\hrule height 0.8ex depth \dimexpr0.4pt-0.8ex\hfill\kern0pt
-  \newline~\vspace{-0.5\baselineskip}\newline}
 
-\titlecontents{part}%
-  [0pt]% distance from left margin
-  {}{}{}{} % leave blank; the patch above does the rest
-  [\vspace*{0.5\baselineskip}]% after
+%BIBLIOGRAFÍA - PUEDES ELEGIR ENTRE ESTILO IEEE O APA. POR DEFECTO ESTÁ CONFIGURADO IEEE. SI DESEAS USAR APA, COMENTA LAS LÍNEA DE IEEE Y DESCOMENTA LAS DE APA. Si haces cambios en la configuración de la bibliografía y no obtienes los resultados esperados, es recomendable limpiar los archivos auxiliares y volver a compilar en este orden: COMPILAR-BIBLIOGRAFIA-COMPILAR
+% Tienes más información sobre cómo generar bibliografía en http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations , https://es.sharelatex.com/learn/Bibliography_management_in_LaTeX y en http://www.ctan.org/tex-archive/macros/latex/exptl/biblatex-contrib
+% También te recomendamos consultar la guía temática de la Biblioteca sobre citas bibliográficas: http://uc3m.libguides.com/guias_tematicas/citas_bibliograficas/inicio
 
-\titlecontents{chapter}%
-  [4em]% distance from left margin
-  {}% above (global formatting of entry)
-  {\contentslabel{2em}\textit}% before w/ label (label = ``Chapter 1'')
-  {\hspace{0em}\textit}% before w/o label
-  {\qquad\thecontentspage}% filler and page (leaders and page num)
-  [\vspace*{0.5\baselineskip}]% after
+% CONFIGURACIÓN PARA LA BIBLIOGRAFÍA IEEE
+\usepackage[backend=biber, style=ieee, isbn=false,sortcites, maxbibnames=5, minbibnames=1]{biblatex} % Configuración para el estilo de citas de IEEE, recomendado para el área de ingeniería. "maxbibnames" indica que a partir de 5 autores trunque la lista el primero (minbibnames) y añada "et al." tal y como se utiliza en el estilo IEEE.
 
-\titlecontents{section}%
-  [6em]% distance from left margin
-  {}% above (global formatting of entry)
-  {\contentslabel{2em}\textit}% before w/ label (label = ``Chapter 1'')
-  {\hspace{0em}\textit}% before w/o label
-  {\qquad\thecontentspage}% filler and page (leaders and page num)
-  [\vspace*{0.5\baselineskip}]% after
+%CONFIGURACIÓN PARA LA BIBLIOGRAFÍA APA
+%\usepackage[style=apa, backend=biber, natbib=true, hyperref=true, uniquelist=false, sortcites]{biblatex}
+%\DeclareLanguageMapping{spanish}{spanish-apa}
 
-\titleformat{\part}%
-  [block]% shape
-  {\begin{fullwidth}}% format applied to label+text
-  {\itshape\Huge\hfill \partname~\thepart}% label
-  {0pt}% horizontal separation between label and title body
-  {\Huge\rmfamily\itshape\quad}% before the title body
-  [\end{fullwidth}]% after the title body
-
- \titleformat{\chapter}
-  [block]% shape
-  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
-  {\itshape\huge\thechapter}% label
-  {1em}% horizontal separation between label and title body
-  {\huge\rmfamily\itshape}% before the title body
-  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
-
-\makeatletter
-\renewcommand{\maketitlepage}{%
-  \includepdf{img/cover-front.pdf}
-  \frontmatter\pagenumbering{roman}
-  \begin{fullwidth}\flushright
-  \thispagestyle{empty}\setlength{\parindent}{0pt}
-  {\includegraphics[width=\textwidth]{img/uc3m.eps}\par}
-  
-  \begingroup\color{uc3m}
-    \vspace{2in}{\fontsize{14}{20}\selectfont\textsf{\smallcaps{Tesis doctoral}}\par}
-    \vspace{0.2in}{\fontsize{22}{34}\selectfont\@title\par}
-  \endgroup
-  
-  \vspace{0.2in}{\fontsize{14}{26}\selectfont\textsf{\smallcaps{Autor: \@author}}\par}
-  {\fontsize{14}{20}\selectfont\textsf{\smallcaps{Director: Dr. Arturo Azcorra Saloña}}\par}
-  
-  \vfill{\fontsize{14}{20}\selectfont
-    \textit{Doctorado en Ingeniería Telemática $\cdot$ Leganés, mayo de 2018}
-  \par}
-  \end{fullwidth}
-  
-  \newpage
-  
-  % copyright page
-  \begingroup
-  ~\vfill
-  \thispagestyle{empty}\setlength{\parindent}{0pt}
-  \setlength{\parskip}{\baselineskip}
-  Copyright \copyright\ \the\year\ \thanklessauthor
-  
-  \par\smallcaps{Published by \thanklesspublisher}
-  
-  \begin{fullwidth}
-    \par Licensed under the Creative Commons License version 3.0 under the terms of Attribution, Non-Commercial and No-Derivatives (the ``License''); you may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc-nd/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \smallcaps{``AS IS'' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\index{license}
-  \end{fullwidth}
-  
-  \par\textit{First printing, May 2018}
-  \endgroup
-  
-  \newpage
-  
-  \begin{fullwidth}\flushright
-  \thispagestyle{empty}\setlength{\parindent}{0pt}
-  {\includegraphics[width=\textwidth]{img/uc3m.eps}\par}
-  
-  \begingroup\color{uc3m}
-    \vspace{2in}{\fontsize{14}{20}\selectfont\textsf{\smallcaps{Tesis doctoral}}\par}
-    \vspace{0.2in}{\fontsize{14}{20}\selectfont\@title\par}
-  \endgroup
-  
-  \vspace{0.2in}{Autor: \@author\par}
-  {Director: Dr. Arturo Azcorra Saloña\par}
-  
-  \vfill\extrarowsep=5mm\begin{tabu}{X[3]X[1]}
-    Tribunal Calificador: & Firma: \\
-    \toprule
-    Presidente: & \\
-    Vocal: & \\
-    Secretario: & \\
-    \bottomrule
-    Calificación:
-  \end{tabu}
-  
-  \vfill{\textit{Leganés, a \qquad de \qquad\qquad de 2018}\par}
-  \end{fullwidth}
-  
-  \cleardoublepage
-  
-  \begingroup
-  ~\vfill
-  \thispagestyle{empty}
-  \begin{fullwidth}
-  \begin{doublespace}
-  \begin{flushright}
-    {\fontsize{14}{18}\selectfont
-    ``Good scientific writing is not a matter of life and death; \\\textbf{it is much more serious than that}.''}
-    
-    \bigskip---Robert A. Day, in \emph{How to Write and Publish a Scientific Paper}.
-  \end{flushright}
-  \end{doublespace}
-  \end{fullwidth}
-  \vfill\vfill
-  \endgroup
-}
-\makeatother
-
-% abstract(s)
-\newenvironment{abstract}{
-  \restorefullwidth
-  \let\cleardoublepage\clearpage
-  \begin{parcolumns}[colwidths={1=.441\linewidth},rulebetween]{2}
-  \chapter*{Abstract\hskip 0pt plus .466 fill Resumen\hfill}
-}{\end{parcolumns}}
-
-% list of figures and tables
-\newcommand{\listoffiguresandtables}{
-  \begingroup
-  \makeatletter
-  %\listoffigures
-  \chapter*{List of Figures and Tables}
-  \addcontentsline{toc}{chapter}{List of Figures and Tables}
-  \section*{List of Figures}
-  \@starttoc{lof}
-  \let\clearpage\relax
-  %\listoftables
-  \section*{List of Tables}
-  \@starttoc{lot}
-  \makeatother
-  \endgroup
-}
-
-% equation numbers as marginnotes
-\makeatletter
-\let\orig@maketag@@@\maketag@@@
-\renewcommand{\eqref}[1]{\textup{\let\maketag@@@\orig@maketag@@@\tagform@{\ref{#1}}}}
-\def\maketag@@@#1{\hbox{\rlap{\kern\marginparsep\m@th\normalfont#1}\kern1sp}}
-\makeatother
-
-% algorithm
-\makeatletter
-\newcommand{\StatexIndent}[1][3]{%
-  \setlength\@tempdima{\algorithmicindent}%
-  \Statex\hskip\dimexpr#1\@tempdima\relax}
-
-\newcommand*{\algrule}[1][\algorithmicindent]{\makebox[#1][l]{\hspace*{.5em}\vrule height .75\baselineskip depth .25\baselineskip}}%
-
-\newcount\ALG@printindent@tempcnta
-\def\ALG@printindent{%
-  \ifnum \theALG@nested>0% is there anything to print
-    \ifx\ALG@text\ALG@x@notext% is this an end group without any text?
-      % do nothing
-      \addvspace{-3pt}% FUDGE for cases where no text is shown, to make the rules line up
-    \else
-      \unskip
-      % draw a rule for each indent level
-      \ALG@printindent@tempcnta=1
-      \loop
-          \algrule[\csname ALG@ind@\the\ALG@printindent@tempcnta\endcsname]%
-          \advance \ALG@printindent@tempcnta 1
-      \ifnum \ALG@printindent@tempcnta<\numexpr\theALG@nested+1\relax% can't do <=, so add one to RHS and use < instead
-      \repeat
-    \fi
-  \fi
-}%
-% the following line injects our new indent handling code in place of the default spacing
-\patchcmd{\ALG@doentity}{\noindent\hskip\ALG@tlm}{\ALG@printindent}{}{\errmessage{failed to patch}}
-\makeatother
-
-\newcommand{\PSalgorithm}[3]{
-\begin{figure}[#1]
-\begin{algorithm}[H]
- \setstretch{1}
- \caption{#3}
- \label{#2}
- \begin{algorithmic}[1]
- \State ... \Comment {Initialisation}
- \State \textbf{global} $C \gets$ \textbf{true} \Comment {Contention flag}
- \Loop \Comment {Main loop}
-  \State ...
-  \While {bytes remaining} \Comment {Receiving loop}
-    \State \Call {Read}{}
-    \If {$R_A = $ BSSID OR ($T_A = $ BSSID AND
-    \StatexIndent[2] \quad $R_A$ is other unicast MAC) }
-      \State \Call {Set\_Sleep}{$\Delta t_\mathrm{DATA}, \Delta t_\mathrm{NAV}$}
-    \EndIf
-  \EndWhile
-  \State \Call {Check\_FCS}{} \Comment {Frame received}
-  \If {is Beacon AND $\Delta t_\mathrm{NAV}>0$} \Comment {CFP starts}
-    \State $C \gets$ \textbf{false}
-  \ElsIf {is CF\_End} \Comment {CFP ends}
-    \State $C \gets$ \textbf{true}
-  \EndIf
-  \State ...
- \EndLoop
- \Procedure {Set\_Sleep}{$\Delta t_\mathrm{DATA}, \Delta t_\mathrm{NAV}$}
-  \State $\Delta t_\mathrm{sleep} \gets \Delta t_\mathrm{DATA} + \Delta t_\mathrm{SIFS}$
-  \If {$C$ AND is not CTS AND $\Delta t_\mathrm{NAV} \le 32 767$}
-    \State $\Delta t_\mathrm{sleep} \gets \Delta t_\mathrm{sleep} + \Delta t_\mathrm{NAV}$
-  \EndIf
-  \If {$\Delta t_\mathrm{sleep} \ge \Delta t_\mathrm{sleep,min}$}
-    \State \Call{Sleep}{$\Delta t_\mathrm{sleep}$}
-    \State \Call{Wait}{$\Delta t_\mathrm{DIFS} - \Delta t_\mathrm{SIFS}$}
-    \State \textbf{go to} Main loop
-  \EndIf
-  \State \textbf{go to} Receiving loop
- \EndProcedure
- \end{algorithmic}
-\end{algorithm}
-\end{figure}
-}
+\addbibresource{bibliografia.bib} % llama al archivo bibliografia.bib que utilizamos de ejemplo
