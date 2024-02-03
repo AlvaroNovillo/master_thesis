@@ -3,7 +3,20 @@ title: "Data Analytics in Football: Pitch Control and Beyond"
 author: "Álvaro Novillo Correas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+documentclass: book
+classoption: twoside,nohyper
+bibliography: bibliografia.bib
+biblio-style: abbrvnat
+link-citations: yes
+description: |
+  Master Thesis. Universidad Carlos III de Madrid. 
+abstract: |
+  `r if (knitr::is_latex_output()) '\\colchunk{'`
+  
+  `r tufte::newthought("Mobile user devices'")` TODOTODO
 ---
+\listoffigures
+
 
 # Down the rabbit-hole
 
