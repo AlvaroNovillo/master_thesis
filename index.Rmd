@@ -1,5 +1,5 @@
 --- 
-title: "Data Analytics in Football: Pitch Control and Beyond"
+title: 'Data Analytics in Football: Pitch Control and Beyond'
 author: "Álvaro Novillo Correas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,10 +8,7 @@ classoption: twoside,nohyper
 bibliography: bibliografia.bib
 biblio-style: abbrvnat
 link-citations: yes
-description: |
-  Master Thesis. Universidad Carlos III de Madrid. 
-
-
+description: "Master Thesis. Universidad Carlos III de Madrid. \n"
 ---
 
 

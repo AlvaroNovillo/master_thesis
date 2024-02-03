@@ -4,6 +4,8 @@ bookdown::tufte_book2:
   keep_tex: yes
   dev: "cairo_pdf"
   toc: true
+  includes:
+    in_header: 00-preamble.tex
 
 
 bookdown::gitbook:
