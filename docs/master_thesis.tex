@@ -310,11 +310,8 @@
 
 \listoffigures
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
-
-\hypertarget{data-analytics-in-football}{%
-\chapter{Data Analytics in football}\label{data-analytics-in-football}}
+\hypertarget{introduction.-data-analytics-in-football}{%
+\chapter{Introduction. Data Analytics in football}\label{introduction.-data-analytics-in-football}}
 
 The digital revolution is currently one of the most significant
 challenges of our time, altering numerous aspects of society. Football,
@@ -354,6 +351,44 @@ data analysis techniques to optimize team and player performance. This
 chapter examines the various areas of football where data can be used
 for analysis, alongside the commonly found data types within this
 industry.
+
+\hypertarget{statistical-analysis-in-football}{%
+\chapter{Statistical analysis in football}\label{statistical-analysis-in-football}}
+
+When discussing sports analytics in football, the first metric that
+often springs to mind is the Expected Goals (xG) ratio. This statistical
+indicator is a predictive Machine Learning (ML) model used to assess the
+likelihood of scoring for every shot made in the game. In the context of
+each shot, the xG model computes the scoring probability, leveraging a
+set of event parameters.
+
+Wyscout xG model, for example, encompass the shot's spatial coordinates,
+the assisting player's position, the striking player's use of foot or
+head, the type of assist involved, the occurrence of a dribble by either
+a field player or the goalkeeper immediately preceding the shot, whether
+the shot arises from a set piece, whether it transpires during a
+counterattack or in a transitional phase of play, and the subjective
+assessment of shot danger as determined by a designated tagger. The
+amalgamation of these parameters serves as the foundation for training
+the xG model using historical Wyscout data, culminating in the
+prediction of the likelihood of a given shot resulting in a goal
+\citep{wyscout}.
+
+The probabilities range from 0 to 1. Thus, a shot with an xG value of
+0.1 has a 10\% chance of being scored. Penalties have a fixed xG value of
+0.76.
+
+\begin{marginfigure}[-1cm]
+\includegraphics[width=27.81in]{imagenes/xg_evol} \caption{\label{fig:f2.1} Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.}\label{fig:unnamed-chunk-2}
+\end{marginfigure}
+
+Fig. \protect\hyperlink{f2.1}{2.1} provides a
+visual representation of the cumulative development of expected goals
+(xG) during the Eibar - Malaga match, which took place on January 15th,
+2023 in Spain's second division. Each data point on the graph
+corresponds to a shot made by both teams over the course of the game,
+offering a comprehensive overview of the evolving scoring opportunities
+and outcomes throughout the duration of the game.
 
 \bibliography{bibliografia.bib}
 

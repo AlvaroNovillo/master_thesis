@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  4 FEB 2024 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  4 FEB 2024 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,7 +1206,25 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
 
 ] [5] [6
 
-] (master_thesis.lof)
+] (master_thesis.lof
+Overfull \hbox (3.04865pt too wide) in paragraph at lines 4--4
+ [][] [][][]\T1/txr/m/n/10 Cumulative de-vel-op-ment of ex-pected goals (xG) du
+r-ing the Eibar-Malaga match, held on Jan-uary 15th
+ []
+
+
+Overfull \hbox (1.85864pt too wide) in paragraph at lines 4--4
+ \T1/txr/m/n/10 in Spain's sec-ond di-vi-sion. Each point de-notes a shot made 
+by both teams through-out the game. Ver-ti-
+ []
+
+
+Overfull \hbox (3.9587pt too wide) in paragraph at lines 4--4
+ \T1/txr/m/n/10 cal dashed lines in-di-cate the goal scored, dis-play-ing the p
+layer and the cor-re-spond-ing score at that spe-
+ []
+
+)
 \tf@lof=\write6
 \openout6 = `master_thesis.lof'.
 
@@ -1218,7 +1236,75 @@ Chapter 1.
 
 ]
 Chapter 2.
-(master_thesis.bbl [11] [12
+<imagenes/xg_evol.png, id=105, 2009.5075pt x 1159.33125pt>
+File: imagenes/xg_evol.png Graphic file (type png)
+<use imagenes/xg_evol.png>
+Package pdftex.def Info: imagenes/xg_evol.png  used on input line 382.
+(pdftex.def)             Requested size: 1218.16284pt x 702.78624pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 382.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (1076.16284pt too wide) in paragraph at lines 381--382
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]\T1/txr/m/n/10 Figure 2.1: |[][] Cu-mu-la-tive de-vel-op-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 ment of ex-pected goals (xG) dur-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 the Eibar-Malaga match, held on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 Jan-uary 15th in Spain's sec-ond
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 di-vi-sion. Each point de-notes a shot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 made by both teams through-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 the game. Ver-ti-cal dashed lines
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 in-di-cate the goal scored, dis-play-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 the player and the cor-re-spond-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/txr/m/n/10 score at that spe-cific mo-ment of the
+ []
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+(master_thesis.bbl [11 <./imagenes/xg_evol.png>] [12
 
 ]
 Chapter 3.
@@ -1245,28 +1331,32 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: EDDB8E88432C45A052BC42145746FCFC;210.
+(rerunfilecheck)             Checksum: C97895AD3271B61E4964E1FD86ECC140;256.
  ) 
 Here is how much of TeX's memory you used:
- 24355 strings out of 474592
- 385633 string characters out of 5747215
+ 24385 strings out of 474592
+ 386371 string characters out of 5747215
  1933533 words of memory out of 5000000
- 46001 multiletter control sequences out of 15000+600000
- 623722 words of font info for 130 fonts, out of 8000000 for 9000
+ 46028 multiletter control sequences out of 15000+600000
+ 625377 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  97i,11n,117p,552b,2558s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pf
-b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.p
-fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.
-pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.
-pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
-pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
-pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
-><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
-:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (13 pages, 139342 bytes).
+
+pdfTeX warning (dest): name{f2.1} has been referenced but does not exist, repla
+ced by a fixed one
+
+<C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb>
+<C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb
+><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pf
+b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pf
+b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pf
+b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pf
+b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><
+C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
+Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on master_thesis.pdf (13 pages, 191057 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 1079 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 1084 words of extra memory for PDF output out of 10000 (max. 10000000)
 

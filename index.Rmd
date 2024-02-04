@@ -17,6 +17,3 @@ knitr::include_graphics("imagenes/cover-front.jpg", dpi=NA)
 # Dedication {#dedication .unnumbered}
 
 \listoffigures
-
-
-# Introduction
