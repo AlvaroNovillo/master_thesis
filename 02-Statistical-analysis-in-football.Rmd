@@ -26,11 +26,11 @@ The probabilities range from 0 to 1. Thus, a shot with an xG value of
 
 
 
-```{r, fig.margin=TRUE, fig.pos='-1cm', fig.cap= "\\label{fig:f2.1} Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.",echo = FALSE}
+```{r, out.width='80%', fig.align='center', fig.cap= "\\label{fig:f2.1} Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.",echo = FALSE}
 knitr::include_graphics("imagenes/xg_evol.png")
 ```
 
-Fig. [2.1](#f2.1){reference-type="ref" reference="fig:f2.1"} provides a
+Fig.   provides a
 visual representation of the cumulative development of expected goals
 (xG) during the Eibar - Malaga match, which took place on January 15th,
 2023 in Spain's second division. Each data point on the graph

@@ -4,6 +4,7 @@ author: "Álvaro Novillo Correas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+cover-image: imagenes/cover-front.jpg
 classoption: twoside,nohyper
 bibliography: bibliografia.bib
 biblio-style: abbrvnat
