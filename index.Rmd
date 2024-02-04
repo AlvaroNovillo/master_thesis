@@ -11,14 +11,12 @@ link-citations: yes
 description: "Master Thesis. Universidad Carlos III de Madrid. \n"
 ---
 
+```{r include=knitr::is_html_output(),echo=FALSE}
+knitr::include_graphics("imagenes/cover-front.jpg", dpi=NA)
+```
 # Dedication {#dedication .unnumbered}
 
 \listoffigures
-
-
-```{r include=knitr::is_html_output()}
-knitr::include_graphics("imagenes/cover-front.jpg", dpi=NA)
-```
 
 
 # Introduction

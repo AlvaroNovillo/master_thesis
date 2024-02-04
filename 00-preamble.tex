@@ -5,6 +5,7 @@
   inner=3cm,
   outer=3cm
 }
+\usepackage{pdfpages}
 
 
 \renewcommand{\baselinestretch}{1.15}
@@ -158,3 +159,55 @@
 
 \lstset{style=estilo}
 \renewcommand{\lstlistingname}{\uppercase{Código}}
+
+% Define the color azulUC3M
+\definecolor{azulUC3M}{RGB}{0,0,102}
+
+% Redefine \maketitle
+\makeatletter
+\renewcommand{\maketitle}{%
+	\begin{titlepage}
+		\begin{sffamily}
+			\color{azulUC3M}
+			\begin{center}
+				\includegraphics[width=16cm]{imagenes/Portada_Logo.png}\\[1cm]
+				\begin{Large}
+					Master Degree in...\\			
+					Academic Year (e.g., 2018-2019)\\
+					\vspace{1cm}		
+					\textsl{Master Thesis}\\
+					\bigskip
+				\end{Large}
+				{\Huge Data Analytics in Football: Pitch Control and Beyond}\\
+				\vspace*{0.5cm}
+				\rule{10.5cm}{0.1mm}\\
+				\vspace*{0.9cm}
+				{\LARGE Author's complete name}\\ 
+				\vspace*{1cm}
+				\begin{Large}
+					1st Tutor complete name\\
+					2nd Tutor complete name\\
+					Place and date\\
+				\end{Large}
+			\end{center}
+
+			\vfill
+			\color{black}
+			\begin{footnotesize}
+				\noindent\fbox{
+					\begin{minipage}{\textwidth}
+						\textbf{AVOID PLAGIARISM}\\
+						The University uses the \textbf{Turnitin Feedback Studio} program within the Aula Global for the delivery of student work. This program compares the originality of the work delivered by each student with millions of electronic resources and detects those parts of the text that are copied and pasted. Plagiarizing in a TFM is considered a \textbf{Serious Misconduct}, and may result in permanent expulsion from the University.
+					\end{minipage}	
+				}
+				\vspace*{.5cm}\\	
+				\noindent\includegraphics[width=4.2cm]{imagenes/creativecommons.png}\\
+				\emph{[Include this code in case you want your Master Thesis published in Open Access University Repository]}\\
+				This work is licensed under Creative Commons \textbf{Attribution – Non Commercial – Non Derivatives}
+			\end{footnotesize}
+		\end{sffamily}
+	\end{titlepage}
+}
+\makeatother
+
+

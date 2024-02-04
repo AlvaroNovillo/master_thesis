@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  4 FEB 2024 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  4 FEB 2024 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,9 +623,30 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (616.0pt) is ignored.
 
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\pdfx.sty
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen258
+\ESO@tempdimb=\dimen259
+)
+\AM@pagewidth=\dimen260
+\AM@pageheight=\dimen261
+\AM@fboxrule=\dimen262
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count318
+\AM@pagebox=\box114
+\AM@global@opts=\toks34
+\AM@pagecnt=\count319
+\AM@toc@title=\toks35
+\AM@lof@heading=\toks36
+\c@AM@survey=\count320
+\AM@templatesizebox=\box115
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\pdfx.sty
 Package: pdfx 2019/02/27 v1.6.3 PDF/X and PDF/A support (CVR/HTH/RRM/PS)
-\pdfx@minorversion=\count318
+\pdfx@minorversion=\count321
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/everyshi\everyshi.sty
 Package: everyshi 2020/11/18 v4.00 EveryShipout Package
 ){C:/Users/pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} (C:\Users\pc\Ap
@@ -634,8 +655,8 @@ File: l8u-penc.def 2017/06/23 v0.8 Custom LaTeX file, for UTF8 encoded letters
 and symbols
 LaTeX Info: Composite with undeclared \b in encoding L8U on input line 278.
 )
-\pdfxsafeforxmp@toks=\toks34
-\pdfx@tmptoks=\toks35
+\pdfxsafeforxmp@toks=\toks37
+\pdfx@tmptoks=\toks38
 
 Package hyperref Warning: Option `pdftex' has already been used,
 (hyperref)                setting the option has no effect on input line 1461.
@@ -690,18 +711,18 @@ Using XMP template file: pdfa.xmp
 \openout3 = `pdfa.xmpi'.
 
 <<pdfa.xmpi>>)
-Package hyperref Info: Option `colorlinks' set `true' on input line 104.
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks36
-\thm@bodyfont=\toks37
-\thm@headfont=\toks38
-\thm@notefont=\toks39
-\thm@headpunct=\toks40
+\thm@style=\toks39
+\thm@bodyfont=\toks40
+\thm@headfont=\toks41
+\thm@notefont=\toks42
+\thm@headpunct=\toks43
 \thm@preskip=\skip107
 \thm@postskip=\skip108
 \thm@headsep=\skip109
-\dth@everypar=\toks41
+\dth@everypar=\toks44
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
@@ -797,12 +818,12 @@ LaTeX Font Info:    Trying to load font information for T1+txr on input line 11
 File: t1txr.fd 2000/12/15 v3.1
 )) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2023/10/25 v3.96 The Babel package
-\babel@savecnt=\count319
-\U@D=\dimen258
+\babel@savecnt=\count322
+\U@D=\dimen263
 \l@unhyphenated=\language79
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count320
+\bbl@dirlevel=\count323
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -825,13 +846,13 @@ Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-\csq@reset=\count321
-\csq@gtype=\count322
-\csq@glevel=\count323
-\csq@qlevel=\count324
-\csq@maxlvl=\count325
-\csq@tshold=\count326
-\csq@ltx@everypar=\toks42
+\csq@reset=\count324
+\csq@gtype=\count325
+\csq@glevel=\count326
+\csq@qlevel=\count327
+\csq@maxlvl=\count328
+\csq@tshold=\count329
+\csq@ltx@everypar=\toks45
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
 )
@@ -847,91 +868,91 @@ Package csquotes Info: Redefining alias 'english' -> 'english/american'.
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip110
-\multirow@cntb=\count327
+\multirow@cntb=\count330
 \multirow@dima=\skip111
-\bigstrutjot=\dimen259
+\bigstrutjot=\dimen264
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen260
-\captionmargin=\dimen261
-\caption@leftmargin=\dimen262
-\caption@rightmargin=\dimen263
-\caption@width=\dimen264
-\caption@indent=\dimen265
-\caption@parindent=\dimen266
-\caption@hangindent=\dimen267
+\caption@tempdima=\dimen265
+\captionmargin=\dimen266
+\caption@leftmargin=\dimen267
+\caption@rightmargin=\dimen268
+\caption@width=\dimen269
+\caption@indent=\dimen270
+\caption@parindent=\dimen271
+\caption@hangindent=\dimen272
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count328
-\c@continuedfloat=\count329
+\c@caption@flags=\count331
+\c@continuedfloat=\count332
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen268
-\caption@adjustwidth@linewidth=\dimen269
+\caption@adjustwidth@hsize=\dimen273
+\caption@adjustwidth@linewidth=\dimen274
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\floatrow.sty
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
-\c@float@type=\count330
-\float@exts=\toks43
-\float@box=\box114
-\@floatcapt=\box115
+\c@float@type=\count333
+\float@exts=\toks46
+\float@box=\box116
+\@floatcapt=\box117
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
-\FR@everyfloat=\toks44
+\FR@everyfloat=\toks47
 \flrow@foot=\insert252
-\FB@wd=\dimen270
-\FBo@wd=\dimen271
-\FBc@wd=\dimen272
+\FB@wd=\dimen275
+\FBo@wd=\dimen276
+\FBc@wd=\dimen277
 \FBo@ht=\skip112
 \FBc@ht=\skip113
 \FBf@ht=\skip114
 \FBo@max=\skip115
 \FBc@max=\skip116
 \FBf@max=\skip117
-\c@FBl@b=\count331
-\floatbox@depth=\count332
-\c@FRobj=\count333
-\c@FRsobj=\count334
+\c@FBl@b=\count334
+\floatbox@depth=\count335
+\c@FRobj=\count336
+\c@FRsobj=\count337
 \Xhsize=\skip118
 \sXhsize=\skip119
 \Zhsize=\skip120
 \sZhsize=\skip121
-\flrow@rowbox=\box116
-\FR@Zunitlength=\dimen273
-\c@FBcnt=\count335
-\FPOScnt=\count336
+\flrow@rowbox=\box118
+\FR@Zunitlength=\dimen278
+\c@FBcnt=\count338
+\FPOScnt=\count339
 \LTleft=\skip122
 \LTright=\skip123
 \LTleft=\skip124
 \LTright=\skip125
-\flrow@types=\toks45
+\flrow@types=\toks48
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count337
-\lst@gtempboxa=\box117
-\lst@token=\toks46
-\lst@length=\count338
-\lst@currlwidth=\dimen274
-\lst@column=\count339
-\lst@pos=\count340
-\lst@lostspace=\dimen275
-\lst@width=\dimen276
-\lst@newlines=\count341
-\lst@lineno=\count342
-\lst@maxwidth=\dimen277
+\lst@mode=\count340
+\lst@gtempboxa=\box119
+\lst@token=\toks49
+\lst@length=\count341
+\lst@currlwidth=\dimen279
+\lst@column=\count342
+\lst@pos=\count343
+\lst@lostspace=\dimen280
+\lst@width=\dimen281
+\lst@newlines=\count344
+\lst@lineno=\count345
+\lst@maxwidth=\dimen282
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count343
-\lst@skipnumbers=\count344
-\lst@framebox=\box118
+\c@lstnumber=\count346
+\lst@skipnumbers=\count347
+\lst@framebox=\box120
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
@@ -942,49 +963,49 @@ Package csquotes Info: ... found 'babel' package.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
 .def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count345
-\l__pdf_internal_box=\box119
+\l__color_backend_stack_int=\count348
+\l__pdf_internal_box=\box121
 ) (master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 243.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 296.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-243.
+296.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 296.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-243.
+296.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 296.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-243.
+296.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 296.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 2
-43.
+96.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 296.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1022,17 +1043,17 @@ LaTeX Font Info:    ... okay on input line 243.
 \langwohyphens=\language80
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
-\scratchdimen=\dimen278
-\scratchbox=\box120
-\nofMPsegments=\count347
-\nofMParguments=\count348
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count349
-\MPscratchDim=\dimen279
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count349
+\scratchdimen=\dimen283
+\scratchbox=\box122
+\nofMPsegments=\count350
+\nofMParguments=\count351
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen284
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
+\everyMPtoPDFconversion=\toks51
 )
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
 .sty
@@ -1042,11 +1063,23 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 243.
+Package hyperref Info: Link coloring ON on input line 296.
 (master_thesis.out) (master_thesis.out)
 \@outlinefile=\write4
 \openout4 = `master_thesis.out'.
 
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometa
+data.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
@@ -1057,38 +1090,114 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
-\flrow@LT@lasthead=\box121
-\flrow@LT@prelastfoot=\box122
-\c@FBLTpage=\count352
+\flrow@LT@lasthead=\box123
+\flrow@LT@prelastfoot=\box124
+\c@FBLTpage=\count355
 )
-\c@lstlisting=\count353
+\c@lstlisting=\count356
 LaTeX Font Info:    Trying to load font information for T1+txss on input line 2
-45.
+98.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 245.
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 17.09995pt on input line 245.
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 34.19989pt on input line 245.
+(Font)              scaled to size 9.49997pt on input line 298.
+<imagenes/Portada_Logo.png, id=22, 456.2865pt x 45.99pt>
+File: imagenes/Portada_Logo.png Graphic file (type png)
+<use imagenes/Portada_Logo.png>
+Package pdftex.def Info: imagenes/Portada_Logo.png  used on input line 298.
+(pdftex.def)             Requested size: 455.24797pt x 45.88531pt.
 
-Overfull \hbox (3.87068pt too wide) in paragraph at lines 245--245
-\T1/txss/m/n/36/200ls BALL: PITCH CON-TROL AND 
+Overfull \hbox (28.45662pt too wide) in paragraph at lines 298--298
+ [] 
  []
 
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 245.
+(Font)              scaled to size 11.39996pt on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
+(Font)              scaled to size 11.39996pt on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 22.79993pt on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/b/n' in size <8> not available
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
+(Font)              scaled to size 7.59998pt on input line 298.
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+\T1/txss/m/n/8 The Uni-ver-sity uses the \T1/txss/bx/n/8 Tur-nitin Feed-back St
+u-dio \T1/txss/m/n/8 pro-gram within the Aula Global for the de-liv-ery of stu-
+dent work. This pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+\T1/txss/m/n/8 gram com-pares the orig-i-nal-ity of the work de-liv-ered by eac
+h stu-dent with mil-lions of elec-tronic re-sources and de-tects those
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+\T1/txss/m/n/8 parts of the text that are copied and pasted. Pla-gia-riz-ing in
+ a TFM is con-sid-ered a \T1/txss/bx/n/8 Se-ri-ous Mis-con-duct\T1/txss/m/n/8 ,
+ and may re-sult in
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
+98.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+298.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
+98.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
+98.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
+98.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
+98.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+Overfull \hbox (11.02554pt too wide) in paragraph at lines 298--298
+[] 
+ []
+
+<imagenes/creativecommons.png, id=24, 338.76563pt x 118.19156pt>
+File: imagenes/creativecommons.png Graphic file (type png)
+<use imagenes/creativecommons.png>
+Package pdftex.def Info: imagenes/creativecommons.png  used on input line 298.
+(pdftex.def)             Requested size: 119.50018pt x 41.69228pt.
+LaTeX Font Info:    Font shape `T1/txss/m/it' in size <8> not available
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 298.
+LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
+(Font)              scaled to size 7.59998pt on input line 298.
 [1
 
 
-{C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2
-
+{C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./imag
+enes/Portada_Logo.png> <./imagenes/creativecommons.png>] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 251.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 304.
 (master_thesis.toc)
 \tf@toc=\write5
 \openout5 = `master_thesis.toc'.
@@ -1117,47 +1226,17 @@ LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
 2.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-2.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
-File: ot1txr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-12.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-2.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
-File: utxsya.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-2.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
-File: utxsyb.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-2.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-2.
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
 ))
 
-Package caption Warning: Unused \captionsetup[table] on input line 185.
+Package caption Warning: Unused \captionsetup[table] on input line 186.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[figure] on input line 201.
+Package caption Warning: Unused \captionsetup[figure] on input line 202.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 238.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 239.
 See the caption package documentation for explanation.
 
 [13] (master_thesis.aux)
@@ -1169,23 +1248,25 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: EDDB8E88432C45A052BC42145746FCFC;210.
  ) 
 Here is how much of TeX's memory you used:
- 23586 strings out of 474592
- 371682 string characters out of 5747215
- 1931533 words of memory out of 5000000
- 45262 multiletter control sequences out of 15000+600000
- 607502 words of font info for 97 fonts, out of 8000000 for 9000
+ 24355 strings out of 474592
+ 385633 string characters out of 5747215
+ 1933533 words of memory out of 5000000
+ 46001 multiletter control sequences out of 15000+600000
+ 623722 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  97i,11n,117p,552b,2558s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pf
 b><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.
+pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.
+pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
 pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
 pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
 ><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
 :/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (13 pages, 81997 bytes).
+Output written on master_thesis.pdf (13 pages, 139342 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
- 2605 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1079 words of extra memory for PDF output out of 10000 (max. 10000000)
 
