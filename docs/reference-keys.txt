@@ -1,3 +1,4 @@
 fig:unnamed-chunk-2
-introduction.-data-analytics-in-football
+introduction
+data-analytics-in-football
 statistical-analysis-in-football
