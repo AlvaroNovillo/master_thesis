@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  5 FEB 2024 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  6 FEB 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -711,7 +711,7 @@ Using XMP template file: pdfa.xmp
 \openout3 = `pdfa.xmpi'.
 
 <<pdfa.xmpi>>)
-Package hyperref Info: Option `colorlinks' set `true' on input line 105.
+Package hyperref Info: Option `colorlinks' set `true' on input line 106.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks39
@@ -968,44 +968,44 @@ File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 ) (master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 296.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 297.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-296.
+297.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 297.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-296.
+297.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 297.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-296.
+297.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 296.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 297.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 2
-96.
+97.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1063,7 +1063,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 296.
+Package hyperref Info: Link coloring ON on input line 297.
 (master_thesis.out) (master_thesis.out)
 \@outlinefile=\write4
 \openout4 = `master_thesis.out'.
@@ -1096,99 +1096,99 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 )
 \c@lstlisting=\count356
 LaTeX Font Info:    Trying to load font information for T1+txss on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 298.
+(Font)              scaled to size 9.49997pt on input line 299.
 <imagenes/Portada_Logo.png, id=26, 456.2865pt x 45.99pt>
 File: imagenes/Portada_Logo.png Graphic file (type png)
 <use imagenes/Portada_Logo.png>
-Package pdftex.def Info: imagenes/Portada_Logo.png  used on input line 298.
+Package pdftex.def Info: imagenes/Portada_Logo.png  used on input line 299.
 (pdftex.def)             Requested size: 455.24797pt x 45.88531pt.
 
-Overfull \hbox (28.45662pt too wide) in paragraph at lines 298--298
+Overfull \hbox (28.45662pt too wide) in paragraph at lines 299--299
  [] 
  []
 
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 298.
+(Font)              scaled to size 11.39996pt on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 298.
+(Font)              scaled to size 11.39996pt on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 22.79993pt on input line 298.
+(Font)              scaled to size 22.79993pt on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 298.
+(Font)              scaled to size 13.67995pt on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 298.
+(Font)              scaled to size 7.59998pt on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <8> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 298.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 7.59998pt on input line 298.
+(Font)              scaled to size 7.59998pt on input line 299.
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
 \T1/txss/m/n/8 The Uni-ver-sity uses the \T1/txss/bx/n/8 Tur-nitin Feed-back St
 u-dio \T1/txss/m/n/8 pro-gram within the Aula Global for the de-liv-ery of stu-
 dent work. This pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
 \T1/txss/m/n/8 gram com-pares the orig-i-nal-ity of the work de-liv-ered by eac
 h stu-dent with mil-lions of elec-tronic re-sources and de-tects those
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
 \T1/txss/m/n/8 parts of the text that are copied and pasted. Pla-gia-riz-ing in
  a TFM is con-sid-ered a \T1/txss/bx/n/8 Se-ri-ous Mis-con-duct\T1/txss/m/n/8 ,
  and may re-sult in
  []
 
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-298.
+299.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
-98.
+99.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Overfull \hbox (11.02554pt too wide) in paragraph at lines 298--298
+Overfull \hbox (11.02554pt too wide) in paragraph at lines 299--299
 [] 
  []
 
 <imagenes/creativecommons.png, id=28, 338.76563pt x 118.19156pt>
 File: imagenes/creativecommons.png Graphic file (type png)
 <use imagenes/creativecommons.png>
-Package pdftex.def Info: imagenes/creativecommons.png  used on input line 298.
+Package pdftex.def Info: imagenes/creativecommons.png  used on input line 299.
 (pdftex.def)             Requested size: 119.50018pt x 41.69228pt.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <8> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 298.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 299.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 298.
+(Font)              scaled to size 7.59998pt on input line 299.
 [1
 
 
@@ -1197,7 +1197,7 @@ enes/Portada_Logo.png> <./imagenes/creativecommons.png>] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 304.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 305.
 (master_thesis.toc)
 \tf@toc=\write5
 \openout5 = `master_thesis.toc'.
@@ -1228,33 +1228,28 @@ Chapter 2.
 
 ]
 Chapter 3.
-<imagenes/xg_evol.png, id=118, 2009.5075pt x 1159.33125pt>
+<imagenes/xg_evol.png, id=119, 2009.5075pt x 1159.33125pt>
 File: imagenes/xg_evol.png Graphic file (type png)
 <use imagenes/xg_evol.png>
-Package pdftex.def Info: imagenes/xg_evol.png  used on input line 386.
+Package pdftex.def Info: imagenes/xg_evol.png  used on input line 394.
 (pdftex.def)             Requested size: 341.42778pt x 196.97757pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
 [][]|\T1/txr/m/n/9 Cu-mu-la-tive de-vel-op-ment of ex-pected goals (xG) dur-ing
  the Eibar-Malaga match, held on Jan-uary 15th in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
 \T1/txr/m/n/9 Spain's sec-ond di-vi-sion. Each point de-notes a shot made by bo
 th teams through-out the game. Ver-ti-cal dashed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
 \T1/txr/m/n/9 lines in-di-cate the goal scored, dis-play-ing the player and the
  cor-re-spond-ing score at that spe-cific mo-ment of
  []
-
-LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 393.
-
-Package natbib Warning: Citation `xg' on page 13 undefined on input line 393.
 
 (master_thesis.bbl [13] [14 <./imagenes/xg_evol.png>]
 Chapter 4.
@@ -1264,14 +1259,11 @@ LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
 File: t1txtt.fd 2000/12/15 v3.1
 ))
 
-Package natbib Warning: There were undefined citations.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 186.
+Package caption Warning: Unused \captionsetup[table] on input line 187.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 239.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 240.
 See the caption package documentation for explanation.
 
 [15
@@ -1285,11 +1277,11 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 93FF5703DCE86B2178BED4855AE2922F;286.
  ) 
 Here is how much of TeX's memory you used:
- 24393 strings out of 474592
- 386319 string characters out of 5747215
+ 24389 strings out of 474592
+ 386281 string characters out of 5747215
  1933533 words of memory out of 5000000
- 46029 multiletter control sequences out of 15000+600000
- 629742 words of font info for 136 fonts, out of 8000000 for 9000
+ 46027 multiletter control sequences out of 15000+600000
+ 626693 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  97i,11n,117p,552b,2558s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pf
@@ -1301,9 +1293,9 @@ pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
 pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
 ><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
 :/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (15 pages, 193106 bytes).
+Output written on master_thesis.pdf (15 pages, 192654 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
+ 191 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
  1092 words of extra memory for PDF output out of 10000 (max. 10000000)
 
