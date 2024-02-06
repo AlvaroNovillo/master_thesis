@@ -1,54 +1,41 @@
-\documentclass[twoside,nohyper]{tufte-book}
-
-% ams
-\usepackage{amssymb,amsmath}
-
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  twoside,nohyper]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-  \makeatletter
-  \@ifpackageloaded{fontspec}{}{\usepackage{fontspec}}
-  \makeatother
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-  \makeatletter
-  \@ifpackageloaded{soul}{
-     \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
-     \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
-   }{}
-  \makeatother
-
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-
-% graphix
-\usepackage{graphicx}
-\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-
-% booktabs
-\usepackage{booktabs}
-
-% url
-\usepackage{url}
-
-% hyperref
-\usepackage{hyperref}
-
-% units.
-\usepackage{units}
-
-
-\setcounter{secnumdepth}{2}
-
-% citations
-\usepackage{natbib}
-\bibliographystyle{abbrvnat}
-
-
-% pandoc syntax highlighting
-
-% table with pandoc
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -59,27 +46,24 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-
-% multiplecol
-\usepackage{multicol}
-
-% strikeout
-\usepackage[normalem]{ulem}
-
-% morefloats
-\usepackage{morefloats}
-
-
-% tightlist macro required by pandoc >= 1.14
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-% title / author / date
-\title{Data Analytics in Football: Pitch Control and Beyond}
-\author{Álvaro Novillo Correas}
-\date{2024-02-06}
-
-
+\setcounter{secnumdepth}{5}
+\usepackage{geometry}
 \geometry{
   a4paper,
   top=2.5cm,
@@ -293,18 +277,31 @@
 \makeatother
 
 
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{abbrvnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Data Analytics in Football: Pitch Control and Beyond},
+  pdfauthor={Álvaro Novillo Correas},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Data Analytics in Football: Pitch Control and Beyond}
+\author{Álvaro Novillo Correas}
+\date{2024-02-06}
 
 \begin{document}
-
 \maketitle
-
-
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-
 \hypertarget{dedication}{%
 \chapter*{Dedication}\label{dedication}}
 \addcontentsline{toc}{chapter}{Dedication}
@@ -313,9 +310,6 @@
 
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
-
-\hypertarget{data-analytics-in-football}{%
-\chapter{Data Analytics in football}\label{data-analytics-in-football}}
 
 The digital revolution is currently one of the most significant
 challenges of our time, altering numerous aspects of society. Football,
@@ -356,9 +350,6 @@ chapter examines the various areas of football where data can be used
 for analysis, alongside the commonly found data types within this
 industry.
 
-\hypertarget{statistical-analysis-in-football}{%
-\chapter{Statistical analysis in football}\label{statistical-analysis-in-football}}
-
 When discussing sports analytics in football, the first metric that
 often springs to mind is the Expected Goals (xG) ratio. This statistical
 indicator is a predictive Machine Learning (ML) model used to assess the
@@ -382,24 +373,114 @@ The probabilities range from 0 to 1. Thus, a shot with an xG value of
 0.1 has a 10\% chance of being scored. Penalties have a fixed xG value of
 0.76.
 
-Fig. \ref{fig:xg} a visual representation of the cumulative development of expected goals
+Fig. \ref{fig:xg} provides a visual representation of the cumulative development of expected goals
 (xG) during the Eibar - Malaga match, which took place on January 15th,
 2023 in Spain's second division. Each data point on the graph
 corresponds to a shot made by both teams over the course of the game,
 offering a comprehensive overview of the evolving scoring opportunities
 and outcomes throughout the duration of the game.
 
-\begin{figure}
+\begin{figure}[H]
 
-{\centering \includegraphics[width=0.8\linewidth]{imagenes/xg_evol} 
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/xg_evol} 
 
 }
 
-\caption[Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division]{Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.}\label{fig:xg}
+\caption{Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.}\label{fig:xg}
 \end{figure}
 
-\bibliography{bibliografia.bib}
+Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport. Using the game presented earlier as an example, the next chapter will introduce the broad field of football analytics.
 
+\hypertarget{data-analytics-in-football}{%
+\chapter{Data Analytics in football}\label{data-analytics-in-football}}
 
+Looking at an xG evolution figure, such as Fig. \ref{fig:xg}, and solely focusing on shot probabilities while disregarding the spatial distribution of shots and occasions feels like merely scratching the surface of what sport analytics can offer to football.
+
+To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. \ref{fig:shotmap}, the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with straight lines, indicating the trajectory the ball followed as it found its way into the opponent's net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common
+source of data in football: \textbf{Events} datasets.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth,]{imagenes/home_shot_map} \includegraphics[width=0.45\linewidth,]{imagenes/away_shot_map} 
+
+}
+
+\caption{Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net.}\label{fig:shotmap}
+\end{figure}
+
+\hypertarget{events-data}{%
+\section{Events data}\label{events-data}}
+
+\texttt{Event\ data} describes specific, human-defined events during a match,
+including passes, shots, and fouls. It is captured by human annotators
+from various providers. However, this manual process is time-consuming
+and typically requires three individuals:
+
+The data collection process is carried out by professional video
+analysts (known as operators), who are specialists in football data
+collection, using proprietary software (the tagger). The tagger has
+undergone several years of development and improvement and is regularly
+updated to ensure the highest level of performance is achieved. To
+ensure accurate data collection when tagging events in soccer matches,
+three operators are assigned: one per team and one supervising the
+output of the entire match. This process is based on analysis of the
+tagger and soccer match videos. When near-live data delivery is
+necessary, a team of four operators may be utilized, with one operator
+dedicated to hastening the collection of complex events that require
+additional, specific attributes or a quick review \citep{3}.
+
+This type of data structure can be used in a number of ways: it can be
+used to measure team performance through general statistics extracted
+from event datasets, such as goals, fouls, xG, etc. It can also be used
+to create advanced analysis of the team using ensembles of mathematical
+tools.
+
+The analysis of the match is furthered through the use of graph theory,
+\citep{Buldu}, \citep{NOVILLO2024114355}. Combining
+different elements of the events dataset, we can create a graph
+corresponding to the passing network of each team, allowing us to
+understand the passing structure of both teams.
+
+Figs. \ref{fig:homepass} and \ref{fig:awaypass} illustrate the
+passing networks observed in the Eibar versus Málaga football match,
+providing insight into the passing interactions and tactical strategies
+used by both teams. The nodes in the graphs represent individual players
+who participated in the match for each team. The nodes are sized
+according to their degree, which represents the amount of ingoing and
+outgoing passes. The node position corresponds to the average passing
+position of each player. Substitutes are represented by yellow nodes,
+and links are created if there have been at least 5 passes made in that
+direction between two players. The edge's width corresponds to the
+amount of passes made in that direction between the two players.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/home_pass_network} 
+
+}
+
+\caption{Representation of the Eibar passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.}\label{fig:homepass}
+\end{figure}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/away_pass_network} 
+
+}
+
+\caption{Representation of the Málaga passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.}\label{fig:awaypass}
+\end{figure}
+
+Analysis as the former can be conducted \emph{in real-time}\footnote{Opta uses a combination of human annotation, computer vision, and
+  AI modelling to offer real-time data at various levels of detail
+  based on customer requirements. In our situation, the data feed
+  updates itself when an event such as a goal, foul or pass occurs;
+  otherwise, it updates every 90 seconds. \citep{opta}} during the
+match using appropriate data sources. Additionally, we could examine
+Eibar's macro situation during the 2022-2023 season to better comprehend
+how this micro-statistics contribute to the overall perception of the
+team.
+
+  \bibliography{bibliografia.bib}
 
 \end{document}

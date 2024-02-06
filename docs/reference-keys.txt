@@ -1,4 +1,7 @@
 fig:xg
+fig:shotmap
+fig:homepass
+fig:awaypass
 introduction
 data-analytics-in-football
-statistical-analysis-in-football
+events-data
