@@ -1,6 +1,6 @@
 # Master Thesis
 
-This repository contains the source files (`master` branch) needed to build the HTML and PDF versions of my dissertation (both available through the `gh-pages` branch) on *Data Analytics in Football: Pitch Control and Beyond*,  for the Master for Stadistics for Data Science at [Universidad Carlos III de Madrid](https://www.uc3m.es).
+This repository contains the source files (`master` branch) needed to build the HTML and PDF versions of my dissertation (both available through the `gh-pages` branch) on *Data Analytics in Football: Pitch Control Model and Beyond*,  for the Master for Stadistics for Data Science at [Universidad Carlos III de Madrid](https://www.uc3m.es).
 
 Published with [bookdown](https://github.com/rstudio/bookdown).
 
