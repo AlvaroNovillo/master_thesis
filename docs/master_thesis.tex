@@ -498,7 +498,7 @@ We've just discussed some of the many statistics that can be inferred from this 
 
 Although event datasets supply beneficial information regarding the team's overall performance, deeper scrutiny can be conducted via tracking data, which consists of the players' and ball's position and movement during the match. Tracking data can offer additional insight into both the physical and tactical aspects of the game.
 
-\section{Tracking}\label{tracking}
+\section{Tracking data}\label{tracking-data}
 
 \texttt{Tracking\ data} offers a more comprehensive perspective than event data by providing access to information on all players, their trajectories, and velocities. This allows for the analysis of off-ball players and team dynamics, resulting in a more nuanced understanding of the game.
 
@@ -535,6 +535,101 @@ This data-driven approach enhances the understanding of the sport and its strate
 After the initial review of the state of art of football analytics, we will introduce the methodology behind our proposed metric to characterize offside strategy's effectiveness. In this chapter, we will combine both physical metrics and tactical models derived from Tracking datasets to build the proposed metric: \emph{Offside Control}
 
 \chapter{Methodology}\label{methodology}
+
+As discussed earlier, tracking datasets provide the position of all players and the ball throughout the match with a temporal resolution of 25fps. This enables us to estimate the players' covered distance, speed, and acceleration. The potential for extracting information from tracking datasets that is useful for football analytics extends beyond variables related to players' physical performance. Many tactical metrics has been implemented to decode how the intricate movements of players translate to the soccer field.
+
+These models provide a scientific perspective for analysing player positioning, decision-
+making, and team dynamics, illuminating the complex interactions that occur during a
+match.
+
+\emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a soccer match. It combines player position and speed with mathematical models that simulate ball and player movement \citep{Spearman}.
+
+This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define and understand Pitch Control Models, including their construction and implementation.
+
+\section{Pitch Control Models}\label{pitch-control-models}
+
+The \emph{Pitch Control (PC)} at a given location represents the probability of a player or team gaining control of the ball if it moves directly to that location. \emph{PC} models simulate the dynamics of the ball and the players to evaluate which player would control the ball if it moves to any location on the pitch at any moment.
+The model captures not only the players' current position, but also their movement. When players are running at high speeds, they are more likely to control
+the space they are moving into rather than the space they currently occupy.
+
+To construct this model, we must calculate the following for a given location on the pitch:
+
+\begin{itemize}
+    \item How long it would take for the ball to reach to the position of interest (from its starting position).
+    \item How long would it take for each player to get to that position.  
+    \item What is the total \textit{probability} that each team will control the ball \textit{after} both the players and the ball have arrived at the desired position? 
+\end{itemize}
+
+In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game (See Fig. \ref{fig:ball})
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/ball} 
+
+}
+
+\caption{p.d.f of the ball speed over a 100 matches from LaLiga 2019-2020 season.}\label{fig:ball}
+\end{figure}
+
+Therefore, the time taken to arrive at the location of interest can be easily calculated as \(t_{b,arr} = \Delta x_b/v_b\), where \(\Delta x_b\) is the distance between the initial and final positions of the ball.
+
+When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of \(v_{max,p} = 18\) \(km/h\), which corresponds to the 95 percentile of the average speed of the players in the game (See Fig. \ref{fig:vel}). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/vel} 
+
+}
+
+\caption{p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 season.}\label{fig:vel}
+\end{figure}
+
+To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\), we use a simple approximation consisting of a two-step process:
+
+\begin{itemize}
+    \item[1.] There is an initial \textit{reaction time}, assumed to be of $t_{r}=0.7$ seconds for every player. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position $\vec{r}_{react}$).
+    \item[2.] After this time, we assume that the player runs directly towards the ball at his maximum speed of $v_{max,p}$.
+\end{itemize}
+
+\begin{align}
+    \tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
+    \label{exp_arr_time}
+\end{align}
+
+Once we computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do so, we will assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate \(\lambda\), with units of \(1/s\). Thus, for any differential time \(\Delta t\) that a player is near the ball, he has a probability of \(\lambda \cdot \Delta t\) of controlling the ball.
+
+So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled \(\sigma\), in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution (See Fig. \ref{fig:lambda}).
+
+\textbackslash begin\{figure\}{[}H{]}
+
+\{\centering \includegraphics[width=0.45\linewidth,]{imagenes/exp_poster} \includegraphics[width=0.45\linewidth,]{imagenes/sigmoid_poster}
+
+\}
+
+\textbackslash caption\{\{Cumulative distribution function of the time to control the ball.\}\label{fig:lambda}
+\textbackslash end\{figure\}
+
+Both \(\lambda\) and \(\sigma\) has been selected according to \citep{SpearmanFit}, where they model passes as a Bernoulli trial, with probability mass function
+
+\begin{align}
+P(k \mid \sigma, \lambda, x)=\left\{\begin{array}{lr}
+1-p \text { for } \mathrm{k}=0 \\
+p & \text { for } \mathrm{k}=1
+\end{array}\right.
+\end{align}
+
+where \(k \in [0,1]\) is the outcome of the pass. Then, the likelihood of a set of\\
+parameters, \(\sigma\) and \(\lambda\), given outcome \(k\) and the start of the pass \(x\) is:
+
+\begin{align}
+\mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
+\end{align}
+
+Then, maximizing the product of the likelihood for each pass for a training sample P, the best fit is found at \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)\footnote{See \citep{SpearmanFit} for further details}
+
+\begin{align}
+\min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
+\end{align}
 
   \bibliography{bibliografia.bib}
 
