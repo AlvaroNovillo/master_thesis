@@ -23,7 +23,7 @@
 <meta name="author" content="Álvaro Novillo Correas" />
 
 
-<meta name="date" content="2024-02-06" />
+<meta name="date" content="2024-03-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="introduction.html"/>
-
+<link rel="next" href="methodology.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -64,6 +64,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -103,7 +104,9 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#events-data"><i class="fa fa-check"></i><b>2.1</b> Events data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking"><i class="fa fa-check"></i><b>2.2</b> Tracking</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
 Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
@@ -129,13 +132,46 @@ src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
             <section class="normal" id="section-">
 <div id="data-analytics-in-football" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Data Analytics in football<a href="data-analytics-in-football.html#data-analytics-in-football" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Looking at an xG evolution figure, such as Fig. <a href="introduction.html#fig:xg">1.1</a>, and solely focusing on shot probabilities while disregarding the spatial distribution of shots and occasions feels like merely scratching the surface of what sport analytics can offer to football.</p>
-<p>To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. <a href="data-analytics-in-football.html#fig:shotmap">2.1</a>, the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with straight lines, indicating the trajectory the ball followed as it found its way into the opponent’s net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common
+<p>When discussing sports analytics in football, the first metric that
+often springs to mind is the Expected Goals (xG) ratio. This statistical
+indicator is a predictive Machine Learning (ML) model used to assess the
+likelihood of scoring for every shot made in the game. In the context of
+each shot, the xG model computes the scoring probability, leveraging a
+set of event parameters.</p>
+<p>Wyscout xG model, for example, encompass the shot’s spatial coordinates,
+the assisting player’s position, the striking player’s use of foot or
+head, the type of assist involved, the occurrence of a dribble by either
+a field player or the goalkeeper immediately preceding the shot, whether
+the shot arises from a set piece, whether it transpires during a
+counterattack or in a transitional phase of play, and the subjective
+assessment of shot danger as determined by a designated tagger. The
+amalgamation of these parameters serves as the foundation for training
+the xG model using historical Wyscout data, culminating in the
+prediction of the likelihood of a given shot resulting in a goal
+<span class="citation">(<a href="#ref-wyscout">Wyscout 2023</a>)</span>.</p>
+<p>The probabilities range from 0 to 1. Thus, a shot with an xG value of
+0.1 has a 10% chance of being scored. Penalties have a fixed xG value of
+0.76.</p>
+<p>Fig. <a href="data-analytics-in-football.html#fig:xg">2.1</a> provides a visual representation of the cumulative development of expected goals
+(xG) during the Eibar - Malaga match, which took place on January 15th,
+2023 in Spain’s second division. Each data point on the graph
+corresponds to a shot made by both teams over the course of the game,
+offering a comprehensive overview of the evolving scoring opportunities
+and outcomes throughout the duration of the game.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xg"></span>
+<img src="imagenes/xg_evol.png" alt="Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match." width="80%"  />
+<p class="caption">
+Figure 2.1: Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.
+</p>
+</div>
+<p>Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport. Using the game presented earlier as an example, the next chapter will introduce the broad field of football analytics.</p>
+<p>Looking at an xG evolution figure, such as Fig. <a href="data-analytics-in-football.html#fig:xg">2.1</a>, and solely focusing on shot probabilities while disregarding the spatial distribution of shots and occasions feels like merely scratching the surface of what sport analytics can offer to football.</p>
+<p>To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. <a href="data-analytics-in-football.html#fig:shotmap">2.2</a>, the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with straight lines, indicating the trajectory the ball followed as it found its way into the opponent’s net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common
 source of data in football: <strong>Events</strong> datasets.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:shotmap"></span>
 <img src="imagenes/home_shot_map.png" alt="Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net." width="45%"  /><img src="imagenes/away_shot_map.png" alt="Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net." width="45%"  />
 <p class="caption">
-Figure 2.1: Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net.
+Figure 2.2: Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net.
 </p>
 </div>
 <div id="events-data" class="section level2 hasAnchor" number="2.1">
@@ -166,7 +202,7 @@ tools.</p>
 different elements of the events dataset, we can create a graph
 corresponding to the passing network of each team, allowing us to
 understand the passing structure of both teams.</p>
-<p>Figs. <a href="data-analytics-in-football.html#fig:homepass">2.2</a> and <a href="data-analytics-in-football.html#fig:awaypass">2.3</a> illustrate the
+<p>Figs. <a href="data-analytics-in-football.html#fig:homepass">2.3</a> illustrate the
 passing networks observed in the Eibar versus Málaga football match,
 providing insight into the passing interactions and tactical strategies
 used by both teams. The nodes in the graphs represent individual players
@@ -178,62 +214,67 @@ and links are created if there have been at least 5 passes made in that
 direction between two players. The edge’s width corresponds to the
 amount of passes made in that direction between the two players.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:homepass"></span>
-<img src="imagenes/home_pass_network.jpg" alt="Representation of the Eibar passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players." width="80%"  />
+<img src="imagenes/home_pass_network.jpg" alt="Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players." width="50%"  /><img src="imagenes/away_pass_network.jpg" alt="Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players." width="50%"  />
 <p class="caption">
-Figure 2.2: Representation of the Eibar passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.
+Figure 2.3: Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:awaypass"></span>
-<img src="imagenes/away_pass_network.jpg" alt="Representation of the Málaga passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players." width="80%"  />
-<p class="caption">
-Figure 2.3: Representation of the Málaga passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.
-</p>
-</div>
-<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> during the
+<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> during the
 match using appropriate data sources. Additionally, we could examine
 Eibar’s macro situation during the 2022-2023 season to better comprehend
 how this micro-statistics contribute to the overall perception of the
 team.</p>
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Buldú, Javier M., Javier Busquets, Johann H. Martínez, José L. Herrera-Diestra, Ignacio Echegoyen, Javier Galeano, and Jordi Luque. 2018. <span>“Using Network Science to Analyse Football Passing Networks: Dynamics, Space, Time, and the Multilayer Nature of the Game.”</span> <em>Frontiers in Psychology</em> 9. <a href="https://doi.org/10.3389/fpsyg.2018.01900">https://doi.org/10.3389/fpsyg.2018.01900</a>.
+<p>Fig. <a href="data-analytics-in-football.html#fig:xg-xga">2.4</a> presents the expected goals (xG) produced by Eibar in all matches played against their opponents. It is noticeable that Eibar has generated a higher xG when playing at their Home stadium, on average. In Fig. <a href="data-analytics-in-football.html#fig:rank-xg-xga">2.5</a> an overview of Eibar’s performance against other teams in the Second Division is presented. It can be observed that Eibar ranks third in generating xGs against their opponents.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xg-xga"></span>
+<img src="imagenes/scat-xG-xGa.png" alt="Expected Goals (xG) and Expected Goals Against (xGA) per match. Codes: Home Matches (Diamonds), Away Matches (Circles), Wins (Green), Draws (Blue), Losses (Red). Matches above the dashed lines represent those matches where Eibar has generated more xG than the opponent." width="80%"  />
+<p class="caption">
+Figure 2.4: Expected Goals (xG) and Expected Goals Against (xGA) per match. Codes: Home Matches (Diamonds), Away Matches (Circles), Wins (Green), Draws (Blue), Losses (Red). Matches above the dashed lines represent those matches where Eibar has generated more xG than the opponent.
+</p>
 </div>
-<div class="csl-entry">
-Footballytics. 2021. <span>“Data Analytics in Football.”</span> 2021. <a href="https://www.footballytics.ch/post/data-analytics-in-football">https://www.footballytics.ch/post/data-analytics-in-football</a>.
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rank-xg-xga"></span>
+<img src="imagenes/xG-xGa.png" alt="Ranking of the average differences in Expected Goals Scored (xG) Minus Expected Goals Conceded by Opponents (xGa) per team." width="80%"  />
+<p class="caption">
+Figure 2.5: Ranking of the average differences in Expected Goals Scored (xG) Minus Expected Goals Conceded by Opponents (xGa) per team.
+</p>
 </div>
-<div class="csl-entry">
-Novillo, Álvaro, Bingnan Gong, Johann H. Martínez, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2024. <span>“A Multilayer Network Framework for Soccer Analysis.”</span> <em>Chaos, Solitons &amp; Fractals</em> 178: 114355. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2023.114355">https://doi.org/10.1016/j.chaos.2023.114355</a>.
+<p>We’ve just discussed some of the many statistics that can be inferred from this data sources to characterize the team performance, such as possession, pressure, duels, fouls, etc. This type of datasets are both easily manageable, and provide teams with useful information. Due to limitations in space and scope, however, we are unable to provide a more in-depth analysis of these measures</p>
+<p>Although event datasets supply beneficial information regarding the team’s overall performance, deeper scrutiny can be conducted via tracking data, which consists of the players’ and ball’s position and movement during the match. Tracking data can offer additional insight into both the physical and tactical aspects of the game.</p>
 </div>
-<div class="csl-entry">
-Pappalardo, Luca, Paolo Cintia, Alessio Rossi, Emanuele Massucco, Paolo Ferragina, Dino Pedreschi, and Fosca Giannotti. 2019. <span>“A Public Data Set of Spatio-Temporal Match Events in Soccer Competitions.”</span> <em>Scientific Data</em> 6 (October). <a href="https://doi.org/10.1038/s41597-019-0247-7">https://doi.org/10.1038/s41597-019-0247-7</a>.
+<div id="tracking" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Tracking<a href="data-analytics-in-football.html#tracking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>Tracking data</code> offers a more comprehensive perspective than event data by providing access to information on all players, their trajectories, and velocities. This allows for the analysis of off-ball players and team dynamics, resulting in a more nuanced understanding of the game.</p>
+<p>There are two main techniques for obtaining tracking data, which decide its classification: <strong>Image detection algorithms</strong> extract players’ positions from the match broadcast and infer locations of concealed players, whereas <strong>optical tracking</strong> employs a specialized camera system installed on the field to record players’ data. Our research will concentrate on the latter method, as it offers more precise and statistically informative data.</p>
+<p>Our tracking data has been provided by Mediacoach®. They utilises the Tracab Optical Tracking system to obtain on-the-pitch player positions. This multi-camera system captures each player’s position at 25 frames per second. The system consists of three units, each with a resolution of 1920x1080 pixels, producing a panoramic picture that generates a stereoscopic view for triangulating the players and ball. In case of a temporary loss of any location, a skilled operator adjusts the players’ positions. The datasets obtained by the Mediacoach® system have been validated in advance using GPS <span class="citation">(<a href="#ref-Felipe2019ValidationOA">Felipe et al. 2019</a>)</span>.</p>
+<p>Fig. <a href="data-analytics-in-football.html#fig:frame">2.6</a> contains a frame from the tracking dataset of an Atlético de Madrid (Blue) - Getafe (Red) game from the Spanish 2019 League. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:frame"></span>
+<img src="imagenes/Frame.png" alt="A frame of tracking data from a football match. The home team is shown in blue, the away team in red. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players." width="80%"  />
+<p class="caption">
+Figure 2.6: A frame of tracking data from a football match. The home team is shown in blue, the away team in red. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.
+</p>
 </div>
-<div class="csl-entry">
-Sarlis, Vangelis, and Christos Tjortjis. 2020. <span>“Sports Analytics — Evaluation of Basketball Players and Team Performance.”</span> <em>Information Systems</em> 93: 101562. https://doi.org/<a href="https://doi.org/10.1016/j.is.2020.101562">https://doi.org/10.1016/j.is.2020.101562</a>.
+<p>Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. <span class="citation">(<a href="#ref-GARRIDO2022112827">Garrido et al. 2022</a>)</span> showed that the correlation between heatmaps, Fig. <a href="data-analytics-in-football.html#fig:heatmap">2.7</a>, made with event datasets and those made with tracking datasets is low. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps provide information about a player’s position without adding information about how relevant his about how relevant their performance was.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:heatmap"></span>
+<img src="imagenes/Heatmap.jpg" alt="Heatmap of the ball position during the Atlético de Madrid - Getafe game under study. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left side of the field and the away team on the right." width="80%"  />
+<p class="caption">
+Figure 2.7: Heatmap of the ball position during the Atlético de Madrid - Getafe game under study. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left side of the field and the away team on the right.
+</p>
 </div>
-<div class="csl-entry">
-StatsPerform. 2023. <span>“Opta Data from Stats Perform.”</span> 2023. <a href="https://www.statsperform.com/opta/">https://www.statsperform.com/opta/</a>.
-</div>
-<div class="csl-entry">
-Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://dataglossary.wyscout.com">https://dataglossary.wyscout.com</a>.
-</div>
+<p>Thus, tracking datasets are crucial for developing new ways of measuring team and player performance, as they provide us with global information about the game.</p>
+<p>This data-driven approach enhances the understanding of the sport and its strategic nuances, fostering a deeper appreciation of the game’s intricacies. As a result, tracking data has become a valuable tool in football analysis, providing insights into player performance and team strategy. These advanced metrics can be applied to specific games, as in the analysis presented earlier (Fig. <a href="data-analytics-in-football.html#fig:heatmap">2.7</a>), or to an ensemble of them to provide a comprehensive view of general player behavior under different parameters. In the following section, we will introduce two main frameworks from which our present a selection of these metrics, both physical and tactical, to provide context for our proposed offside control metric across multiple games.</p>
+<p>After the initial review of the state of art of football analytics, we will introduce the methodology behind our proposed metric to characterize offside strategy’s effectiveness. In this chapter, we will combine both physical metrics and tactical models derived from Tracking datasets to build the proposed metric: <em>Offside Control</em></p>
+
 </div>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<h3> Methodology<a href="methodology.html#methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Buldu" class="csl-entry">
 Buldú, Javier M., Javier Busquets, Johann H. Martínez, José L. Herrera-Diestra, Ignacio Echegoyen, Javier Galeano, and Jordi Luque. 2018. <span>“Using Network Science to Analyse Football Passing Networks: Dynamics, Space, Time, and the Multilayer Nature of the Game.”</span> <em>Frontiers in Psychology</em> 9. <a href="https://doi.org/10.3389/fpsyg.2018.01900">https://doi.org/10.3389/fpsyg.2018.01900</a>.
+</div>
+<div id="ref-Felipe2019ValidationOA" class="csl-entry">
+Felipe, José Luis, Jorge García-Unanue, David Viejo-Romero, Archit Navandar, and Javier Sánchez-Sánchez. 2019. <span>“Validation of a Video-Based Performance Analysis System (Mediacoach<span></span>) to Analyze the Physical Demands During Matches in LaLiga.”</span> <em>Sensors (Basel, Switzerland)</em> 19. <a href="https://api.semanticscholar.org/CorpusID:202746198">https://api.semanticscholar.org/CorpusID:202746198</a>.
+</div>
+<div id="ref-GARRIDO2022112827" class="csl-entry">
+Garrido, David, Borja Burriel, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2022. <span>“Heatmaps in Soccer: Event Vs Tracking Datasets.”</span> <em>Chaos, Solitons &amp; Fractals</em> 165: 112827. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2022.112827">https://doi.org/10.1016/j.chaos.2022.112827</a>.
 </div>
 <div id="ref-NOVILLO2024114355" class="csl-entry">
 Novillo, Álvaro, Bingnan Gong, Johann H. Martínez, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2024. <span>“A Multilayer Network Framework for Soccer Analysis.”</span> <em>Chaos, Solitons &amp; Fractals</em> 178: 114355. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2023.114355">https://doi.org/10.1016/j.chaos.2023.114355</a>.
@@ -244,15 +285,18 @@ Pappalardo, Luca, Paolo Cintia, Alessio Rossi, Emanuele Massucco, Paolo Ferragin
 <div id="ref-opta" class="csl-entry">
 StatsPerform. 2023. <span>“Opta Data from Stats Perform.”</span> 2023. <a href="https://www.statsperform.com/opta/">https://www.statsperform.com/opta/</a>.
 </div>
+<div id="ref-wyscout" class="csl-entry">
+Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://dataglossary.wyscout.com">https://dataglossary.wyscout.com</a>.
+</div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Opta uses a combination of human annotation, computer vision, and
+<ol start="2">
+<li id="fn2"><p>Opta uses a combination of human annotation, computer vision, and
 AI modelling to offer real-time data at various levels of detail
 based on customer requirements. In our situation, the data feed
-updates itself when an event such as a goal, foul or pass occurs;
-otherwise, it updates every 90 seconds. <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span><a href="data-analytics-in-football.html#fnref1" class="footnote-back">↩︎</a></p></li>
+updates itself when an event such as a goal, foul or pass occurs.
+Otherwise, it updates every 90 seconds. <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span><a href="data-analytics-in-football.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -260,8 +304,8 @@ otherwise, it updates every 90 seconds. <span class="citation">(<a href="#ref-op
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methodology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

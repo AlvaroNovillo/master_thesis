@@ -1,7 +1,12 @@
 fig:xg
 fig:shotmap
 fig:homepass
-fig:awaypass
+fig:xg-xga
+fig:rank-xg-xga
+fig:frame
+fig:heatmap
 introduction
 data-analytics-in-football
 events-data
+tracking
+methodology
