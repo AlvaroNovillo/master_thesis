@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  25 MAR 2024 14:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  25 MAR 2024 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,7 +1128,7 @@ Chapter 3.
 <imagenes/ball.jpg, id=219, 605.6226pt x 213.9192pt>
 File: imagenes/ball.jpg Graphic file (type jpg)
 <use imagenes/ball.jpg>
-Package pdftex.def Info: imagenes/ball.jpg  used on input line 567.
+Package pdftex.def Info: imagenes/ball.jpg  used on input line 571.
 (pdftex.def)             Requested size: 341.44736pt x 120.60669pt.
 [17
 
@@ -1136,17 +1136,17 @@ Package pdftex.def Info: imagenes/ball.jpg  used on input line 567.
 <imagenes/vel.png, id=226, 1390.44469pt x 526.96875pt>
 File: imagenes/vel.png Graphic file (type png)
 <use imagenes/vel.png>
-Package pdftex.def Info: imagenes/vel.png  used on input line 580.
+Package pdftex.def Info: imagenes/vel.png  used on input line 584.
 (pdftex.def)             Requested size: 341.41512pt x 129.39392pt.
 <imagenes/exp_poster.png, id=229, 433.62pt x 289.08pt>
 File: imagenes/exp_poster.png Graphic file (type png)
 <use imagenes/exp_poster.png>
-Package pdftex.def Info: imagenes/exp_poster.png  used on input line 614.
+Package pdftex.def Info: imagenes/exp_poster.png  used on input line 621.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
 <imagenes/sigmoid_poster.png, id=230, 433.62pt x 289.08pt>
 File: imagenes/sigmoid_poster.png Graphic file (type png)
 <use imagenes/sigmoid_poster.png>
-Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 614.
+Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 621.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
 [18 <./imagenes/vel.png>] (master_thesis.bbl [19 <./imagenes/exp_poster.png> <.
 /imagenes/sigmoid_poster.png>] [20
@@ -1167,11 +1167,11 @@ L3 programming layer <2023-11-01>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25271 strings out of 474592
- 396517 string characters out of 5747215
+ 25267 strings out of 474592
+ 396488 string characters out of 5747215
  1948533 words of memory out of 5000000
  46443 multiletter control sequences out of 15000+600000
- 652432 words of font info for 475 fonts, out of 8000000 for 9000
+ 652267 words of font info for 472 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,16n,108p,1204b,2554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.p
@@ -1188,7 +1188,7 @@ a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
 a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (21 pages, 8551752 bytes).
+Output written on master_thesis.pdf (21 pages, 8551813 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)

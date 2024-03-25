@@ -555,9 +555,13 @@ the space they are moving into rather than the space they currently occupy.
 To construct this model, we must calculate the following for a given location on the pitch:
 
 \begin{itemize}
-    \item How long it would take for the ball to reach to the position of interest (from its starting position).
-    \item How long would it take for each player to get to that position.  
-    \item What is the total \textit{probability} that each team will control the ball \textit{after} both the players and the ball have arrived at the desired position? 
+\tightlist
+\item
+  How long it would take for the ball to reach to the position of interest (from its starting position).
+\item
+  How long would it take for each player to get to that position.
+\item
+  What is the total \emph{probability} that each team will control the ball \emph{after} both the players and the ball have arrived at the desired position?
 \end{itemize}
 
 In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game (See Fig. \ref{fig:ball})
@@ -584,11 +588,14 @@ When considering how long it will take the players to reach the target position,
 \caption{p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 season.}\label{fig:vel}
 \end{figure}
 
-To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\) \footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}, we use a simple approximation consisting of a two-step process:
+To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\) , we use a simple approximation consisting of a two-step process:
 
 \begin{itemize}
-    \item[1.] There is an initial \textit{reaction time}, assumed to be of $t_{r}=0.7$ seconds for every player. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position $\vec{r}_{react}$).
-    \item[2.] After this time, we assume that the player runs directly towards the ball at his maximum speed of $v_{max,p}$.
+\tightlist
+\item
+  There is an initial \emph{reaction time}, assumed to be of \(t_{r} = 0.7\) seconds for every player\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \(\vec{r}_{\text{react}}\)).
+\item
+  After this time, we assume that the player runs directly towards the ball at his maximum speed of \(v_{\text{max,p}}\).
 \end{itemize}
 
 \begin{align}
