@@ -38,7 +38,7 @@ When considering how long it will take the players to reach the target position,
 knitr::include_graphics("imagenes/vel.png")
 ```
 
-To compute the player's expected arrival time, $\tau_{exp}(\vec{r};t_r)$, we use a simple approximation consisting of a two-step process:
+To compute the player's expected arrival time, $\tau_{exp}(\vec{r};t_r)$ [^3], we use a simple approximation consisting of a two-step process:
 \begin{itemize}
     \item[1.] There is an initial \textit{reaction time}, assumed to be of $t_{r}=0.7$ seconds for every player. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position $\vec{r}_{react}$).
     \item[2.] After this time, we assume that the player runs directly towards the ball at his maximum speed of $v_{max,p}$.
@@ -50,9 +50,20 @@ To compute the player's expected arrival time, $\tau_{exp}(\vec{r};t_r)$, we use
 
 Once we computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do so, we will assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate $\lambda$, with units of $1/s$. Thus, for any differential time $\Delta t$ that a player is near the ball, he has a probability of $\lambda \cdot \Delta t$ of controlling the ball.
 
+\begin{align}
+F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
+\end{align}
+
+
 So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled $\sigma$, in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution (See Fig. \@ref(fig:lambda)).
 
-```{r lambda, fig.show="hold", out.width='45%', fig.align='center', fig.cap= "{Cumulative distribution function of the time to control the ball.",echo = FALSE}
+\begin{align}
+    F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
+    \label{sigmoid}
+\end{align}
+
+
+```{r lambda, fig.show="hold", out.width='45%', fig.align='center', fig.cap= "Cumulative distribution function of the time to control the ball.",echo = FALSE}
 knitr::include_graphics("imagenes/exp_poster.png")
 knitr::include_graphics("imagenes/sigmoid_poster.png")
 ```

@@ -104,9 +104,12 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#events-data"><i class="fa fa-check"></i><b>2.1</b> Events data</a></li>
-<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking"><i class="fa fa-check"></i><b>2.2</b> Tracking</a></li>
+<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking-data"><i class="fa fa-check"></i><b>2.2</b> Tracking data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a></li>
+<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="methodology.html"><a href="methodology.html#pitch-control-models"><i class="fa fa-check"></i><b>3.1</b> Pitch Control Models</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
 Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
@@ -240,8 +243,8 @@ Figure 2.5: Ranking of the average differences in Expected Goals Scored (xG) Min
 <p>We’ve just discussed some of the many statistics that can be inferred from this data sources to characterize the team performance, such as possession, pressure, duels, fouls, etc. This type of datasets are both easily manageable, and provide teams with useful information. Due to limitations in space and scope, however, we are unable to provide a more in-depth analysis of these measures</p>
 <p>Although event datasets supply beneficial information regarding the team’s overall performance, deeper scrutiny can be conducted via tracking data, which consists of the players’ and ball’s position and movement during the match. Tracking data can offer additional insight into both the physical and tactical aspects of the game.</p>
 </div>
-<div id="tracking" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Tracking<a href="data-analytics-in-football.html#tracking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tracking-data" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Tracking data<a href="data-analytics-in-football.html#tracking-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><code>Tracking data</code> offers a more comprehensive perspective than event data by providing access to information on all players, their trajectories, and velocities. This allows for the analysis of off-ball players and team dynamics, resulting in a more nuanced understanding of the game.</p>
 <p>There are two main techniques for obtaining tracking data, which decide its classification: <strong>Image detection algorithms</strong> extract players’ positions from the match broadcast and infer locations of concealed players, whereas <strong>optical tracking</strong> employs a specialized camera system installed on the field to record players’ data. Our research will concentrate on the latter method, as it offers more precise and statistically informative data.</p>
 <p>Our tracking data has been provided by Mediacoach®. They utilises the Tracab Optical Tracking system to obtain on-the-pitch player positions. This multi-camera system captures each player’s position at 25 frames per second. The system consists of three units, each with a resolution of 1920x1080 pixels, producing a panoramic picture that generates a stereoscopic view for triangulating the players and ball. In case of a temporary loss of any location, a skilled operator adjusts the players’ positions. The datasets obtained by the Mediacoach® system have been validated in advance using GPS <span class="citation">(<a href="#ref-Felipe2019ValidationOA">Felipe et al. 2019</a>)</span>.</p>
@@ -265,7 +268,7 @@ Figure 2.7: Heatmap of the ball position during the Atlético de Madrid - Getafe
 
 </div>
 </div>
-<h3> Methodology<a href="methodology.html#methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Buldu" class="csl-entry">
 Buldú, Javier M., Javier Busquets, Johann H. Martínez, José L. Herrera-Diestra, Ignacio Echegoyen, Javier Galeano, and Jordi Luque. 2018. <span>“Using Network Science to Analyse Football Passing Networks: Dynamics, Space, Time, and the Multilayer Nature of the Game.”</span> <em>Frontiers in Psychology</em> 9. <a href="https://doi.org/10.3389/fpsyg.2018.01900">https://doi.org/10.3389/fpsyg.2018.01900</a>.
@@ -359,6 +362,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

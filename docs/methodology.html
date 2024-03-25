@@ -104,9 +104,12 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#events-data"><i class="fa fa-check"></i><b>2.1</b> Events data</a></li>
-<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking"><i class="fa fa-check"></i><b>2.2</b> Tracking</a></li>
+<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking-data"><i class="fa fa-check"></i><b>2.2</b> Tracking data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a></li>
+<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="methodology.html"><a href="methodology.html#pitch-control-models"><i class="fa fa-check"></i><b>3.1</b> Pitch Control Models</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
 Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
@@ -132,6 +135,69 @@ src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
             <section class="normal" id="section-">
 <div id="methodology" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Methodology<a href="methodology.html#methodology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>As discussed earlier, tracking datasets provide the position of all players and the ball throughout the match with a temporal resolution of 25fps. This enables us to estimate the players’ covered distance, speed, and acceleration. The potential for extracting information from tracking datasets that is useful for football analytics extends beyond variables related to players’ physical performance. Many tactical metrics has been implemented to decode how the intricate movements of players translate to the soccer field.</p>
+<p>These models provide a scientific perspective for analysing player positioning, decision-
+making, and team dynamics, illuminating the complex interactions that occur during a
+match.</p>
+<p><em>Pitch Control</em> is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a soccer match. It combines player position and speed with mathematical models that simulate ball and player movement <span class="citation">(<a href="#ref-Spearman">Spearman 2018</a>)</span>.</p>
+<p>This master’s thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define and understand Pitch Control Models, including their construction and implementation.</p>
+<div id="pitch-control-models" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Pitch Control Models<a href="methodology.html#pitch-control-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <em>Pitch Control (PC)</em> at a given location represents the probability of a player or team gaining control of the ball if it moves directly to that location. <em>PC</em> models simulate the dynamics of the ball and the players to evaluate which player would control the ball if it moves to any location on the pitch at any moment.
+The model captures not only the players’ current position, but also their movement. When players are running at high speeds, they are more likely to control
+the space they are moving into rather than the space they currently occupy.</p>
+<p>To construct this model, we must calculate the following for a given location on the pitch:</p>
+<p>In the model, the ball is set to move at a constant speed of <span class="math inline">\(v_b = 54\)</span> <span class="math inline">\(km/h\)</span>, which is approximately the average speed of the ball in the game (See Fig. <a href="methodology.html#fig:ball">3.1</a>)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ball"></span>
+<img src="imagenes/ball.jpg" alt="p.d.f of the ball speed over a 100 matches from LaLiga 2019-2020 season." width="80%"  />
+<p class="caption">
+Figure 3.1: p.d.f of the ball speed over a 100 matches from LaLiga 2019-2020 season.
+</p>
+</div>
+<p>Therefore, the time taken to arrive at the location of interest can be easily calculated as <span class="math inline">\(t_{b,arr} = \Delta x_b/v_b\)</span>, where <span class="math inline">\(\Delta x_b\)</span> is the distance between the initial and final positions of the ball.</p>
+<p>When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of <span class="math inline">\(v_{max,p} = 18\)</span> <span class="math inline">\(km/h\)</span>, which corresponds to the 95 percentile of the average speed of the players in the game (See Fig. <a href="methodology.html#fig:vel">3.2</a>). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vel"></span>
+<img src="imagenes/vel.png" alt="p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 season." width="80%"  />
+<p class="caption">
+Figure 3.2: p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 season.
+</p>
+</div>
+To compute the player’s expected arrival time, <span class="math inline">\(\tau_{exp}(\vec{r};t_r)\)</span> <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, we use a simple approximation consisting of a two-step process:
+<p><span class="math display">\[\begin{align}
+    \tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
+    \label{exp_arr_time}
+\end{align}\]</span></p>
+<p>Once we computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do so, we will assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate <span class="math inline">\(\lambda\)</span>, with units of <span class="math inline">\(1/s\)</span>. Thus, for any differential time <span class="math inline">\(\Delta t\)</span> that a player is near the ball, he has a probability of <span class="math inline">\(\lambda \cdot \Delta t\)</span> of controlling the ball.</p>
+<p><span class="math display">\[\begin{align}
+F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
+\end{align}\]</span></p>
+<p>So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled <span class="math inline">\(\sigma\)</span>, in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution (See Fig. <a href="methodology.html#fig:lambda">3.3</a>).</p>
+<p><span class="math display">\[\begin{align}
+    F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
+    \label{sigmoid}
+\end{align}\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lambda"></span>
+<img src="imagenes/exp_poster.png" alt="Cumulative distribution function of the time to control the ball." width="45%"  /><img src="imagenes/sigmoid_poster.png" alt="Cumulative distribution function of the time to control the ball." width="45%"  />
+<p class="caption">
+Figure 3.3: Cumulative distribution function of the time to control the ball.
+</p>
+</div>
+<p>Both <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\sigma\)</span> has been selected according to <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span>, where they model passes as a Bernoulli trial, with probability mass function</p>
+<p><span class="math display">\[\begin{align}
+P(k \mid \sigma, \lambda, x)=\left\{\begin{array}{lr}
+1-p \text { for } \mathrm{k}=0 \\
+p &amp; \text { for } \mathrm{k}=1
+\end{array}\right.
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(k \in [0,1]\)</span> is the outcome of the pass. Then, the likelihood of a set of<br />
+parameters, <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\lambda\)</span>, given outcome <span class="math inline">\(k\)</span> and the start of the pass <span class="math inline">\(x\)</span> is:</p>
+<p><span class="math display">\[\begin{align}
+\mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
+\end{align}\]</span></p>
+<p>Then, maximizing the product of the likelihood for each pass for a training sample P, the best fit is found at <span class="math inline">\(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)</span><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p><span class="math display">\[\begin{align}
+\min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
+\end{align}\]</span></p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div class="csl-entry">
@@ -159,6 +225,9 @@ Sarlis, Vangelis, and Christos Tjortjis. 2020. <span>“Sports Analytics — Ev
 Spearman, William. 2018. <span>“Beyond Expected Goals.”</span> In.
 </div>
 <div class="csl-entry">
+Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <span>“Physics-Based Modeling of Pass Probabilities in Soccer.”</span> In.
+</div>
+<div class="csl-entry">
 StatsPerform. 2023. <span>“Opta Data from Stats Perform.”</span> 2023. <a href="https://www.statsperform.com/opta/">https://www.statsperform.com/opta/</a>.
 </div>
 <div class="csl-entry">
@@ -166,6 +235,7 @@ Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://
 </div>
 </div>
 </div>
+</div>
 
 
 
@@ -177,6 +247,24 @@ Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://
 
 
 
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-Spearman" class="csl-entry">
+Spearman, William. 2018. <span>“Beyond Expected Goals.”</span> In.
+</div>
+<div id="ref-SpearmanFit" class="csl-entry">
+Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <span>“Physics-Based Modeling of Pass Probabilities in Soccer.”</span> In.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.<a href="methodology.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>See <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span> for further details<a href="methodology.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
@@ -237,6 +325,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
