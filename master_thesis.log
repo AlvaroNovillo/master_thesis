@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  25 MAR 2024 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  25 MAR 2024 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -771,31 +771,116 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen269
+\WF@size=\dimen270
+\c@WF@wrappedlines=\count332
+\WF@box=\box70
+\WF@everypar=\toks48
+Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks49
+\minrowclearance=\skip94
+\rownum=\count333
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometa
+data.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/tabu\tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box71
+\sift@deathcycles=\count334
+\@vwid@loff=\dimen271
+\@vwid@roff=\dimen272
+)
+\c@taburow=\count335
+\tabu@nbcols=\count336
+\tabu@cnt=\count337
+\tabu@Xcol=\count338
+\tabu@alloc=\count339
+\tabu@nested=\count340
+\tabu@target=\dimen273
+\tabu@spreadtarget=\dimen274
+\tabu@naturalX=\dimen275
+\tabucolX=\dimen276
+\tabu@Xsum=\dimen277
+\extrarowdepth=\dimen278
+\abovetabulinesep=\dimen279
+\belowtabulinesep=\dimen280
+\tabustrutrule=\dimen281
+\tabu@thebody=\toks50
+\tabu@footnotes=\toks51
+\tabu@box=\box72
+\tabu@arstrutbox=\box73
+\tabu@hleads=\box74
+\tabu@vleads=\box75
+\tabu@cellskip=\skip95
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepartta
+ble.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box76
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/threeparttablex\threepartt
+ablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip96
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box77
+\UL@hyphenbox=\box78
+\UL@skip=\skip97
+\UL@hook=\toks52
+\UL@height=\dimen282
+\UL@pe=\count341
+\UL@pixel=\dimen283
+\ULC@box=\box79
+Package: ulem 2019/11/18
+\ULdepth=\dimen284
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen285
+\c@nlinenum=\count342
+\TeXr@lab=\toks53
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip94
-\bibsep=\skip95
+\bibhang=\skip98
+\bibsep=\skip99
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count332
+\c@NAT@ctr=\count343
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count333
+\BKM@id=\count344
 )) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 
 Package hyperref Warning: Option `pdftitle' has already been used,
-(hyperref)                setting the option has no effect on input line 292.
+(hyperref)                setting the option has no effect on input line 306.
 
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 292.
+(hyperref)                setting the option has no effect on input line 306.
 
 
 Package hyperref Warning: Option `pdfcreator' has already been used,
-(hyperref)                setting the option has no effect on input line 292.
+(hyperref)                setting the option has no effect on input line 306.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -803,8 +888,8 @@ Package csquotes Info: ... found 'babel' package.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
 .def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count334
-\l__pdf_internal_box=\box70
+\l__color_backend_stack_int=\count345
+\l__pdf_internal_box=\box80
 )
 
 LaTeX Warning: Unused global option(s):
@@ -813,57 +898,57 @@ LaTeX Warning: Unused global option(s):
 (master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 298.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 312.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-298.
+312.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 312.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-298.
+312.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 298.
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 298.
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 298.
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 312.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-298.
+312.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 298.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 2
-98.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 312.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 3
+12.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 298.
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 298.
-LaTeX Font Info:    ... okay on input line 298.
-LaTeX Info: Redefining \microtypecontext on input line 298.
-Package microtype Info: Applying patch `item' on input line 298.
-Package microtype Info: Applying patch `toc' on input line 298.
-Package microtype Info: Applying patch `eqnum' on input line 298.
-Package microtype Info: Applying patch `footnote' on input line 298.
-Package microtype Info: Applying patch `verbatim' on input line 298.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Info: Redefining \microtypecontext on input line 312.
+Package microtype Info: Applying patch `item' on input line 312.
+Package microtype Info: Applying patch `toc' on input line 312.
+Package microtype Info: Applying patch `eqnum' on input line 312.
+Package microtype Info: Applying patch `footnote' on input line 312.
+Package microtype Info: Applying patch `verbatim' on input line 312.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 298.
+LaTeX Info: Redefining \showhyphens on input line 312.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -872,17 +957,17 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
-\scratchdimen=\dimen269
-\scratchbox=\box71
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count338
-\MPscratchDim=\dimen270
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count346
+\scratchdimen=\dimen286
+\scratchbox=\box81
+\nofMPsegments=\count347
+\nofMParguments=\count348
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count349
+\MPscratchDim=\dimen287
+\MPnumerator=\count350
+\makeMPintoPDFobject=\count351
+\everyMPtoPDFconversion=\toks55
 )
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
 .sty
@@ -926,41 +1011,31 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
-
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometa
-data.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
-F (HO)
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-))
-Package hyperref Info: Link coloring OFF on input line 298.
+Package hyperref Info: Link coloring OFF on input line 312.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: Fixing longtable code of `floatrow' package.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
-\flrow@LT@lasthead=\box72
-\flrow@LT@prelastfoot=\box73
-\c@FBLTpage=\count341
+\flrow@LT@lasthead=\box82
+\flrow@LT@prelastfoot=\box83
+\c@FBLTpage=\count352
 )
-\c@lstlisting=\count342
-LaTeX Font Info:    Trying to load font information for T1+txss on input line 2
-99.
+\c@lstlisting=\count353
+LaTeX Font Info:    Trying to load font information for T1+txss on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 299.
+(Font)              scaled to size 9.49997pt on input line 313.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `txss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -968,63 +1043,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 <imagenes/Portada_Logo.png, id=6, 456.2865pt x 45.99pt>
 File: imagenes/Portada_Logo.png Graphic file (type png)
 <use imagenes/Portada_Logo.png>
-Package pdftex.def Info: imagenes/Portada_Logo.png  used on input line 299.
+Package pdftex.def Info: imagenes/Portada_Logo.png  used on input line 313.
 (pdftex.def)             Requested size: 455.24797pt x 45.88531pt.
 
-Overfull \hbox (28.45662pt too wide) in paragraph at lines 299--299
+Overfull \hbox (28.45662pt too wide) in paragraph at lines 313--313
  [] 
  []
 
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 299.
+(Font)              scaled to size 13.67995pt on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 13.67995pt on input line 299.
+(Font)              scaled to size 13.67995pt on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 299.
+(Font)              scaled to size 23.63593pt on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 299.
+(Font)              scaled to size 16.41594pt on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 299.
+(Font)              scaled to size 7.59998pt on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <8> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 299.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 7.59998pt on input line 299.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
-99.
+(Font)              scaled to size 7.59998pt on input line 313.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
-99.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
-99.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
-99.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
-99.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 3
+13.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 <imagenes/creativecommons.png, id=8, 338.76563pt x 118.19156pt>
 File: imagenes/creativecommons.png Graphic file (type png)
 <use imagenes/creativecommons.png>
-Package pdftex.def Info: imagenes/creativecommons.png  used on input line 299.
+Package pdftex.def Info: imagenes/creativecommons.png  used on input line 313.
 (pdftex.def)             Requested size: 119.50018pt x 41.69228pt.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <8> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 299.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 313.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 299.
+(Font)              scaled to size 7.59998pt on input line 313.
 
-Overfull \hbox (11.02554pt too wide) in paragraph at lines 299--299
+Overfull \hbox (11.02554pt too wide) in paragraph at lines 313--313
 []
  []
 
@@ -1036,7 +1111,7 @@ enes/Portada_Logo.png> <./imagenes/creativecommons.png>] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 303.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 317.
 (master_thesis.toc)
 \tf@toc=\write4
 \openout4 = `master_thesis.toc'.
@@ -1045,121 +1120,132 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 
 ] [5] [6
 
+]
+<imagenes/sign.png, id=72, 1154.06157pt x 1204.5pt>
+File: imagenes/sign.png Graphic file (type png)
+<use imagenes/sign.png>
+Package pdftex.def Info: imagenes/sign.png  used on input line 327.
+(pdftex.def)             Requested size: 72.5513pt x 75.72215pt.
+[7 <./imagenes/sign.png>] [8
+
 ] (master_thesis.lof)
 \tf@lof=\write5
 \openout5 = `master_thesis.lof'.
 
-[7] [8
+[9] [10
+
+] (master_thesis.lot)
+\tf@lot=\write6
+\openout6 = `master_thesis.lot'.
+
+[11] [12
 
 ]
 Chapter 1.
-[9] [10
+[13] [14
 
 ]
 Chapter 2.
-<imagenes/xg_evol.png, id=146, 962.81708pt x 423.38174pt>
+<imagenes/xg_evol.png, id=174, 962.81708pt x 423.38174pt>
 File: imagenes/xg_evol.png Graphic file (type png)
 <use imagenes/xg_evol.png>
-Package pdftex.def Info: imagenes/xg_evol.png  used on input line 391.
+Package pdftex.def Info: imagenes/xg_evol.png  used on input line 417.
 (pdftex.def)             Requested size: 341.42783pt x 150.13683pt.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 403.
-[11 <./imagenes/xg_evol.png>]
-<imagenes/home_shot_map.png, id=155, 941.76843pt x 1208.26407pt>
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 429.
+[15 <./imagenes/xg_evol.png>]
+<imagenes/home_shot_map.png, id=183, 941.76843pt x 1208.26407pt>
 File: imagenes/home_shot_map.png Graphic file (type png)
 <use imagenes/home_shot_map.png>
-Package pdftex.def Info: imagenes/home_shot_map.png  used on input line 407.
+Package pdftex.def Info: imagenes/home_shot_map.png  used on input line 433.
 (pdftex.def)             Requested size: 192.04349pt x 246.38673pt.
-<imagenes/away_shot_map.png, id=156, 941.76843pt x 1208.26407pt>
+<imagenes/away_shot_map.png, id=184, 941.76843pt x 1208.26407pt>
 File: imagenes/away_shot_map.png Graphic file (type png)
 <use imagenes/away_shot_map.png>
-Package pdftex.def Info: imagenes/away_shot_map.png  used on input line 407.
+Package pdftex.def Info: imagenes/away_shot_map.png  used on input line 433.
 (pdftex.def)             Requested size: 192.04349pt x 246.38673pt.
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 4
-16.
+42.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [12 <./imagenes/home_shot_map.png> <./imagenes/away_shot_map.png>]
-<imagenes/home_pass_network.jpg, id=175, 992.9898pt x 665.3658pt>
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16 <./imagenes/home_shot_map.png> <./imagenes/away_shot_map.png>]
+<imagenes/home_pass_network.jpg, id=203, 992.9898pt x 665.3658pt>
 File: imagenes/home_pass_network.jpg Graphic file (type jpg)
 <use imagenes/home_pass_network.jpg>
-Package pdftex.def Info: imagenes/home_pass_network.jpg  used on input line 460
+Package pdftex.def Info: imagenes/home_pass_network.jpg  used on input line 506
 .
 (pdftex.def)             Requested size: 213.38258pt x 142.97978pt.
-<imagenes/away_pass_network.jpg, id=176, 989.1354pt x 665.3658pt>
+<imagenes/away_pass_network.jpg, id=204, 989.1354pt x 665.3658pt>
 File: imagenes/away_pass_network.jpg Graphic file (type jpg)
 <use imagenes/away_pass_network.jpg>
-Package pdftex.def Info: imagenes/away_pass_network.jpg  used on input line 460
+Package pdftex.def Info: imagenes/away_pass_network.jpg  used on input line 506
 .
 (pdftex.def)             Requested size: 213.38443pt x 143.53818pt.
-<imagenes/scat-xG-xGa.png, id=182, 2347.77126pt x 1659.19875pt>
+[17 <./imagenes/home_pass_network.jpg> <./imagenes/away_pass_network.jpg>]
+<imagenes/scat-xG-xGa.png, id=215, 2347.77126pt x 1659.19875pt>
 File: imagenes/scat-xG-xGa.png Graphic file (type png)
 <use imagenes/scat-xG-xGa.png>
-Package pdftex.def Info: imagenes/scat-xG-xGa.png  used on input line 481.
+Package pdftex.def Info: imagenes/scat-xG-xGa.png  used on input line 527.
 (pdftex.def)             Requested size: 341.40327pt x 241.27388pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[13 <./imagenes/home_pass_network.jpg> <./imagenes/away_pass_network.jpg>]
-<imagenes/xG-xGa.png, id=190, 2347.77126pt x 1659.19875pt>
+<imagenes/xG-xGa.png, id=216, 2347.77126pt x 1659.19875pt>
 File: imagenes/xG-xGa.png Graphic file (type png)
 <use imagenes/xG-xGa.png>
-Package pdftex.def Info: imagenes/xG-xGa.png  used on input line 490.
+Package pdftex.def Info: imagenes/xG-xGa.png  used on input line 536.
 (pdftex.def)             Requested size: 341.40327pt x 241.27388pt.
-[14 <./imagenes/scat-xG-xGa.png> <./imagenes/xG-xGa.png>]
+[18 <./imagenes/scat-xG-xGa.png> <./imagenes/xG-xGa.png>]
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
-07.
+53.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<imagenes/Frame.png, id=200, 505.89pt x 361.35pt>
+<imagenes/Frame.png, id=227, 505.89pt x 361.35pt>
 File: imagenes/Frame.png Graphic file (type png)
 <use imagenes/Frame.png>
-Package pdftex.def Info: imagenes/Frame.png  used on input line 513.
+Package pdftex.def Info: imagenes/Frame.png  used on input line 559.
 (pdftex.def)             Requested size: 341.43785pt x 243.88419pt.
-[15 <./imagenes/Frame.png>]
-<imagenes/Heatmap.jpg, id=212, 505.89pt x 361.35pt>
+[19 <./imagenes/Frame.png>]
+<imagenes/Heatmap.jpg, id=239, 505.89pt x 361.35pt>
 File: imagenes/Heatmap.jpg Graphic file (type jpg)
 <use imagenes/Heatmap.jpg>
-Package pdftex.def Info: imagenes/Heatmap.jpg  used on input line 524.
+Package pdftex.def Info: imagenes/Heatmap.jpg  used on input line 570.
 (pdftex.def)             Requested size: 341.43785pt x 243.88419pt.
-[16 <./imagenes/Heatmap.jpg>]
+[20 <./imagenes/Heatmap.jpg>]
 Chapter 3.
-<imagenes/ball.jpg, id=221, 605.6226pt x 213.9192pt>
+<imagenes/ball.jpg, id=249, 605.6226pt x 213.9192pt>
 File: imagenes/ball.jpg Graphic file (type jpg)
 <use imagenes/ball.jpg>
-Package pdftex.def Info: imagenes/ball.jpg  used on input line 571.
+Package pdftex.def Info: imagenes/ball.jpg  used on input line 617.
 (pdftex.def)             Requested size: 341.44736pt x 120.60669pt.
-[17
+[21
 
  <./imagenes/ball.jpg>]
-<imagenes/vel.png, id=229, 1390.44469pt x 526.96875pt>
+<imagenes/vel.png, id=257, 1390.44469pt x 526.96875pt>
 File: imagenes/vel.png Graphic file (type png)
 <use imagenes/vel.png>
-Package pdftex.def Info: imagenes/vel.png  used on input line 586.
+Package pdftex.def Info: imagenes/vel.png  used on input line 632.
 (pdftex.def)             Requested size: 341.41512pt x 129.39392pt.
-[18 <./imagenes/vel.png>]
-<imagenes/sigmoid_poster.png, id=242, 433.62pt x 289.08pt>
+[22 <./imagenes/vel.png>]
+<imagenes/sigmoid_poster.png, id=270, 433.62pt x 289.08pt>
 File: imagenes/sigmoid_poster.png Graphic file (type png)
 <use imagenes/sigmoid_poster.png>
-Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 625.
+Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 671.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
-<imagenes/exp_poster.png, id=243, 433.62pt x 289.08pt>
+<imagenes/exp_poster.png, id=271, 433.62pt x 289.08pt>
 File: imagenes/exp_poster.png Graphic file (type png)
 <use imagenes/exp_poster.png>
-Package pdftex.def Info: imagenes/exp_poster.png  used on input line 625.
+Package pdftex.def Info: imagenes/exp_poster.png  used on input line 671.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
-[19 <./imagenes/sigmoid_poster.png> <./imagenes/exp_poster.png>] (master_thesis
-.bbl [20])
-
-Package caption Warning: Unused \captionsetup[table] on input line 171.
-See the caption package documentation for explanation.
-
+[23 <./imagenes/sigmoid_poster.png> <./imagenes/exp_poster.png>] (master_thesis
+.bbl [24])
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 224.
 See the caption package documentation for explanation.
 
-[21
+[25
 
 ] (master_thesis.aux)
  ***********
@@ -1168,13 +1254,13 @@ L3 programming layer <2023-11-01>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25305 strings out of 474592
- 396840 string characters out of 5747215
+ 26591 strings out of 474592
+ 417210 string characters out of 5747215
  1948533 words of memory out of 5000000
- 46449 multiletter control sequences out of 15000+600000
- 656119 words of font info for 494 fonts, out of 8000000 for 9000
+ 47684 multiletter control sequences out of 15000+600000
+ 656225 words of font info for 495 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,16n,108p,1204b,2554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,17n,108p,1204b,2554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxi.p
@@ -1190,9 +1276,9 @@ a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
 a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (21 pages, 8562544 bytes).
+Output written on master_thesis.pdf (25 pages, 8905424 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 127120 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 127133 words of extra memory for PDF output out of 128383 (max. 10000000)
 

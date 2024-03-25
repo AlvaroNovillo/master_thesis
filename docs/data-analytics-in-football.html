@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Data Analytics in football | Data Analytics in Football: Pitch Control and Beyond</title>
+  <title>2 Data Analytics in football | Data Analytics in Football: Pitch Control Models and Beyond</title>
   <meta name="description" content="Master Thesis. Universidad Carlos III de Madrid." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Data Analytics in football | Data Analytics in Football: Pitch Control and Beyond" />
+  <meta property="og:title" content="2 Data Analytics in football | Data Analytics in Football: Pitch Control Models and Beyond" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/imagenes/cover-front.jpg" />
   <meta property="og:description" content="Master Thesis. Universidad Carlos III de Madrid." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Data Analytics in football | Data Analytics in Football: Pitch Control and Beyond" />
+  <meta name="twitter:title" content="2 Data Analytics in football | Data Analytics in Football: Pitch Control Models and Beyond" />
   
   <meta name="twitter:description" content="Master Thesis. Universidad Carlos III de Madrid." />
   <meta name="twitter:image" content="/imagenes/cover-front.jpg" />
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -99,7 +101,8 @@ div.csl-indent {
 <li><a href="./">Contents</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="dedication.html"><a href="dedication.html"><i class="fa fa-check"></i>Dedication</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
 <ul>
@@ -129,7 +132,7 @@ src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analytics in Football: Pitch Control and Beyond</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analytics in Football: Pitch Control Models and Beyond</a>
           </h1>
         </div>
 
@@ -199,6 +202,218 @@ tagger and soccer match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
 additional, specific attributes or a quick review <span class="citation">(<a href="#ref-3">Pappalardo et al. 2019</a>)</span>.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:event">Table 2.1: </span>Example of an events dataset of a game.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+team_id
+</th>
+<th style="text-align:right;">
+code
+</th>
+<th style="text-align:left;">
+type
+</th>
+<th style="text-align:right;">
+player
+</th>
+<th style="text-align:right;">
+x
+</th>
+<th style="text-align:right;">
+y
+</th>
+<th style="text-align:right;">
+min
+</th>
+<th style="text-align:right;">
+sec
+</th>
+<th style="text-align:right;">
+period
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+174
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:left;">
+0aerial_duel_lost
+</td>
+<td style="text-align:right;">
+18498
+</td>
+<td style="text-align:right;">
+71.2
+</td>
+<td style="text-align:right;">
+25.5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+174
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+0ball_out
+</td>
+<td style="text-align:right;">
+18498
+</td>
+<td style="text-align:right;">
+77.0
+</td>
+<td style="text-align:right;">
+-1.7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+0ball_out
+</td>
+<td style="text-align:right;">
+171101
+</td>
+<td style="text-align:right;">
+70.0
+</td>
+<td style="text-align:right;">
+-1.2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+0despeje_clearance
+</td>
+<td style="text-align:right;">
+52356
+</td>
+<td style="text-align:right;">
+29.5
+</td>
+<td style="text-align:right;">
+85.1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+0ball_out
+</td>
+<td style="text-align:right;">
+52356
+</td>
+<td style="text-align:right;">
+25.2
+</td>
+<td style="text-align:right;">
+101.3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+174
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:left;">
+0aerial_duel_lost
+</td>
+<td style="text-align:right;">
+18498
+</td>
+<td style="text-align:right;">
+64.2
+</td>
+<td style="text-align:right;">
+42.4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
 <p>This type of data structure can be used in a number of ways: it can be
 used to measure team performance through general statistics extracted
 from event datasets, such as goals, fouls, xG, etc. It can also be used
@@ -226,7 +441,7 @@ amount of passes made in that direction between the two players.</p>
 Figure 2.3: Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitutes are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.
 </p>
 </div>
-<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> during the
+<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> during the
 match using appropriate data sources. Additionally, we could examine
 Eibar’s macro situation during the 2022-2023 season to better comprehend
 how this micro-statistics contribute to the overall perception of the
@@ -298,12 +513,12 @@ Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://
 </div>
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p>Opta uses a combination of human annotation, computer vision, and
+<ol start="3">
+<li id="fn3"><p>Opta uses a combination of human annotation, computer vision, and
 AI modelling to offer real-time data at various levels of detail
 based on customer requirements. In our situation, the data feed
 updates itself when an event such as a goal, foul or pass occurs.
-Otherwise, it updates every 90 seconds. <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span><a href="data-analytics-in-football.html#fnref2" class="footnote-back">↩︎</a></p></li>
+Otherwise, it updates every 90 seconds. <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span><a href="data-analytics-in-football.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -343,7 +558,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/alvaronovillo/master_thesis/edit/main/01-Introduction.Rmd",
+"link": "https://github.com/alvaronovillo/master_thesis/edit/main/02-Lit_review.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -351,7 +566,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/alvaronovillo/master_thesis/blob/main/01-Introduction.Rmd",
+"link": "https://github.com/alvaronovillo/master_thesis/blob/main/02-Lit_review.Rmd",
 "text": null
 },
 "download": ["master_thesis.pdf"],
