@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Methodology | Data Analytics in Football: Pitch Control Models and Beyond</title>
+  <title>3 Methodology | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</title>
   <meta name="description" content="Master Thesis. Universidad Carlos III de Madrid." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Methodology | Data Analytics in Football: Pitch Control Models and Beyond" />
+  <meta property="og:title" content="3 Methodology | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/imagenes/cover-front.jpg" />
   <meta property="og:description" content="Master Thesis. Universidad Carlos III de Madrid." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Methodology | Data Analytics in Football: Pitch Control Models and Beyond" />
+  <meta name="twitter:title" content="3 Methodology | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
   
   <meta name="twitter:description" content="Master Thesis. Universidad Carlos III de Madrid." />
   <meta name="twitter:image" content="/imagenes/cover-front.jpg" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Álvaro Novillo Correas" />
 
 
-<meta name="date" content="2024-03-25" />
+<meta name="date" content="2024-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="data-analytics-in-football.html"/>
-
+<link rel="next" href="offside-control.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -117,6 +117,10 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.2" data-path="methodology.html"><a href="methodology.html#control-probability"><i class="fa fa-check"></i><b>3.1.2</b> Control probability</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="offside-control.html"><a href="offside-control.html"><i class="fa fa-check"></i><b>4</b> Offside Control</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="offside-control.html"><a href="offside-control.html#results"><i class="fa fa-check"></i><b>4.1</b> Results</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
 Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
@@ -132,7 +136,7 @@ src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analytics in Football: Pitch Control Models and Beyond</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</a>
           </h1>
         </div>
 
@@ -220,68 +224,18 @@ parameters, <span class="math inline">\(\sigma\)</span> and <span class="math in
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
 \end{align}\]</span></p>
 <p>Using the above components, we recursively construct the partial derivative of the probability that player <span class="math inline">\(j\)</span> controls a given location <span class="math inline">\(r\)</span>, at time t is</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display" id="eq:PC">\[\begin{align}
 \frac{d P P C F_j}{d t}\left(T, \vec{r} , \sigma, \lambda_j, t_r\right)=\left(1-\sum_k P P C F_k\left(t, \vec{r} , \sigma, \lambda_k\right)\right) F_{int,j}(t, \vec{r}  , \sigma, t_r) \lambda_j
-\label{PC_eq}
+\tag{3.1}
 \end{align}\]</span></p>
 <p>where <span class="math inline">\(PPCF_j\)</span> is the Potential Pitch Control Field of player <span class="math inline">\(j\)</span>. <span class="math inline">\(F_{int,j}(t, \vec{r}, T ; \sigma, t_r)\)</span> is the probability that player <span class="math inline">\(j\)</span> can reach the target location <span class="math inline">\(r\)</span> in a given time <span class="math inline">\(t\)</span>, and <span class="math inline">\(\lambda_j\)</span> is the control rate of such a player <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Importantly, note that <span class="math inline">\(\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)\)</span> accounts for the sum of the Potential Pitch Control Field of the rest of the <span class="math inline">\(k\)</span> players on the pitch at time <span class="math inline">\(t\)</span>.</p>
-<p>By integrating Eq. <span class="math inline">\(\ref{PC_eq}\)</span> over <span class="math inline">\(t \in \left[ t_{ball},t_{ball} + 10 \right]\)</span> seconds, and taking <span class="math inline">\(P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0\)</span> at the beginning of the integration, the probability of control per player is obtained. This probability is then extracted along all the pitch, obtaining a pitch control surface.</p>
+<p>By integrating the equation above, Eq. <a href="methodology.html#eq:PC">(3.1)</a>, <span class="math inline">\(t \in \left[ t_{ball},t_{ball} + 10 \right]\)</span> seconds, and taking <span class="math inline">\(P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0\)</span> at the beginning of the integration, the probability of control per player is obtained. This probability is then extracted along all the pitch, obtaining a pitch control surface.</p>
 <p>Now that we are able to generate the pitch control surface for a frame, we can extend this methodology to measure the quality of each team’s offside strategy. To do this, we will focus on the pitch control generated <em>after</em> the offside line, called <strong>Offside Control (OC)</strong>. To do this, we determine where the offside line is and which players are in an offside position. Then we calculate the pitch control generated by the attacking team after the offside line. If a player is in an offside position, we mark his contribution as ineffective.</p>
 <p>The <em>Offside Control</em> was calculated for 100 matches from LaLiga (season 2018 - 2019) using tracking data. We calculated the OC every 2 frames per second of each match. In order to discretise the space efficiently, we decided to reduce our calculations to the half of the pitch of the team not in possession of the ball. We then detect the position of the offside line and calculate the pitch control after it. In this way, we significantly reduce the computation time of the model while maintaining a high spatial resolution (<span class="math inline">\(50 \times 32\)</span>).</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div class="csl-entry">
-Buldú, Javier M., Javier Busquets, Johann H. Martínez, José L. Herrera-Diestra, Ignacio Echegoyen, Javier Galeano, and Jordi Luque. 2018. <span>“Using Network Science to Analyse Football Passing Networks: Dynamics, Space, Time, and the Multilayer Nature of the Game.”</span> <em>Frontiers in Psychology</em> 9. <a href="https://doi.org/10.3389/fpsyg.2018.01900">https://doi.org/10.3389/fpsyg.2018.01900</a>.
-</div>
-<div class="csl-entry">
-Felipe, José Luis, Jorge García-Unanue, David Viejo-Romero, Archit Navandar, and Javier Sánchez-Sánchez. 2019. <span>“Validation of a Video-Based Performance Analysis System (Mediacoach<span></span>) to Analyze the Physical Demands During Matches in LaLiga.”</span> <em>Sensors (Basel, Switzerland)</em> 19. <a href="https://api.semanticscholar.org/CorpusID:202746198">https://api.semanticscholar.org/CorpusID:202746198</a>.
-</div>
-<div class="csl-entry">
-Footballytics. 2021. <span>“Data Analytics in Football.”</span> 2021. <a href="https://www.footballytics.ch/post/data-analytics-in-football">https://www.footballytics.ch/post/data-analytics-in-football</a>.
-</div>
-<div class="csl-entry">
-Garrido, David, Borja Burriel, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2022. <span>“Heatmaps in Soccer: Event Vs Tracking Datasets.”</span> <em>Chaos, Solitons &amp; Fractals</em> 165: 112827. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2022.112827">https://doi.org/10.1016/j.chaos.2022.112827</a>.
-</div>
-<div class="csl-entry">
-Novillo, Álvaro, Bingnan Gong, Johann H. Martínez, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2024. <span>“A Multilayer Network Framework for Soccer Analysis.”</span> <em>Chaos, Solitons &amp; Fractals</em> 178: 114355. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2023.114355">https://doi.org/10.1016/j.chaos.2023.114355</a>.
-</div>
-<div class="csl-entry">
-Pappalardo, Luca, Paolo Cintia, Alessio Rossi, Emanuele Massucco, Paolo Ferragina, Dino Pedreschi, and Fosca Giannotti. 2019. <span>“A Public Data Set of Spatio-Temporal Match Events in Soccer Competitions.”</span> <em>Scientific Data</em> 6 (October). <a href="https://doi.org/10.1038/s41597-019-0247-7">https://doi.org/10.1038/s41597-019-0247-7</a>.
-</div>
-<div class="csl-entry">
-Sarlis, Vangelis, and Christos Tjortjis. 2020. <span>“Sports Analytics — Evaluation of Basketball Players and Team Performance.”</span> <em>Information Systems</em> 93: 101562. https://doi.org/<a href="https://doi.org/10.1016/j.is.2020.101562">https://doi.org/10.1016/j.is.2020.101562</a>.
-</div>
-<div class="csl-entry">
-Spearman, William. 2018. <span>“Beyond Expected Goals.”</span> In.
-</div>
-<div class="csl-entry">
-Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <span>“Physics-Based Modeling of Pass Probabilities in Soccer.”</span> In.
-</div>
-<div class="csl-entry">
-StatsPerform. 2023. <span>“Opta Data from Stats Perform.”</span> 2023. <a href="https://www.statsperform.com/opta/">https://www.statsperform.com/opta/</a>.
-</div>
-<div class="csl-entry">
-Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://dataglossary.wyscout.com">https://dataglossary.wyscout.com</a>.
 </div>
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Spearman" class="csl-entry">
@@ -304,8 +258,8 @@ Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <sp
           </div>
         </div>
       </div>
-<a href="data-analytics-in-football.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="data-analytics-in-football.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="offside-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

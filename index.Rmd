@@ -1,9 +1,10 @@
 --- 
-title: 'Data Analytics in Football: Pitch Control Models and Beyond'
+title: 'Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance'
 author: "Álvaro Novillo Correas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+fontsize: 10pt
 cover-image: imagenes/cover-front.jpg
 classoption: twoside,nohyper
 bibliography: bibliografia.bib

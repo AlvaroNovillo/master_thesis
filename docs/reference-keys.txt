@@ -9,6 +9,13 @@ fig:heatmap
 fig:ball
 fig:vel
 fig:lambda
+eq:PC
+fig:eff
+fig:games
+fig:oct
+fig:ranking
+fig:forwards
+fig:forwardsglob
 introduction
 data-analytics-in-football
 events-data
@@ -17,3 +24,5 @@ methodology
 pitch-control-models
 model-assumptions
 control-probability
+offside-control
+results
