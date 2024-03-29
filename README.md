@@ -11,7 +11,7 @@ To cite this thesis in publications use:
 ```
 @phdthesis{a.novillo2024oc,
   author    = {Álvaro Novillo},
-  title     = {Data Analytics in Football: Pitch Control and Beyond},
+  title     = {Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance},
   school    = {Universidad Carlos III de Madrid},
   year      = {2024},
   url       = {http://hdl.handle.net/10016/27448}
