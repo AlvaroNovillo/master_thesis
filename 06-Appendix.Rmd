@@ -1,0 +1,17 @@
+# Appendix 
+
+In Table \@ref(tab:ranking-tab), we have gathered the Effective Offside Control, along with the efficiency percentage for each of the teams represented in Fig. \@ref(fig:ranking), in descending ranking order
+
+```{r ranking-tab, echo=FALSE}
+ranking_oc <- read.csv("~/TFM_ANC_2024/TFM_ANC_2024/master_thesis/data_samples/ranking_oc.txt")
+
+colnames(ranking_oc) <- c("Ranking", "Effective OC", "Efficiency (%)")
+
+ranking_oc %>%
+  kbl(booktabs = T, caption = "Average Effective Offside Control values and Efficiency for each team analyzed") %>%
+  kable_styling(latex_options = c("scale_down","hold_position"), position = "center")
+
+
+
+```
+

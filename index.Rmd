@@ -1,7 +1,7 @@
 --- 
 title: 'Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance'
 author: "Álvaro Novillo Correas"
-date: "`r Sys.Date()`"
+date: "Last modified on `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 fontsize: 10pt
@@ -31,6 +31,7 @@ knitr::opts_chunk$set(cache=TRUE, echo = FALSE,
 
 # Abstract {#abstract .unnumbered}
 The master thesis explores the application of data analytics in football, with a focus on enhancing understanding and performance through a data driven approach. The study reviews the history and evolution of data analytics in sports, particularly football, and introduces a new methodology for quantifying the effectiveness of offside strategies using Pitch Control models, *Offside Control*. We analize 1,251,934 frames from 100 matches to characterize the Offside Control of 442 players. The methodology combines physical metrics and tactical models derived from tracking datasets, offering insights into the tactical nuances of successful offside strategies. The project's data processing and modeling are conducted using Python, with the source code available in a GitHub repository[^1]. 
+
 
 # Dedication {#dedication .unnumbered}
 

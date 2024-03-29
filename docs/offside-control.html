@@ -23,7 +23,6 @@
 <meta name="author" content="Álvaro Novillo Correas" />
 
 
-<meta name="date" content="2024-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +30,7 @@
   
   
 <link rel="prev" href="methodology.html"/>
-
+<link rel="next" href="conclusion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -121,6 +120,9 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1" data-path="offside-control.html"><a href="offside-control.html#results"><i class="fa fa-check"></i><b>4.1</b> Results</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
+<li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
 Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
@@ -171,7 +173,7 @@ Figure 4.2: Spatial and percentage of effective offside control (EOC) over the c
 Figure 4.3: Analysis of the home team’s Offside Control over the course of a match. Each point of <span class="math inline">\(OC(t)\)</span> is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).
 </p>
 </div>
-<p>After analysing the OC of the 99 games evaluated in the study, we can also analyse the OC performance of all teams in the competition. Fig. <a href="offside-control.html#fig:ranking">4.4</a> shows a comparison between the generated and received OC per effective time unit, for all teams. In the figure, the size of the teams and their labels indicate the final ranking after the matches included in the analysis. The dashed line plotted (<span class="math inline">\(y=x\)</span>) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents. We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient <span class="math inline">\(R^2=0.48\)</span> is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place.</p>
+<p>After analysing the OC of the 99 games evaluated in the study, we can also analyse the OC performance of all teams in the competition. Fig. <a href="offside-control.html#fig:ranking">4.4</a> shows a comparison between the generated and received OC per effective time unit, for all teams. In the figure, the size of the teams and their labels indicate the final ranking after the matches included in the analysis. The dashed line plotted (<span class="math inline">\(y=x\)</span>) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents. We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient <span class="math inline">\(R^2=0.48\)</span> is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place. For a better understanding of the figure, Table <a href="appendix.html#tab:ranking-tab">6.1</a> of the Appendix contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking</p>
 <p>One of the advantages of our proposed metric is its versatility: it can be used to describe the general behavior of the team, as presented above, but it can also be more specific and focus on the performance of specific players. Fig. <a href="offside-control.html#fig:forwards">4.5</a> shows the Effective Offside Control produced by two different strikers, identified as <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. The left panel shows the positions on the pitch where the EOC is produced by each striker. The EOC is normalized by the total time played over the matches analyzed. In this way, we have a heat map showing where a striker tends to create controlled areas behind the offside line, which is useful information for analyzing his performance. In addition, the right panel shows the corresponding probability distribution functions of the time spent by both players at a given distance from the offside line. The distances are referenced to the offside line and are negative when the striker is in a valid position and positive when he is offside. Interestingly, striker <span class="math inline">\(A\)</span> spends more time in front of the offside line than striker <span class="math inline">\(B\)</span> (see the percentages of time spent on each side of the offside line). This means that player <span class="math inline">\(A\)</span> is more likely to generate more EOCs.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ranking"></span>
 <img src="imagenes/Mean_rival_OC_vs_team_norm_efftime.png" alt="Generated vs. received Offside Control. The values correspond to the average accumulated OC per effective time unit. The size of the nodes (and their labels) correlates with the ranking corresponding to all the matches analysed. The dashed line corresponds to $y=x$. The linear regression is shown in blue and has the equation $y = -0.86x + 285.42$, with $R^2 = 0.48$ and $RMSE = 14.96$. Teams above the dashed line have accumulated more Offside Controls than their rivals." width="80%"  />
@@ -194,60 +196,8 @@ Figure 4.6: Interplay between Offside Time Efficiency Ratio (OTER) and Offside C
 </p>
 </div>
 
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div class="csl-entry">
-Buldú, Javier M., Javier Busquets, Johann H. Martínez, José L. Herrera-Diestra, Ignacio Echegoyen, Javier Galeano, and Jordi Luque. 2018. <span>“Using Network Science to Analyse Football Passing Networks: Dynamics, Space, Time, and the Multilayer Nature of the Game.”</span> <em>Frontiers in Psychology</em> 9. <a href="https://doi.org/10.3389/fpsyg.2018.01900">https://doi.org/10.3389/fpsyg.2018.01900</a>.
-</div>
-<div class="csl-entry">
-Felipe, José Luis, Jorge García-Unanue, David Viejo-Romero, Archit Navandar, and Javier Sánchez-Sánchez. 2019. <span>“Validation of a Video-Based Performance Analysis System (Mediacoach<span></span>) to Analyze the Physical Demands During Matches in LaLiga.”</span> <em>Sensors (Basel, Switzerland)</em> 19. <a href="https://api.semanticscholar.org/CorpusID:202746198">https://api.semanticscholar.org/CorpusID:202746198</a>.
-</div>
-<div class="csl-entry">
-Footballytics. 2021. <span>“Data Analytics in Football.”</span> 2021. <a href="https://www.footballytics.ch/post/data-analytics-in-football">https://www.footballytics.ch/post/data-analytics-in-football</a>.
-</div>
-<div class="csl-entry">
-Garrido, David, Borja Burriel, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2022. <span>“Heatmaps in Soccer: Event Vs Tracking Datasets.”</span> <em>Chaos, Solitons &amp; Fractals</em> 165: 112827. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2022.112827">https://doi.org/10.1016/j.chaos.2022.112827</a>.
-</div>
-<div class="csl-entry">
-Novillo, Álvaro, Bingnan Gong, Johann H. Martínez, Ricardo Resta, Roberto López del Campo, and Javier M. Buldú. 2024. <span>“A Multilayer Network Framework for Soccer Analysis.”</span> <em>Chaos, Solitons &amp; Fractals</em> 178: 114355. https://doi.org/<a href="https://doi.org/10.1016/j.chaos.2023.114355">https://doi.org/10.1016/j.chaos.2023.114355</a>.
-</div>
-<div class="csl-entry">
-Pappalardo, Luca, Paolo Cintia, Alessio Rossi, Emanuele Massucco, Paolo Ferragina, Dino Pedreschi, and Fosca Giannotti. 2019. <span>“A Public Data Set of Spatio-Temporal Match Events in Soccer Competitions.”</span> <em>Scientific Data</em> 6 (October). <a href="https://doi.org/10.1038/s41597-019-0247-7">https://doi.org/10.1038/s41597-019-0247-7</a>.
-</div>
-<div class="csl-entry">
-Sarlis, Vangelis, and Christos Tjortjis. 2020. <span>“Sports Analytics — Evaluation of Basketball Players and Team Performance.”</span> <em>Information Systems</em> 93: 101562. https://doi.org/<a href="https://doi.org/10.1016/j.is.2020.101562">https://doi.org/10.1016/j.is.2020.101562</a>.
-</div>
-<div class="csl-entry">
-Spearman, William. 2018. <span>“Beyond Expected Goals.”</span> In.
-</div>
-<div class="csl-entry">
-Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <span>“Physics-Based Modeling of Pass Probabilities in Soccer.”</span> In.
-</div>
-<div class="csl-entry">
-StatsPerform. 2023. <span>“Opta Data from Stats Perform.”</span> 2023. <a href="https://www.statsperform.com/opta/">https://www.statsperform.com/opta/</a>.
-</div>
-<div class="csl-entry">
-Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://dataglossary.wyscout.com">https://dataglossary.wyscout.com</a>.
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
 <ol start="7">
@@ -260,8 +210,8 @@ Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://
           </div>
         </div>
       </div>
-<a href="methodology.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="methodology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

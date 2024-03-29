@@ -16,6 +16,7 @@ fig:oct
 fig:ranking
 fig:forwards
 fig:forwardsglob
+tab:ranking-tab
 introduction
 data-analytics-in-football
 events-data
@@ -26,3 +27,5 @@ model-assumptions
 control-probability
 offside-control
 results
+conclusion
+appendix

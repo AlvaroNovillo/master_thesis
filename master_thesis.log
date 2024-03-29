@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  27 MAR 2024 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  29 MAR 2024 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,7 +1121,7 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 ] [5] [6
 
 ]
-<imagenes/sign.png, id=78, 1154.06157pt x 1204.5pt>
+<imagenes/sign.png, id=84, 1154.06157pt x 1204.5pt>
 File: imagenes/sign.png Graphic file (type png)
 <use imagenes/sign.png>
 Package pdftex.def Info: imagenes/sign.png  used on input line 328.
@@ -1149,7 +1149,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<imagenes/xg_evol.png, id=214, 962.81708pt x 423.38174pt>
+<imagenes/xg_evol.png, id=222, 962.81708pt x 423.38174pt>
 File: imagenes/xg_evol.png Graphic file (type png)
 <use imagenes/xg_evol.png>
 Package pdftex.def Info: imagenes/xg_evol.png  used on input line 418.
@@ -1157,12 +1157,12 @@ Package pdftex.def Info: imagenes/xg_evol.png  used on input line 418.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 430.
 [15 <./imagenes/xg_evol.png>]
-<imagenes/home_shot_map.png, id=223, 941.76843pt x 1208.26407pt>
+<imagenes/home_shot_map.png, id=231, 941.76843pt x 1208.26407pt>
 File: imagenes/home_shot_map.png Graphic file (type png)
 <use imagenes/home_shot_map.png>
 Package pdftex.def Info: imagenes/home_shot_map.png  used on input line 434.
 (pdftex.def)             Requested size: 192.04349pt x 246.38673pt.
-<imagenes/away_shot_map.png, id=224, 941.76843pt x 1208.26407pt>
+<imagenes/away_shot_map.png, id=232, 941.76843pt x 1208.26407pt>
 File: imagenes/away_shot_map.png Graphic file (type png)
 <use imagenes/away_shot_map.png>
 Package pdftex.def Info: imagenes/away_shot_map.png  used on input line 434.
@@ -1176,25 +1176,25 @@ File: t1txtt.fd 2000/12/15 v3.1
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <./imagenes/home_shot_map.png> <./imagenes/away_shot_map.png>]
-<imagenes/home_pass_network.jpg, id=243, 992.9898pt x 665.3658pt>
+<imagenes/home_pass_network.jpg, id=251, 992.9898pt x 665.3658pt>
 File: imagenes/home_pass_network.jpg Graphic file (type jpg)
 <use imagenes/home_pass_network.jpg>
 Package pdftex.def Info: imagenes/home_pass_network.jpg  used on input line 507
 .
 (pdftex.def)             Requested size: 213.38258pt x 142.97978pt.
-<imagenes/away_pass_network.jpg, id=244, 989.1354pt x 665.3658pt>
+<imagenes/away_pass_network.jpg, id=252, 989.1354pt x 665.3658pt>
 File: imagenes/away_pass_network.jpg Graphic file (type jpg)
 <use imagenes/away_pass_network.jpg>
 Package pdftex.def Info: imagenes/away_pass_network.jpg  used on input line 507
 .
 (pdftex.def)             Requested size: 213.38443pt x 143.53818pt.
 [17 <./imagenes/home_pass_network.jpg> <./imagenes/away_pass_network.jpg>]
-<imagenes/scat-xG-xGa.png, id=255, 2347.77126pt x 1659.19875pt>
+<imagenes/scat-xG-xGa.png, id=263, 2347.77126pt x 1659.19875pt>
 File: imagenes/scat-xG-xGa.png Graphic file (type png)
 <use imagenes/scat-xG-xGa.png>
 Package pdftex.def Info: imagenes/scat-xG-xGa.png  used on input line 528.
 (pdftex.def)             Requested size: 341.40327pt x 241.27388pt.
-<imagenes/xG-xGa.png, id=256, 2347.77126pt x 1659.19875pt>
+<imagenes/xG-xGa.png, id=264, 2347.77126pt x 1659.19875pt>
 File: imagenes/xG-xGa.png Graphic file (type png)
 <use imagenes/xG-xGa.png>
 Package pdftex.def Info: imagenes/xG-xGa.png  used on input line 537.
@@ -1205,20 +1205,20 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<imagenes/Frame.png, id=267, 505.89pt x 361.35pt>
+<imagenes/Frame.png, id=275, 505.89pt x 361.35pt>
 File: imagenes/Frame.png Graphic file (type png)
 <use imagenes/Frame.png>
 Package pdftex.def Info: imagenes/Frame.png  used on input line 560.
 (pdftex.def)             Requested size: 341.43785pt x 243.88419pt.
 [19 <./imagenes/Frame.png>]
-<imagenes/Heatmap.jpg, id=279, 505.89pt x 361.35pt>
+<imagenes/Heatmap.jpg, id=287, 505.89pt x 361.35pt>
 File: imagenes/Heatmap.jpg Graphic file (type jpg)
 <use imagenes/Heatmap.jpg>
 Package pdftex.def Info: imagenes/Heatmap.jpg  used on input line 571.
 (pdftex.def)             Requested size: 341.43785pt x 243.88419pt.
 [20 <./imagenes/Heatmap.jpg>]
 Chapter 3.
-<imagenes/ball.jpg, id=289, 605.6226pt x 213.9192pt>
+<imagenes/ball.jpg, id=297, 605.6226pt x 213.9192pt>
 File: imagenes/ball.jpg Graphic file (type jpg)
 <use imagenes/ball.jpg>
 Package pdftex.def Info: imagenes/ball.jpg  used on input line 618.
@@ -1226,25 +1226,25 @@ Package pdftex.def Info: imagenes/ball.jpg  used on input line 618.
 [21
 
  <./imagenes/ball.jpg>]
-<imagenes/vel.png, id=296, 1390.44469pt x 526.96875pt>
+<imagenes/vel.png, id=304, 1390.44469pt x 526.96875pt>
 File: imagenes/vel.png Graphic file (type png)
 <use imagenes/vel.png>
 Package pdftex.def Info: imagenes/vel.png  used on input line 633.
 (pdftex.def)             Requested size: 341.41512pt x 129.39392pt.
 [22 <./imagenes/vel.png>]
-<imagenes/sigmoid_poster.png, id=308, 433.62pt x 289.08pt>
+<imagenes/sigmoid_poster.png, id=316, 433.62pt x 289.08pt>
 File: imagenes/sigmoid_poster.png Graphic file (type png)
 <use imagenes/sigmoid_poster.png>
 Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 672.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
-<imagenes/exp_poster.png, id=309, 433.62pt x 289.08pt>
+<imagenes/exp_poster.png, id=317, 433.62pt x 289.08pt>
 File: imagenes/exp_poster.png Graphic file (type png)
 <use imagenes/exp_poster.png>
 Package pdftex.def Info: imagenes/exp_poster.png  used on input line 672.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
 [23 <./imagenes/sigmoid_poster.png> <./imagenes/exp_poster.png>] [24]
 Chapter 4.
-<imagenes/eff_inef_OC.png, id=343, 914.106pt x 896.805pt>
+<imagenes/eff_inef_OC.png, id=351, 914.106pt x 896.805pt>
 File: imagenes/eff_inef_OC.png Graphic file (type png)
 <use imagenes/eff_inef_OC.png>
 Package pdftex.def Info: imagenes/eff_inef_OC.png  used on input line 730.
@@ -1255,30 +1255,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [25
 
 ]
-<imagenes/Games_OC.png, id=351, 1351.449pt x 751.827pt>
+<imagenes/Games_OC.png, id=359, 1351.449pt x 751.827pt>
 File: imagenes/Games_OC.png Graphic file (type png)
 <use imagenes/Games_OC.png>
 Package pdftex.def Info: imagenes/Games_OC.png  used on input line 739.
 (pdftex.def)             Requested size: 341.42892pt x 189.94093pt.
 [26 <./imagenes/eff_inef_OC.png> <./imagenes/Games_OC.png>]
-<imagenes/cumulative_OC_evolution.pdf, id=359, 433.62pt x 289.08pt>
+<imagenes/cumulative_OC_evolution.pdf, id=367, 433.62pt x 289.08pt>
 File: imagenes/cumulative_OC_evolution.pdf Graphic file (type pdf)
 <use imagenes/cumulative_OC_evolution.pdf>
 Package pdftex.def Info: imagenes/cumulative_OC_evolution.pdf  used on input li
 ne 750.
 (pdftex.def)             Requested size: 341.4511pt x 227.63405pt.
-<imagenes/Mean_rival_OC_vs_team_norm_efftime.png, id=362, 453.2935pt x 283.459p
+
+LaTeX Warning: Reference `tab:ranking-tab' on page 27 undefined on input line 7
+57.
+
+<imagenes/Mean_rival_OC_vs_team_norm_efftime.png, id=370, 453.2935pt x 283.459p
 t>
 File: imagenes/Mean_rival_OC_vs_team_norm_efftime.png Graphic file (type png)
 <use imagenes/Mean_rival_OC_vs_team_norm_efftime.png>
 Package pdftex.def Info: imagenes/Mean_rival_OC_vs_team_norm_efftime.png  used 
 on input line 763.
 (pdftex.def)             Requested size: 341.44254pt x 213.51498pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [27 <./imagenes/cumulative_OC_evolution.pdf>]
-<imagenes/forwards_OC.png, id=393, 881.475pt x 865.269pt>
+<imagenes/forwards_OC.png, id=401, 881.475pt x 865.269pt>
 File: imagenes/forwards_OC.png Graphic file (type png)
 <use imagenes/forwards_OC.png>
 Package pdftex.def Info: imagenes/forwards_OC.png  used on input line 772.
@@ -1288,30 +1289,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [28 <./imagenes/Mean_rival_OC_vs_team_norm_efftime.png> <./imagenes/forwards_OC
 .png>]
-<imagenes/av_eff.png, id=403, 1115.367pt x 425.298pt>
+<imagenes/av_eff.png, id=411, 1115.367pt x 425.298pt>
 File: imagenes/av_eff.png Graphic file (type png)
 <use imagenes/av_eff.png>
 Package pdftex.def Info: imagenes/av_eff.png  used on input line 784.
 (pdftex.def)             Requested size: 341.43735pt x 130.19267pt.
-(master_thesis.bbl [29 <./imagenes/av_eff.png>] [30
+[29 <./imagenes/av_eff.png>] [30
+
+]
+Chapter 5.
+[31] [32
+
+]
+Chapter 6.
+
+LaTeX Warning: Reference `tab:ranking-tab' on page 33 undefined on input line 8
+11.
+
+(master_thesis.bbl [33] [34
 
 ])
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 225.
 See the caption package documentation for explanation.
 
-[31] (master_thesis.aux)
+[35] (master_thesis.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 26795 strings out of 474592
- 420749 string characters out of 5747215
- 1952533 words of memory out of 5000000
- 47780 multiletter control sequences out of 15000+600000
- 664848 words of font info for 573 fonts, out of 8000000 for 9000
+ 26816 strings out of 474592
+ 420937 string characters out of 5747215
+ 1951533 words of memory out of 5000000
+ 47786 multiletter control sequences out of 15000+600000
+ 665198 words of font info for 579 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,17n,108p,1441b,2554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.p
@@ -1329,9 +1345,9 @@ a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
 a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (31 pages, 16263796 bytes).
+Output written on master_thesis.pdf (35 pages, 16275978 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 131275 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 577 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 131291 words of extra memory for PDF output out of 154059 (max. 10000000)
 

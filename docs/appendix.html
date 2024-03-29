@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Appendix | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</title>
+  <meta name="description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Appendix | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/imagenes/cover-front.jpg" />
+  <meta property="og:description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Appendix | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
+  
+  <meta name="twitter:description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  <meta name="twitter:image" content="/imagenes/cover-front.jpg" />
+
+<meta name="author" content="Álvaro Novillo Correas" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="conclusion.html"/>
+<link rel="next" href="bibliography.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Contents</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="dedication.html"><a href="dedication.html"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#events-data"><i class="fa fa-check"></i><b>2.1</b> Events data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking-data"><i class="fa fa-check"></i><b>2.2</b> Tracking data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="methodology.html"><a href="methodology.html#pitch-control-models"><i class="fa fa-check"></i><b>3.1</b> Pitch Control Models</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="methodology.html"><a href="methodology.html#model-assumptions"><i class="fa fa-check"></i><b>3.1.1</b> Model assumptions</a></li>
+<li class="chapter" data-level="3.1.2" data-path="methodology.html"><a href="methodology.html#control-probability"><i class="fa fa-check"></i><b>3.1.2</b> Control probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="offside-control.html"><a href="offside-control.html"><i class="fa fa-check"></i><b>4</b> Offside Control</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="offside-control.html"><a href="offside-control.html#results"><i class="fa fa-check"></i><b>4.1</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
+<li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="divider"></li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
+src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Appendix<a href="appendix.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In Table <a href="appendix.html#tab:ranking-tab">6.1</a>, we have gathered the Effective Offside Control, along with the efficiency percentage for each of the teams represented in Fig. <a href="offside-control.html#fig:ranking">4.4</a>, in descending ranking order</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:ranking-tab">Table 6.1: </span>Average Effective Offside Control values and Efficiency for each team analyzed
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Ranking
+</th>
+<th style="text-align:right;">
+Effective OC
+</th>
+<th style="text-align:right;">
+Efficiency (%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+#1
+</td>
+<td style="text-align:right;">
+160.23
+</td>
+<td style="text-align:right;">
+84.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#2
+</td>
+<td style="text-align:right;">
+161.42
+</td>
+<td style="text-align:right;">
+81.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#3
+</td>
+<td style="text-align:right;">
+137.31
+</td>
+<td style="text-align:right;">
+87.75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#4
+</td>
+<td style="text-align:right;">
+145.21
+</td>
+<td style="text-align:right;">
+84.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#5
+</td>
+<td style="text-align:right;">
+157.14
+</td>
+<td style="text-align:right;">
+82.97
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#6
+</td>
+<td style="text-align:right;">
+175.96
+</td>
+<td style="text-align:right;">
+78.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#7
+</td>
+<td style="text-align:right;">
+172.44
+</td>
+<td style="text-align:right;">
+81.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#8
+</td>
+<td style="text-align:right;">
+170.74
+</td>
+<td style="text-align:right;">
+78.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#9
+</td>
+<td style="text-align:right;">
+132.05
+</td>
+<td style="text-align:right;">
+84.32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#10
+</td>
+<td style="text-align:right;">
+158.53
+</td>
+<td style="text-align:right;">
+81.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#11
+</td>
+<td style="text-align:right;">
+142.67
+</td>
+<td style="text-align:right;">
+78.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#12
+</td>
+<td style="text-align:right;">
+214.47
+</td>
+<td style="text-align:right;">
+81.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#13
+</td>
+<td style="text-align:right;">
+126.55
+</td>
+<td style="text-align:right;">
+84.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#14
+</td>
+<td style="text-align:right;">
+153.58
+</td>
+<td style="text-align:right;">
+78.28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#15
+</td>
+<td style="text-align:right;">
+135.48
+</td>
+<td style="text-align:right;">
+81.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#16
+</td>
+<td style="text-align:right;">
+119.82
+</td>
+<td style="text-align:right;">
+84.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#17
+</td>
+<td style="text-align:right;">
+135.42
+</td>
+<td style="text-align:right;">
+81.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#18
+</td>
+<td style="text-align:right;">
+158.04
+</td>
+<td style="text-align:right;">
+83.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#19
+</td>
+<td style="text-align:right;">
+162.09
+</td>
+<td style="text-align:right;">
+82.75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#20
+</td>
+<td style="text-align:right;">
+144.18
+</td>
+<td style="text-align:right;">
+86.11
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/alvaronovillo/master_thesis/edit/main/06-Appendix.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/alvaronovillo/master_thesis/blob/main/06-Appendix.Rmd",
+"text": null
+},
+"download": ["master_thesis.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
