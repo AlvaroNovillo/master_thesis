@@ -14,7 +14,7 @@ To cite this thesis in publications use:
   title     = {Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance},
   school    = {Universidad Carlos III de Madrid},
   year      = {2024},
-  url       = {http://hdl.handle.net/10016/27448}
+  url       = {alvaronovillo.github.io/master_thesis/}
 }
 ```
 
