@@ -41,7 +41,7 @@ knitr::include_graphics("imagenes/vel.png")
 
 To compute the player's expected arrival time, $\tau_{exp}(\vec{r};t_r)$ , we use a simple approximation consisting of a two-step process:
 
-- There is an initial *reaction time*, assumed to be of \( t_{r} = 0.7 \) seconds for every player[^3]. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \( \vec{r}_{\text{react}} \)).
+- There is an initial *reaction time*, assumed to be of \( t_{r} = 0.7 \) seconds for every player[^4]. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \( \vec{r}_{\text{react}} \)).
 - After this time, we assume that the player runs directly towards the ball at his maximum speed of \( v_{\text{max,p}} \).
 
 \begin{align}
@@ -86,7 +86,7 @@ parameters,	$\sigma$ and $\lambda$, given outcome	$k$ and	the start of the pass 
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
 \end{align}
 
-Then,	maximizing	the	product	of	the	likelihood	for	each	pass for a training sample P, the best fit is found at $\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}$[^4]
+Then,	maximizing	the	product	of	the	likelihood	for	each	pass for a training sample P, the best fit is found at $\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}$[^5]
 
 \begin{align}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
@@ -99,7 +99,7 @@ Using	the	above	components, we recursively construct	the	partial	derivative	of	t
 (\#eq:PC)
 \end{align}
 
-where $PPCF_j$ is the Potential Pitch Control Field of player $j$. $F_{int,j}(t, \vec{r}, T ; \sigma, t_r)$ is the probability that player $j$ can reach the target location $r$ in a given time $t$, and $\lambda_j$ is the control rate of such a player [^5]. Importantly, note that $\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)$ accounts for the sum of the Potential Pitch Control Field of the rest of the $k$ players on the pitch at time $t$.
+where $PPCF_j$ is the Potential Pitch Control Field of player $j$. $F_{int,j}(t, \vec{r}, T ; \sigma, t_r)$ is the probability that player $j$ can reach the target location $r$ in a given time $t$, and $\lambda_j$ is the control rate of such a player [^6]. Importantly, note that $\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)$ accounts for the sum of the Potential Pitch Control Field of the rest of the $k$ players on the pitch at time $t$.
 
 By integrating the equation above, Eq. \@ref(eq:PC), $t \in \left[ t_{ball},t_{ball} + 10 \right]$ seconds, and taking $P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0$ at the beginning of the integration, the probability of control per player is obtained. This probability is then extracted along all the pitch, obtaining a pitch control surface.
 
@@ -109,8 +109,8 @@ The *Offside Control* was calculated for 100 matches from LaLiga (season 2018 - 
 
 
 
-[^3]: We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.
+[^4]: We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.
 
-[^4]: See [@SpearmanFit] for further details
+[^5]: See [@SpearmanFit] for further details
 
-[^5]: We assign the goalkeepers to have a higher control rate, $\lambda_{GK} = 12.9$ $s^{-1}$, to ensure that they are likely to claim the ball if it is near them and also to account for the ability of grabbing the ball with their hands
+[^6]: We assign the goalkeepers to have a higher control rate, $\lambda_{GK} = 12.9$ $s^{-1}$, to ensure that they are likely to claim the ball if it is near them and also to account for the ability of grabbing the ball with their hands

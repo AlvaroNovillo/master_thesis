@@ -19,17 +19,12 @@ analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
 component of sport, football inclusive [@1].
 
-One of the best examples of data analytics being applied to sports is
-basketball. Teams use data to analyze player performance, identify
-strengths and weaknesses, and develop strategies to win games [@2]. They
-use in-memory analytics, visualization, the cloud, mobility, camera
-footage, and sensors to transform their game. This performance analyses
-are of vital importance to a team, aiming to reduce expenditure, enhance
-team worth and refine processes across all levels and segments of
-operations. The German Football Association (DFB) and the National
-Basketball Association (NBA) are two unique cases of digital
-transformation from the sports world. Successful teams turn player
-performance data into action and gain a competitive advantage.
+Basketball is one of the best examples of data analytics being
+applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games [@2].  Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. 
+
+Performance analysis is vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. 
+
+The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
 
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced

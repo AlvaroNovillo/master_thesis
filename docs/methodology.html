@@ -184,7 +184,7 @@ Figure 3.2: p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 
 </div>
 <p>To compute the player’s expected arrival time, <span class="math inline">\(\tau_{exp}(\vec{r};t_r)\)</span> , we use a simple approximation consisting of a two-step process:</p>
 <ul>
-<li>There is an initial <em>reaction time</em>, assumed to be of <span class="math inline">\(t_{r} = 0.7\)</span> seconds for every player<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position <span class="math inline">\(\vec{r}_{\text{react}}\)</span>).</li>
+<li>There is an initial <em>reaction time</em>, assumed to be of <span class="math inline">\(t_{r} = 0.7\)</span> seconds for every player<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position <span class="math inline">\(\vec{r}_{\text{react}}\)</span>).</li>
 <li>After this time, we assume that the player runs directly towards the ball at his maximum speed of <span class="math inline">\(v_{\text{max,p}}\)</span>.</li>
 </ul>
 <p><span class="math display">\[\begin{align}
@@ -221,7 +221,7 @@ parameters, <span class="math inline">\(\sigma\)</span> and <span class="math in
 <p><span class="math display">\[\begin{align}
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
 \end{align}\]</span></p>
-<p>Then, maximizing the product of the likelihood for each pass for a training sample P, the best fit is found at <span class="math inline">\(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)</span><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>Then, maximizing the product of the likelihood for each pass for a training sample P, the best fit is found at <span class="math inline">\(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)</span><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
 <p><span class="math display">\[\begin{align}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
 \end{align}\]</span></p>
@@ -230,7 +230,7 @@ parameters, <span class="math inline">\(\sigma\)</span> and <span class="math in
 \frac{d P P C F_j}{d t}\left(T, \vec{r} , \sigma, \lambda_j, t_r\right)=\left(1-\sum_k P P C F_k\left(t, \vec{r} , \sigma, \lambda_k\right)\right) F_{int,j}(t, \vec{r}  , \sigma, t_r) \lambda_j
 \tag{3.1}
 \end{align}\]</span></p>
-<p>where <span class="math inline">\(PPCF_j\)</span> is the Potential Pitch Control Field of player <span class="math inline">\(j\)</span>. <span class="math inline">\(F_{int,j}(t, \vec{r}, T ; \sigma, t_r)\)</span> is the probability that player <span class="math inline">\(j\)</span> can reach the target location <span class="math inline">\(r\)</span> in a given time <span class="math inline">\(t\)</span>, and <span class="math inline">\(\lambda_j\)</span> is the control rate of such a player <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Importantly, note that <span class="math inline">\(\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)\)</span> accounts for the sum of the Potential Pitch Control Field of the rest of the <span class="math inline">\(k\)</span> players on the pitch at time <span class="math inline">\(t\)</span>.</p>
+<p>where <span class="math inline">\(PPCF_j\)</span> is the Potential Pitch Control Field of player <span class="math inline">\(j\)</span>. <span class="math inline">\(F_{int,j}(t, \vec{r}, T ; \sigma, t_r)\)</span> is the probability that player <span class="math inline">\(j\)</span> can reach the target location <span class="math inline">\(r\)</span> in a given time <span class="math inline">\(t\)</span>, and <span class="math inline">\(\lambda_j\)</span> is the control rate of such a player <a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>. Importantly, note that <span class="math inline">\(\sum_k P P C F_k\left(T, \vec{r} , \sigma, \lambda_k\right)\)</span> accounts for the sum of the Potential Pitch Control Field of the rest of the <span class="math inline">\(k\)</span> players on the pitch at time <span class="math inline">\(t\)</span>.</p>
 <p>By integrating the equation above, Eq. <a href="methodology.html#eq:PC">(3.1)</a>, <span class="math inline">\(t \in \left[ t_{ball},t_{ball} + 10 \right]\)</span> seconds, and taking <span class="math inline">\(P P C F_j\left(t, \vec{r} , \sigma, \lambda_j\right) = 0\)</span> at the beginning of the integration, the probability of control per player is obtained. This probability is then extracted along all the pitch, obtaining a pitch control surface.</p>
 <p>Now that we are able to generate the pitch control surface for a frame, we can extend this methodology to measure the quality of each team’s offside strategy. To do this, we will focus on the pitch control generated <em>after</em> the offside line, called <strong>Offside Control (OC)</strong>. To do this, we determine where the offside line is and which players are in an offside position. Then we calculate the pitch control generated by the attacking team after the offside line. If a player is in an offside position, we mark his contribution as ineffective.</p>
 <p>The <em>Offside Control</em> was calculated for 100 matches from LaLiga (season 2018 - 2019) using tracking data. We calculated the OC every 2 frames per second of each match. In order to discretise the space efficiently, we decided to reduce our calculations to the half of the pitch of the team not in possession of the ball. We then detect the position of the offside line and calculate the pitch control after it. In this way, we significantly reduce the computation time of the model while maintaining a high spatial resolution (<span class="math inline">\(50 \times 32\)</span>).</p>
@@ -249,10 +249,10 @@ Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <sp
 </div>
 <div class="footnotes">
 <hr />
-<ol start="4">
-<li id="fn4"><p>We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.<a href="methodology.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>See <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span> for further details<a href="methodology.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>We assign the goalkeepers to have a higher control rate, <span class="math inline">\(\lambda_{GK} = 12.9\)</span> <span class="math inline">\(s^{-1}\)</span>, to ensure that they are likely to claim the ball if it is near them and also to account for the ability of grabbing the ball with their hands<a href="methodology.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<ol start="5">
+<li id="fn5"><p>We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.<a href="methodology.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>See <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span> for further details<a href="methodology.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>We assign the goalkeepers to have a higher control rate, <span class="math inline">\(\lambda_{GK} = 12.9\)</span> <span class="math inline">\(s^{-1}\)</span>, to ensure that they are likely to claim the ball if it is near them and also to account for the ability of grabbing the ball with their hands<a href="methodology.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
