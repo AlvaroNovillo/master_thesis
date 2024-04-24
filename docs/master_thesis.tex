@@ -308,7 +308,7 @@
 
 \title{Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance}
 \author{Álvaro Novillo Correas}
-\date{Last modified on 2024-04-14}
+\date{Last modified on 2024-04-24}
 
 \begin{document}
 \maketitle
@@ -337,7 +337,7 @@ The master thesis explores the application of data analytics in football, with a
 \chapter{Introduction}\label{introduction}
 
 The digital revolution is currently one of the most significant
-challenges of our time, altering numerous aspects of society. Football,
+challenges of our time, altering numerous aspects of society. Sports,
 in particular, has also been influenced by this transformation.
 Technological advancements and digitalization have resulted in a swift
 upsurge in the number of measuring devices, data collection and volumes
@@ -346,7 +346,10 @@ and Microsoft, are vying for superior data analytics tools and
 leveraging sports as an example domain to showcase their products and
 brand power \citep{1}.
 
-The practice of data analytics in football has a long history, dating
+Basketball is one of the best examples of data analytics being
+applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games \citep{2}. Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. Such analysis have become vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
+
+In the case of football, the practice of data analytics has a long history, dating
 back to the post-World War II era, when data collection and analysis was
 undertaken manually using pencil and paper \citep{1}. It wasn't until
 Moneyball was published in 2003 that significant progress began to
@@ -356,22 +359,17 @@ analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
 component of sport, football inclusive \citep{1}.
 
-Basketball is one of the best examples of data analytics being
-applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games \citep{2}. Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance.
-
-Performance analysis is vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations.
-
-The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
-
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced
 data analysis techniques to optimize team and player performance.
 
-The main objective of this master's thesis is to enhance understanding and performance in football through the use of Data Analytics. The master's thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models \citep{Spearman}. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called \emph{Offside Control}, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
+The main objective of this master's thesis is to enhance understanding and performance in football through the use of data analytics. The master's thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models \citep{Spearman}. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called \emph{Offside Control}, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
 
 In the study, we will compute both effective and ineffective Offside Control at a rate of 2 frames per second for 100 matches from LaLiga 2019-2020, resulting in a total of 1,251,934 frames analysed. This will allow us to characterize successfully the Offside Control of 442 players in total.
 
 Our proposed methodology aims to contribute to this growing body of knowledge. Analyzing vast amounts of tracking data from LaLiga matches, we seek to uncover patterns in player and team behavior, shedding light on the tactical nuances that underlie successful offside strategies.
+
+We presented this metric at \emph{OptaForum 2023}, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work\footnote{You can check the rest of the proposals accepted here \url{https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/}}.
 
 All data processing and modeling in this project has been made using python. You can find the source code of the project inside the GitHub repository\footnote{All the source code is inside the code folder at \url{https://github.com/AlvaroNovillo/master_thesis.git}}
 
@@ -427,10 +425,10 @@ analysts (known as operators), who are specialists in football data
 collection, using proprietary software (the tagger)\footnote{See Fig. 1 in \citep{3} for an example of the tagging software}. The tagger has
 undergone several years of development and improvement and is regularly
 updated to ensure the highest level of performance is achieved. To
-ensure accurate data collection when tagging events in soccer matches,
+ensure accurate data collection when tagging events in football matches,
 three operators are assigned: one per team and one supervising the
 output of the entire match. This process is based on analysis of the
-tagger and soccer match videos. When near-live data delivery is
+tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
 additional, specific attributes or a quick review \citep{3}.
@@ -525,7 +523,9 @@ Fig. \ref{fig:frame} contains a frame from the tracking dataset of an Atlético 
 \caption{A frame of tracking data from a football match. The home team is shown in blue, the away team in red. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.}\label{fig:frame}
 \end{figure}
 
-Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. \citep{GARRIDO2022112827} showed that the correlation between heatmaps, Fig. \ref{fig:heatmap}, made with event datasets and those made with tracking datasets is low. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps provide information about a player's position without adding information about how relevant his about how relevant their performance was.
+Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. \citep{GARRIDO2022112827} showed that the correlation between heatmaps, Fig. \ref{fig:heatmap}, made with event datasets and those made with tracking datasets is low. These heatmaps are constructed by discretising the field using a grid and measuring how frequently the object at study has been in such discretized spaces. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps can provide information about a player's position without adding information about how relevant their performance was, since we have their position at every instance of the game.
+
+\ref{fig:heatmap} uses tracking data to show the position of the ball during the match between Atlético de Madrid and Getafe. With a simple glance, we can extract a lot of information from the match. The ball was most likely to be found in the centre-left part of the field, showing a strong attacking dominance from Getafe. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left of the pitch and the away team on the right.
 
 \begin{figure}[H]
 
@@ -544,15 +544,15 @@ In the next chapter, after the initial review of the state of art of football an
 
 \chapter{Methodology}\label{methodology}
 
-As discussed earlier, tracking datasets provide the position of all players and the ball throughout the match with a temporal resolution of 25fps. This enables us to estimate the players' covered distance, speed, and acceleration. The potential for extracting information from tracking datasets that is useful for football analytics extends beyond variables related to players' physical performance. Many tactical metrics has been implemented to decode how the intricate movements of players translate to the soccer field.
+As discussed earlier, tracking datasets provide the position of all players and the ball throughout the match with a temporal resolution of 25fps. This enables us to estimate the players' covered distance, speed, and acceleration. The potential for extracting information from tracking datasets that is useful for football analytics extends beyond variables related to players' physical performance. Many tactical metrics has been implemented to decode how the intricate movements of players translate to the football field.
 
 These models provide a scientific perspective for analysing player positioning, decision-
 making, and team dynamics, illuminating the complex interactions that occur during a
 match.
 
-\emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a soccer match. It combines player position and speed with mathematical models that simulate ball and player movement \citep{Spearman}.
+\emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a football match. It combines player position and speed with mathematical models that simulate ball and player movement \citep{Spearman}.
 
-This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define and understand Pitch Control Models, including their construction and implementation.
+This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define Pitch Control Models, including their construction and implementation.
 
 \section{Pitch Control Models}\label{pitch-control-models}
 
@@ -560,7 +560,7 @@ The \emph{Pitch Control (PC)} at a given location represents the probability of 
 The model captures not only the players' current position, but also their movement. When players are running at high speeds, they are more likely to control
 the space they are moving into rather than the space they currently occupy.
 
-To construct this model, we must calculate the following for a given location on the pitch:
+To construct this model, we must address the following issues for a given location on the pitch:
 
 \begin{itemize}
 \tightlist
@@ -572,7 +572,7 @@ To construct this model, we must calculate the following for a given location on
   What is the total \emph{probability} that each team will control the ball \emph{after} both the players and the ball have arrived at the desired position?
 \end{itemize}
 
-In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game (See Fig. \ref{fig:ball})
+In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game \citep{Spearman} (See Fig. \ref{fig:ball})
 
 \begin{figure}[H]
 
@@ -587,7 +587,7 @@ Therefore, the time taken to arrive at the location of interest can be easily ca
 
 \subsection{Model assumptions}\label{model-assumptions}
 
-When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of \(v_{max,p} = 18\) \(km/h\), which corresponds to the 95 percentile of the average speed of the players in the game (See Fig. \ref{fig:vel}). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball
+When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of \(v_{max,p} = 18\) \(km/h\), which corresponds to the 95 percentile of the average speed of the players in the game\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.} \citep{Spearman} (See Fig. \ref{fig:vel}). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball
 
 \begin{figure}[H]
 
@@ -603,7 +603,7 @@ To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\) , we 
 \begin{itemize}
 \tightlist
 \item
-  There is an initial \emph{reaction time}, assumed to be of \(t_{r} = 0.7\) seconds for every player\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}. This is approximately the time it takes a player moving at maximum speed to come to a complete stop. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \(\vec{r}_{\text{react}}\)).
+  There is an initial \emph{reaction time}, assumed to be of \(t_{r} = 0.7\) seconds for every player\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}. This is approximately the time it takes a player moving at maximum speed to come to a complete stop \citep{Spearman}. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \(\vec{r}_{\text{react}}\)).
 \item
   After this time, we assume that the player runs directly towards the ball at his maximum speed of \(v_{\text{max,p}}\).
 \end{itemize}
@@ -615,13 +615,14 @@ To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\) , we 
 
 \subsection{Control probability}\label{control-probability}
 
-Once we computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do so, we will assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate \(\lambda\), with units of \(1/s\). Thus, for any differential time \(\Delta t\) that a player is near the ball, he has a probability of \(\lambda \cdot \Delta t\) of controlling the ball.
+Once we have computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do this, we assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate \(\lambda\). The inverse of such a free parameter, \(\lambda^{-1}\), can be thought of as the time it takes a player to gain control of the ball, in seconds. Modeling the process with a exponential distribution, we capture the fact that players who stay closer to the ball for longer are more able to control the ball, \eqref{eq:cdf} \citep{SpearmanFit}. Thus, for any differential time \(\Delta t\) that a player is near the ball, he has a probability of \(\lambda \cdot \Delta t\) of controlling the ball.
 
 \begin{align}
 F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
+\label{eq:cdf}
 \end{align}
 
-So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled \(\sigma\), in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution (See Fig. \ref{fig:lambda}).
+So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled \(\sigma\), in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. To model that uncertainty, we will use a Logistic distribution. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution \citep{SpearmanFit} (See Fig. \ref{fig:lambda}).
 
 \begin{align}
     F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
@@ -653,7 +654,7 @@ parameters, \(\sigma\) and \(\lambda\), given outcome \(k\) and the start of the
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
 \end{align}
 
-Then, maximizing the product of the likelihood for each pass for a training sample P, the best fit is found at \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)\footnote{See \citep{SpearmanFit} for further details}
+Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)\footnote{See \citep{SpearmanFit} for further details}
 
 \begin{align}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
@@ -674,13 +675,9 @@ Now that we are able to generate the pitch control surface for a frame, we can e
 
 The \emph{Offside Control} was calculated for 100 matches from LaLiga (season 2018 - 2019) using tracking data. We calculated the OC every 2 frames per second of each match. In order to discretise the space efficiently, we decided to reduce our calculations to the half of the pitch of the team not in possession of the ball. We then detect the position of the offside line and calculate the pitch control after it. In this way, we significantly reduce the computation time of the model while maintaining a high spatial resolution (\(50 \times 32\)).
 
-\chapter{Offside Control}\label{offside-control}
+\chapter{Reuslts}\label{reuslts}
 
-As previously mentioned, this master's thesis introduces the parameter \emph{Offside Control (OC)}, which is derived through a modification of the Potential Pitch Control Field methodology. The purpose is to examine the pitch control dynamics of teams or individual players after the offside line. The procedure involves first identifying the offside line, which is determined by the positioning of the second-to-last defender. Identify attacking players who are within permissible boundaries and in offside positions across each frame. Calculate the OC metric as the measure of pitch control exerted by the attacking team or player subsequent to the offside demarcation. Additionally, assess the involvement of a player in an offside position as a manifestation of ineffective Offside Control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective Offside Control (EOC).
-
-We presented this metric at \emph{OptaForum 2023}, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work\footnote{You can check the rest of the proposals accepted here \url{https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/}}.
-
-\section{Results}\label{results}
+The procedure for constructing the \emph{Offside Control (OC)} parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation. Additionally, depending on each player's position with respect to the offside line, we can evaluate a player's involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).
 
 The concept of effective and ineffective Offside Control is illustrated in Fig. \ref{fig:eff}. Players from both teams are shown in blue (home team, attacking from left to right) and red (away team, attacking from right to left). Areas of the pitch controlled by the home team are shown in blue, while areas controlled by the away team in that particular match are shown in red. In this frame, the home team is in possession of the ball. The vertical dashed line indicates the position of the offside line. The areas surrounded by a broad grey line represent the areas controlled by the attacking team behind the offside line. We can see that the home player with the number \(11\) is behind the offside line, in an invalid position, and therefore generates IOC around him. On the contrary, player \(18\) is in a correct position and the Offside Control generated behind the offside line is classified as effective (EOC).
 

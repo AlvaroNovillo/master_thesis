@@ -1,3 +1,14 @@
+bookdown::pdf_book:
+  latex_engine: pdflatex
+  citation_package: natbib
+  fontsize: 12pt
+  keep_tex: yes
+  dev: "cairo_pdf"
+  toc: true
+  includes:
+   in_header: 00-preamble.tex
+
+
 bookdown::gitbook:
   css: style.css
   config:
@@ -15,15 +26,6 @@ bookdown::gitbook:
 
 
 
-bookdown::pdf_book:
-  latex_engine: pdflatex
-  citation_package: natbib
-  fontsize: 12pt
-  keep_tex: yes
-  dev: "cairo_pdf"
-  toc: true
-  includes:
-   in_header: 00-preamble.tex
 
 
 

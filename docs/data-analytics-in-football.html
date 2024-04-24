@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Data Analytics in football | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</title>
   <meta name="description" content="Master Thesis. Universidad Carlos III de Madrid." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Data Analytics in football | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
   <meta property="og:type" content="book" />
@@ -116,10 +116,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.2" data-path="methodology.html"><a href="methodology.html#control-probability"><i class="fa fa-check"></i><b>3.1.2</b> Control probability</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="offside-control.html"><a href="offside-control.html"><i class="fa fa-check"></i><b>4</b> Offside Control</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="offside-control.html"><a href="offside-control.html#results"><i class="fa fa-check"></i><b>4.1</b> Results</a></li>
-</ul></li>
+<li class="chapter" data-level="4" data-path="reuslts.html"><a href="reuslts.html"><i class="fa fa-check"></i><b>4</b> Reuslts</a></li>
 <li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
 <li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
@@ -181,13 +178,13 @@ from various providers. However, this manual process is time-consuming
 and typically requires three individuals:</p>
 <p>The data collection process is carried out by professional video
 analysts (known as operators), who are specialists in football data
-collection, using proprietary software (the tagger)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. The tagger has
+collection, using proprietary software (the tagger)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. The tagger has
 undergone several years of development and improvement and is regularly
 updated to ensure the highest level of performance is achieved. To
-ensure accurate data collection when tagging events in soccer matches,
+ensure accurate data collection when tagging events in football matches,
 three operators are assigned: one per team and one supervising the
 output of the entire match. This process is based on analysis of the
-tagger and soccer match videos. When near-live data delivery is
+tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
 additional, specific attributes or a quick review <span class="citation">(<a href="#ref-3">Pappalardo et al. 2019</a>)</span>.</p>
@@ -427,7 +424,7 @@ amount of passes made in that direction between the two players.</p>
 Figure 2.3: Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitute players are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.
 </p>
 </div>
-<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> during the
+<p>Analysis as the former can be conducted <em>in real-time</em><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> during the
 match using appropriate data sources. Additionally, we could examine
 Eibar’s macro situation during the 2022-2023 season to better comprehend
 how this micro-statistics contribute to the overall perception of the
@@ -454,7 +451,8 @@ Figure 2.4: Expected Goals (xG) and Expected Goals Against (xGA) per match. Code
 Figure 2.5: A frame of tracking data from a football match. The home team is shown in blue, the away team in red. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.
 </p>
 </div>
-<p>Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. <span class="citation">(<a href="#ref-GARRIDO2022112827">Garrido et al. 2022</a>)</span> showed that the correlation between heatmaps, Fig. <a href="data-analytics-in-football.html#fig:heatmap">2.6</a>, made with event datasets and those made with tracking datasets is low. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps provide information about a player’s position without adding information about how relevant his about how relevant their performance was.</p>
+<p>Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. <span class="citation">(<a href="#ref-GARRIDO2022112827">Garrido et al. 2022</a>)</span> showed that the correlation between heatmaps, Fig. <a href="data-analytics-in-football.html#fig:heatmap">2.6</a>, made with event datasets and those made with tracking datasets is low. These heatmaps are constructed by discretising the field using a grid and measuring how frequently the object at study has been in such discretized spaces. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps can provide information about a player’s position without adding information about how relevant their performance was, since we have their position at every instance of the game.</p>
+<p><a href="data-analytics-in-football.html#fig:heatmap">2.6</a> uses tracking data to show the position of the ball during the match between Atlético de Madrid and Getafe. With a simple glance, we can extract a lot of information from the match. The ball was most likely to be found in the centre-left part of the field, showing a strong attacking dominance from Getafe. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left of the pitch and the away team on the right.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:heatmap"></span>
 <img src="imagenes/Heatmap.jpg" alt="Heatmap of the ball position during the Atlético de Madrid - Getafe game under study. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left side of the field and the away team on the right." width="80%"  />
 <p class="caption">
@@ -493,9 +491,9 @@ Wyscout. 2023. <span>“Wyscout Data Glossary.”</span> 2023. <a href="https://
 </div>
 <div class="footnotes">
 <hr />
-<ol start="3">
-<li id="fn3"><p>See Fig. 1 in <span class="citation">(<a href="#ref-3">Pappalardo et al. 2019</a>)</span> for an example of the tagging software<a href="data-analytics-in-football.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Opta <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span> uses a combination of human annotation, computer vision, and AI modelling to offer real-time data at various levels of detail based on customer requirements. In our situation, the data feed updates itself when an event such as a goal, foul or pass occurs. Otherwise, it updates every 90 seconds.<a href="data-analytics-in-football.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>See Fig. 1 in <span class="citation">(<a href="#ref-3">Pappalardo et al. 2019</a>)</span> for an example of the tagging software<a href="data-analytics-in-football.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Opta <span class="citation">(<a href="#ref-opta">StatsPerform 2023</a>)</span> uses a combination of human annotation, computer vision, and AI modelling to offer real-time data at various levels of detail based on customer requirements. In our situation, the data feed updates itself when an event such as a goal, foul or pass occurs. Otherwise, it updates every 90 seconds.<a href="data-analytics-in-football.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
