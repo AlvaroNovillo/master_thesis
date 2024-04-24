@@ -41,10 +41,10 @@ analysts (known as operators), who are specialists in football data
 collection, using proprietary software (the tagger)[^3]. The tagger has
 undergone several years of development and improvement and is regularly
 updated to ensure the highest level of performance is achieved. To
-ensure accurate data collection when tagging events in soccer matches,
+ensure accurate data collection when tagging events in football matches,
 three operators are assigned: one per team and one supervising the
 output of the entire match. This process is based on analysis of the
-tagger and soccer match videos. When near-live data delivery is
+tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
 additional, specific attributes or a quick review [@3].
@@ -119,7 +119,10 @@ Fig. \@ref(fig:frame) contains a frame from the tracking dataset of an Atlético
 knitr::include_graphics("imagenes/Frame.png")
 ```
 
-Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. [@GARRIDO2022112827] showed that the correlation between heatmaps, Fig. \@ref(fig:heatmap), made with event datasets and those made with tracking datasets is low. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps provide information about a player's position without adding information about how relevant his about how relevant their performance was. 
+Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. [@GARRIDO2022112827] showed that the correlation between heatmaps, Fig. \@ref(fig:heatmap), made with event datasets and those made with tracking datasets is low. These heatmaps are constructed by discretising the field using a grid and measuring how frequently the object at study has been in such discretized spaces. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps can provide information about a player's position without adding information about how relevant their performance was, since we have their position at every instance of the game. 
+
+\@ref(fig:heatmap) uses tracking data to show the position of the ball during the match between Atlético de Madrid and Getafe. With a simple glance, we can extract a lot of information from the match. The ball was most likely to be found in the centre-left part of the field, showing a strong attacking dominance from Getafe.  Note that we always keep the direction of play from left to right, so the home team will always be placed on the left of the pitch and the away team on the right. 
+
 
 ```{r heatmap, out.width='80%', fig.align='center', fig.cap= "Heatmap of the ball position during the Atlético de Madrid - Getafe game under study. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left side of the field and the away team on the right.",echo = FALSE}
 knitr::include_graphics("imagenes/Heatmap.jpg")

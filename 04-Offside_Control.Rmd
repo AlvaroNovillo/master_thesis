@@ -1,10 +1,6 @@
-# Offside Control 
+# Reuslts
 
-As previously mentioned, this master's thesis introduces the parameter *Offside Control (OC)*, which is derived through a modification of the Potential Pitch Control Field methodology. The purpose is to examine the pitch control dynamics of teams or individual players after the offside line. The procedure involves first identifying the offside line, which is determined by the positioning of the second-to-last defender. Identify attacking players who are within permissible boundaries and in offside positions across each frame. Calculate the OC metric as the measure of pitch control exerted by the attacking team or player subsequent to the offside demarcation. Additionally, assess the involvement of a player in an offside position as a manifestation of ineffective Offside Control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective Offside Control (EOC).
-
-We presented this metric at *OptaForum 2023*, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work[^7].
-
-## Results 
+The procedure for constructing the *Offside Control (OC)* parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation. Additionally, depending on each player's position with respect to the offside line, we can evaluate a player's involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).
 
 The concept of effective and ineffective Offside Control is illustrated in Fig. \@ref(fig:eff). Players from both teams are shown in blue (home team, attacking from left to right) and red (away team, attacking from right to left). Areas of the pitch controlled by the home team are shown in blue, while areas controlled by the away team in that particular match are shown in red. In this frame, the home team is in possession of the ball. The vertical dashed line indicates the position of the offside line. The areas surrounded by a broad grey line represent the areas controlled by the attacking team behind the offside line. We can see that the home player with the number $11$ is behind the offside line, in an invalid position, and therefore generates IOC around him. On the contrary, player $18$ is in a correct position and the Offside Control generated behind the offside line is classified as effective (EOC).
 
@@ -46,6 +42,6 @@ knitr::include_graphics("imagenes/av_eff.png")
 
 
 
-[^7]: You can check the rest of the proposals accepted here https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/
+
 
 [^8]: To ensure the statistical validity of the results, the study only included players who played at least 6 games.

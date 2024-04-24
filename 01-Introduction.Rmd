@@ -1,6 +1,6 @@
 # Introduction
 The digital revolution is currently one of the most significant
-challenges of our time, altering numerous aspects of society. Football,
+challenges of our time, altering numerous aspects of society. Sports,
 in particular, has also been influenced by this transformation.
 Technological advancements and digitalization have resulted in a swift
 upsurge in the number of measuring devices, data collection and volumes
@@ -9,7 +9,10 @@ and Microsoft, are vying for superior data analytics tools and
 leveraging sports as an example domain to showcase their products and
 brand power [@1].
 
-The practice of data analytics in football has a long history, dating
+Basketball is one of the best examples of data analytics being
+applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games [@2].  Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. Such analysis have become vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
+
+In the case of football, the practice of data analytics has a long history, dating
 back to the post-World War II era, when data collection and analysis was
 undertaken manually using pencil and paper [@1]. It wasn't until
 Moneyball was published in 2003 that significant progress began to
@@ -19,23 +22,20 @@ analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
 component of sport, football inclusive [@1].
 
-Basketball is one of the best examples of data analytics being
-applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games [@2].  Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. 
-
-Performance analysis is vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. 
-
-The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
-
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced
 data analysis techniques to optimize team and player performance. 
 
-The main objective of this master’s thesis is to enhance understanding and performance in football through the use of Data Analytics. The master’s thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models [@Spearman]. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called *Offside Control*, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
+The main objective of this master’s thesis is to enhance understanding and performance in football through the use of data analytics. The master’s thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models [@Spearman]. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called *Offside Control*, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
 
 In the study, we will compute both effective and ineffective Offside Control at a rate of 2 frames per second for 100 matches from LaLiga 2019-2020, resulting in a total of 1,251,934 frames analysed. This will allow us to characterize successfully the Offside Control of 442 players in total.
 
 Our proposed methodology aims to contribute to this growing body of knowledge. Analyzing vast amounts of tracking data from LaLiga matches, we seek to uncover patterns in player and team behavior, shedding light on the tactical nuances that underlie successful offside strategies.
 
+We presented this metric at *OptaForum 2023*, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work[^7].
+
 All data processing and modeling in this project has been made using python. You can find the source code of the project inside the GitHub repository[^1]
 
 [^1]: All the source code is inside the code folder at https://github.com/AlvaroNovillo/master_thesis.git
+
+[^7]: You can check the rest of the proposals accepted here https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/
