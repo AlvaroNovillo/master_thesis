@@ -87,7 +87,7 @@ parameters,	$\sigma$ and $\lambda$, given outcome	$k$ and	the start of the pass 
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
 \end{align}
 
-Then,	maximizing	the	product	of	the	likelihood	for	each	pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at $\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}$[^5]
+Then,	maximizing	the	product	of	the	likelihood	for	each	pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at[^5] $\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}$ 
 
 \begin{align}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
