@@ -308,7 +308,7 @@
 
 \title{Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance}
 \author{Álvaro Novillo Correas}
-\date{Last modified on 2024-04-24}
+\date{Last modified on 2024-04-29}
 
 \begin{document}
 \maketitle
@@ -654,7 +654,7 @@ parameters, \(\sigma\) and \(\lambda\), given outcome \(k\) and the start of the
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
 \end{align}
 
-Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)\footnote{See \citep{SpearmanFit} for further details}
+Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at\footnote{See \citep{SpearmanFit} for further details} \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)
 
 \begin{align}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
@@ -712,7 +712,7 @@ Offside Control can also be tracked over the course of a match. Fig. \ref{fig:oc
 \caption{Analysis of the home team's Offside Control over the course of a match. Each point of $OC(t)$ is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).}\label{fig:oct}
 \end{figure}
 
-After analysing the OC of the 99 games evaluated in the study, we can also analyse the OC performance of all teams in the competition. Fig. \ref{fig:ranking} shows a comparison between the generated and received OC per effective time unit, for all teams. In the figure, the size of the teams and their labels indicate the final ranking after the matches included in the analysis. The dashed line plotted (\(y=x\)) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents. We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient \(R^2=0.48\) is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place. For a better understanding of the figure, Table \ref{tab:ranking-tab} of the Appendix contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking
+After analysing the OC of the 99 games evaluated in the study, we can also analyse the OC performance of all teams in the competition. Fig. \ref{fig:ranking} shows a comparison between the generated and received OC per effective time unit, for all teams. In the figure, the size of the teams and their labels indicate the final ranking after the matches included in the analysis. The dashed line plotted (\(y=x\)) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents. We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient \(R^2=0.48\) is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place. For a better understanding of the figure, Table 6.1 of the Appendix contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking
 
 One of the advantages of our proposed metric is its versatility: it can be used to describe the general behavior of the team, as presented above, but it can also be more specific and focus on the performance of specific players. Fig. \ref{fig:forwards} shows the Effective Offside Control produced by two different strikers, identified as \(A\) and \(B\). The left panel shows the positions on the pitch where the EOC is produced by each striker. The EOC is normalized by the total time played over the matches analyzed. In this way, we have a heat map showing where a striker tends to create controlled areas behind the offside line, which is useful information for analyzing his performance. In addition, the right panel shows the corresponding probability distribution functions of the time spent by both players at a given distance from the offside line. The distances are referenced to the offside line and are negative when the striker is in a valid position and positive when he is offside. Interestingly, striker \(A\) spends more time in front of the offside line than striker \(B\) (see the percentages of time spent on each side of the offside line). This means that player \(A\) is more likely to generate more EOCs.
 
@@ -734,8 +734,8 @@ One of the advantages of our proposed metric is its versatility: it can be used 
 \caption{Effective Offside Control (EOC) of two different strikers, A (upper plots) and B (lower plots). On the left, the positions on the pitch where the two players generate EOC. On the right, the probability distribution function of the time spent at a distance from the offside line. Negative values indicate that the player is in the correct position, while positive values indicate that the player is offside. The EOC is normalised to the time played. The values on the right plot indicate the proportion of time a player is in front of or behind the offside line.}\label{fig:forwards}
 \end{figure}
 
-In this work, the Offside Control of a total of 442 players was characterized. With all this data, we calculated the percentage of time that strikers spend close to the offside line and what percentage of that time the striker is in a valid position. We call this percentage a player's Offside Time Efficiency Ratio (OTER). Next, we relate the OTER to the percentage of OC that is effective, i.e.~\(EOC/IOC\), and we call this percentage the \emph{Offside Control Efficiency Ratio (OCER)}. In Fig. \ref{fig:forwardsglob} (A) we show the relationship between OTER and OCER for the \(50\)\footnote{To ensure the statistical validity of the results, the study only included players who played at least 6 games.} forwards. We have obtained a positive correlation between the two metrics, as indicated by the solid blue line. This suggests that the more time a striker spends in a valid position near the offside line, the higher the probability of generating effective Offside Control.
-However, the correlation coefficient between the two variables is low (\(R^2=0.2325\)), indicating that their relationship is complex and suggesting the effects of alternative variables not considered in our analysis. Finally, Fig. \ref{fig:forwardsglob} (B) shows the probability distribution function of the values of the OCER. We can see that most of the Offside Control generated by the strikers is effective, indicated by a probability distribution mainly above \(0.5\) and a mean of \(\langle OTER \rangle=0.7506\).
+In this work, the Offside Control of a total of 442 players was characterized. With all this data, we calculated the percentage of time that strikers spend close to the offside line and what percentage of that time the striker is in a valid position. We call this percentage a player's Offside Time Efficiency Ratio (OTER). Next, we relate the OTER to the percentage of OC that is effective, i.e.~\(EOC/IOC\), and we call this percentage the \emph{Offside Control Efficiency Ratio (OCER)}. In Fig. \ref{fig:forwardsglob} (A) we show the relationship between OTER and OCER for the \(50\) forwards\footnote{To ensure the statistical validity of the results, the study only included players who played at least 6 games.}. We have obtained a positive correlation between the two metrics, as indicated by the solid blue line. This suggests that the more time a striker spends in a valid position near the offside line, the higher the probability of generating effective Offside Control.
+However, the correlation coefficient between the two variables is low (\(R^2=0.2325\), \(p_{value} = 0.00039\)), indicating that their relationship is complex and suggesting the effects of alternative variables not considered in our analysis. Finally, Fig. \ref{fig:forwardsglob} (B) shows the probability distribution function of the values of the OCER. We can see that most of the Offside Control generated by the strikers is effective, indicated by a probability distribution mainly above \(0.5\) and a mean of \(\langle OTER \rangle=0.7506\). This result indicates that, in general, most of the pressure exerted by the strikers is effective.
 
 \begin{figure}[H]
 
@@ -743,26 +743,26 @@ However, the correlation coefficient between the two variables is low (\(R^2=0.2
 
 }
 
-\caption{Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the right, we show the OCER vs. OTER of the strikers.}\label{fig:forwardsglob}
+\caption{Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the left (A), we show the OCER vs. OTER of the strikers. On the right (B), the p.d.f of the OCER}\label{fig:forwardsglob}
 \end{figure}
 
 \chapter{Conclusion}\label{conclusion}
 
-At its core, Pitch Control model provides a quantitative framework using tracking data to assess player movement, spatial control, and decision making on the soccer field. Based on such a framework, we introduced the concept of \emph{Offside Control} to analyze the performance of players with respect to the danger created behind the offside line of the opposing team.
+At its core, Pitch Control model provides a quantitative framework using tracking data to assess player movement, spatial control, and decision making on the football field. Based on such a framework, we introduced the concept of \emph{Offside Control} to analyze the performance of players with respect to the danger created behind the offside line of the opposing team.
 
 The introduction of the OC parameter, derived from the modification of the Potential Pitch Control Field methodology, has provided a framework for studying the dynamics of pitch control beyond the offside line. By identifying attacking players within permissible boundaries and calculating the OC metric, this study has characterized the effectiveness of teams or individual players in exerting control beyond the offside line.
 
 The results demonstrated the practical application of OC in various dimensions, from spatial distribution to temporal dynamics during matches. We also effectively characterized the distinction between effective and ineffective offside control, delineating between real surface control and ineffective control.
 
-Furthermore, the versatility of OC was highlighted by its applicability at both the team and player levels. From tracking team-level OC performance over multiple matches to characterizing individual player behavior, OC emerged as a multifaceted metric capable of capturing diverse aspects of soccer.
+Furthermore, the versatility of OC was highlighted by its applicability at both the team and player levels. From tracking team-level OC performance over multiple matches to characterizing individual player behavior, OC emerged as a multifaceted metric capable of capturing diverse aspects of football.
 
-The findings further underscored the potential utility of OC in assessing player efficiency and effectiveness near the offside line. The relationship between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER) provided insight into the interplay between player positioning and the generation of effective offside control. While a positive correlation between OTER and OCER was observed, the analysis also suggested the influence of additional variables, suggesting avenues for further research and refinement of the OC framework.
+The findings further underscored the potential utility of OC in assessing player efficiency and effectiveness near the offside line. The relationship between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER) provided insight into the interplay between player positioning and the generation of effective offside control. While a positive correlation between OTER and OCER was observed, the analysis also suggested the influence of additional variables, suggesting that the OC framework should be refined to capture such external influence.
 
 Further work to develop this metric would include consideration of external factors, as well as improvements in tracking data collection and pitch control models. One of the major drawbacks of this methodology is that it cannot be performed in real-time during the game, due to the lack of real-time tracking data and the computational cost of calculating a Potential Pitch Control Surface.
 
-We believe that the development of both computer vision and the Pitch Control methodology will enable real-time analysis using tracking data, which is currently not possible. This will revolutionize data analysis in soccer, as all metrics and analyses previously defined in the literature for tracking data could be performed in real time, allowing for a broader understanding and control of football.
+We think that the development of both computer vision and the Pitch Control methodology will enable real-time analysis using tracking data, which is currently not possible. This will revolutionize data analysis in football, as all metrics and analyses previously defined in the literature for tracking data could be performed in real time, allowing for a broader understanding and control of football.
 
-Overall, our study contributes to the ongoing discourse on tactical analysis in soccer by introducing a novel metric that enriches our understanding of the dynamics of the offside play. By revealing the intricacies of offside control and its implications for team and player performance, this research lays the groundwork for future investigations aimed at improving strategic insight and decision-making in soccer.
+Overall, our study contributes to the ongoing discourse on tactical analysis in football by introducing a novel metric that enriches our understanding of the dynamics of the offside play. By revealing the intricacies of offside control and its implications for team and player performance, this research lays the groundwork for future investigations aimed at improving strategic insight and decision-making in football.
 
 \chapter{Appendix}\label{appendix}
 
@@ -770,7 +770,7 @@ In Table \ref{tab:ranking-tab}, we have gathered the Effective Offside Control, 
 
 \begin{table}[!h]
 \centering
-\caption{\label{tab:ranking-tab}Average Effective Offside Control values and Efficiency for each team analyzed}
+\caption{\label{tab:ranking-tab}Average Effective Offside Control values and Efficiency for each team from the Spanish national league (LaLiga Santander) during the season 2019/2020, ordered by their ranking}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{tabular}[t]{lrr}
