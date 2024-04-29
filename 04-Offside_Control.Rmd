@@ -1,4 +1,4 @@
-# Reuslts
+# Results
 
 The procedure for constructing the *Offside Control (OC)* parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation. Additionally, depending on each player's position with respect to the offside line, we can evaluate a player's involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).
 
