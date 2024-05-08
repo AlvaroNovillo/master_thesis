@@ -295,8 +295,8 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage[]{natbib}
-\bibliographystyle{abbrvnat}
+\usepackage[style=apa,]{biblatex}
+\addbibresource{bibliografia.bib}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -308,7 +308,7 @@
 
 \title{Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance}
 \author{Álvaro Novillo Correas}
-\date{Last modified on 2024-04-29}
+\date{Last modified on 2024-05-08}
 
 \begin{document}
 \maketitle
@@ -344,26 +344,26 @@ upsurge in the number of measuring devices, data collection and volumes
 of data. The leading data companies worldwide, including IBM, Intel, SAP
 and Microsoft, are vying for superior data analytics tools and
 leveraging sports as an example domain to showcase their products and
-brand power \citep{1}.
+brand power \autocite{1}.
 
 Basketball is one of the best examples of data analytics being
-applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games \citep{2}. Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. Such analysis have become vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
+applied to sports. Teams use data to analyze player performance, identify strengths and weaknesses, and develop strategies to win games \autocite{2}. Basketball Analytics can provide qualitative analysis to team owners, players, coaches, and technical staff to help them predict future situations and make informed decisions to improve performance. Such analysis have become vital to a team's success, as it aims to reduce expenditure, enhance team worth, and refine processes across all levels and segments of operations. The German Football Association (DFB) and the National Basketball Association (NBA) are two examples of digital transformation in the sports world. Successful teams use player performance data to gain a competitive advantage.
 
 In the case of football, the practice of data analytics has a long history, dating
 back to the post-World War II era, when data collection and analysis was
-undertaken manually using pencil and paper \citep{1}. It wasn't until
+undertaken manually using pencil and paper \autocite{1}. It wasn't until
 Moneyball was published in 2003 that significant progress began to
 emerge: The book, "The Art of Winning an Unfair Game" introduced
 sports analytics to a broader audience. It illustrated the use of data
 analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
-component of sport, football inclusive \citep{1}.
+component of sport, football inclusive \autocite{1}.
 
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced
 data analysis techniques to optimize team and player performance.
 
-The main objective of this master's thesis is to enhance understanding and performance in football through the use of data analytics. The master's thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models \citep{Spearman}. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called \emph{Offside Control}, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
+The main objective of this master's thesis is to enhance understanding and performance in football through the use of data analytics. The master's thesis includes a literature review of the field, alongside the commonly found data types within this industry and the main metrics used to analyse player and team performance, focusing on tracking data and Pitch Control models \autocite{Spearman}. Following the initial review of the field's state of the art, we propose a new methodology for quantifying the effectiveness of the offside strategy of teams and players using Pitch Control models. Our study defines a new performance parameter, called \emph{Offside Control}, which quantifies the amount of threat posed by the attacking team or player beyond the offside line.
 
 In the study, we will compute both effective and ineffective Offside Control at a rate of 2 frames per second for 100 matches from LaLiga 2019-2020, resulting in a total of 1,251,934 frames analysed. This will allow us to characterize successfully the Offside Control of 442 players in total.
 
@@ -378,7 +378,7 @@ All data processing and modeling in this project has been made using python. You
 When discussing sports analytics in football, the first metric that
 often comes to mind is the \emph{Expected Goals (xG) ratio}. This statistical indicator is a predictive Machine Learning (ML) model used to assess the likelihood of scoring for every shot made in the game. In the context of each shot, most Expected Goals models consider the following factors: distance to goal, angle to goal, body part used for the shot, and type of assist or previous action (such as throughball, cross, set-piece, or dribble). Then, using a regression model, the xG model assigns a value between 0 and 1 to each shot, indicating the probability of it resulting in a goal.
 
-Wyscout xG model, for example, encompass the shot's spatial coordinates, the assisting player's position, the striking player's use of foot or head, the type of assist involved, the occurrence of a dribble by either a field player or the goalkeeper immediately preceding the shot, whether the shot arises from a set piece, whether it transpires during a counterattack or in a transitional phase of play, and the subjective assessment of shot danger as determined by a designated tagger. This set of parameters serves as the foundation for training the xG model using historical Wyscout data, culminating in the prediction of the likelihood of a given shot resulting in a goal \citep{wyscout}.
+Wyscout xG model, for example, encompass the shot's spatial coordinates, the assisting player's position, the striking player's use of foot or head, the type of assist involved, the occurrence of a dribble by either a field player or the goalkeeper immediately preceding the shot, whether the shot arises from a set piece, whether it transpires during a counterattack or in a transitional phase of play, and the subjective assessment of shot danger as determined by a designated tagger. This set of parameters serves as the foundation for training the xG model using historical Wyscout data, culminating in the prediction of the likelihood of a given shot resulting in a goal \autocite{wyscout}.
 
 Since the probabilities range from 0 to 1, a shot with an xG value of
 0.1 has a 10\% chance of being scored. Penalties have a fixed xG value of 0.76.
@@ -422,7 +422,7 @@ and typically requires three individuals:
 
 The data collection process is carried out by professional video
 analysts (known as operators), who are specialists in football data
-collection, using proprietary software (the tagger)\footnote{See Fig. 1 in \citep{3} for an example of the tagging software}. The tagger has
+collection, using proprietary software (the tagger)\footnote{See Fig. 1 in \autocite{3} for an example of the tagging software}. The tagger has
 undergone several years of development and improvement and is regularly
 updated to ensure the highest level of performance is achieved. To
 ensure accurate data collection when tagging events in football matches,
@@ -431,7 +431,7 @@ output of the entire match. This process is based on analysis of the
 tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
-additional, specific attributes or a quick review \citep{3}.
+additional, specific attributes or a quick review \autocite{3}.
 
 \begin{table}[!h]
 \centering
@@ -457,7 +457,7 @@ This type of data structure can be used in a number of ways: it can be
 used to measure team performance through general statistics extracted
 from event datasets, such as goals, fouls, xG, etc. It can also be used to create advanced analysis of the team using ensembles of mathematical models.
 
-The match analysis is frequently conducted using Graph Theory, \citep{Buldu}, \citep{NOVILLO2024114355}. Combining
+The match analysis is frequently conducted using Graph Theory, \autocite{Buldu}, \autocite{NOVILLO2024114355}. Combining
 different elements of the events dataset, we can create a graph
 corresponding to the passing network of each team, allowing us to
 understand the passing structure of both teams.
@@ -483,7 +483,7 @@ amount of passes made in that direction between the two players.
 \caption{Representation of the Eibar (blue, left), Málaga (right, red) passing networks of the match Eibar - Málaga. Nodes represent players, edges represent passes between players. The position of the players in the field is their average passing position. The size of the nodes reflects the number of ingoing and outgoing passes (i.e. node’s degree), while the size of the edges is proportional to the number of passes between the players. Substitute players are represented in yellow. A connection is set if those players share at least 5 passes. The edge’s width is proportional to the amount of passes made in that direction between the two players.}\label{fig:homepass}
 \end{figure}
 
-Analysis as the former can be conducted \emph{in real-time}\footnote{Opta \citep{opta} uses a combination of human annotation, computer vision, and AI modelling to offer real-time data at various levels of detail based on customer requirements. In our situation, the data feed updates itself when an event such as a goal, foul or pass occurs. Otherwise, it updates every 90 seconds.} during the
+Analysis as the former can be conducted \emph{in real-time}\footnote{Opta \autocite{opta} uses a combination of human annotation, computer vision, and AI modelling to offer real-time data at various levels of detail based on customer requirements. In our situation, the data feed updates itself when an event such as a goal, foul or pass occurs. Otherwise, it updates every 90 seconds.} during the
 match using appropriate data sources. Additionally, we could examine
 Eibar's macro situation during the 2022-2023 season to better comprehend
 how this micro-statistics contribute to the overall perception of the
@@ -510,7 +510,7 @@ Although event datasets supply beneficial information regarding the team's overa
 
 There are two main techniques for obtaining tracking data, which decide its classification: \textbf{Image detection algorithms} extract players' positions from the match broadcast and infer locations of players that are not visible in the broadcast frame, whereas \textbf{optical tracking} employs a specialized camera system installed on the field to record players' data. Our research will concentrate on the latter method, as it offers more precise and statistically informative data.
 
-Our tracking data has been provided by Mediacoach®. They utilises the Tracab Optical Tracking system to obtain on-the-pitch player positions. This multi-camera system captures each player's position at 25 frames per second. The system consists of three units, each with a resolution of 1920x1080 pixels, producing a panoramic picture that generates a stereoscopic view for triangulating the players and ball. In case of a temporary loss of any location, a skilled operator adjusts the players' positions. The datasets obtained by the Mediacoach® system have been validated in advance using GPS \citep{Felipe2019ValidationOA}.
+Our tracking data has been provided by Mediacoach®. They utilises the Tracab Optical Tracking system to obtain on-the-pitch player positions. This multi-camera system captures each player's position at 25 frames per second. The system consists of three units, each with a resolution of 1920x1080 pixels, producing a panoramic picture that generates a stereoscopic view for triangulating the players and ball. In case of a temporary loss of any location, a skilled operator adjusts the players' positions. The datasets obtained by the Mediacoach® system have been validated in advance using GPS \autocite{Felipe2019ValidationOA}.
 
 Fig. \ref{fig:frame} contains a frame from the tracking dataset of an Atlético de Madrid (Blue) - Getafe (Red) game from the Spanish 2019 League. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.
 
@@ -523,7 +523,7 @@ Fig. \ref{fig:frame} contains a frame from the tracking dataset of an Atlético 
 \caption{A frame of tracking data from a football match. The home team is shown in blue, the away team in red. The ball is shown as a black dot. Referees are shown as yellow squares. Purple arrows represent the speed vectors of the players.}\label{fig:frame}
 \end{figure}
 
-Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. \citep{GARRIDO2022112827} showed that the correlation between heatmaps, Fig. \ref{fig:heatmap}, made with event datasets and those made with tracking datasets is low. These heatmaps are constructed by discretising the field using a grid and measuring how frequently the object at study has been in such discretized spaces. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps can provide information about a player's position without adding information about how relevant their performance was, since we have their position at every instance of the game.
+Traditionally, all football statistics have been produced using event datasets. In this respect, tracking datasets have been crucial in developing new ways of measuring team and player performance. With this type of information, we are not just limited to ball-related events such as passes, goals, etc. tracking datasets contain the precise location of players and the ball during a match. \autocite{GARRIDO2022112827} showed that the correlation between heatmaps, Fig. \ref{fig:heatmap}, made with event datasets and those made with tracking datasets is low. These heatmaps are constructed by discretising the field using a grid and measuring how frequently the object at study has been in such discretized spaces. Event heatmaps show where a player has performed more actions. On the other hand, tracking heatmaps can provide information about a player's position without adding information about how relevant their performance was, since we have their position at every instance of the game.
 
 \ref{fig:heatmap} uses tracking data to show the position of the ball during the match between Atlético de Madrid and Getafe. With a simple glance, we can extract a lot of information from the match. The ball was most likely to be found in the centre-left part of the field, showing a strong attacking dominance from Getafe. Note that we always keep the direction of play from left to right, so the home team will always be placed on the left of the pitch and the away team on the right.
 
@@ -550,7 +550,7 @@ These models provide a scientific perspective for analysing player positioning, 
 making, and team dynamics, illuminating the complex interactions that occur during a
 match.
 
-\emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a football match. It combines player position and speed with mathematical models that simulate ball and player movement \citep{Spearman}.
+\emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a football match. It combines player position and speed with mathematical models that simulate ball and player movement \autocite{Spearman}.
 
 This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define Pitch Control Models, including their construction and implementation.
 
@@ -572,7 +572,7 @@ To construct this model, we must address the following issues for a given locati
   What is the total \emph{probability} that each team will control the ball \emph{after} both the players and the ball have arrived at the desired position?
 \end{itemize}
 
-In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game \citep{Spearman} (See Fig. \ref{fig:ball})
+In the model, the ball is set to move at a constant speed of \(v_b = 54\) \(km/h\), which is approximately the average speed of the ball in the game \autocite{Spearman} (See Fig. \ref{fig:ball})
 
 \begin{figure}[H]
 
@@ -587,7 +587,7 @@ Therefore, the time taken to arrive at the location of interest can be easily ca
 
 \subsection{Model assumptions}\label{model-assumptions}
 
-When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of \(v_{max,p} = 18\) \(km/h\), which corresponds to the 95 percentile of the average speed of the players in the game\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.} \citep{Spearman} (See Fig. \ref{fig:vel}). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball
+When considering how long it will take the players to reach the target position, given their initial position and speed, players are assumed to only have a maximum speed of \(v_{max,p} = 18\) \(km/h\), which corresponds to the 95 percentile of the average speed of the players in the game\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.} \autocite{Spearman} (See Fig. \ref{fig:vel}). This upper limit should not be misunderstood as the maximum speed at which players can move, but rather as an estimate of the maximum speed at which they are likely to move when trying to control the ball
 
 \begin{figure}[H]
 
@@ -603,31 +603,29 @@ To compute the player's expected arrival time, \(\tau_{exp}(\vec{r};t_r)\) , we 
 \begin{itemize}
 \tightlist
 \item
-  There is an initial \emph{reaction time}, assumed to be of \(t_{r} = 0.7\) seconds for every player\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}. This is approximately the time it takes a player moving at maximum speed to come to a complete stop \citep{Spearman}. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \(\vec{r}_{\text{react}}\)).
+  There is an initial \emph{reaction time}, assumed to be of \(t_{r} = 0.7\) seconds for every player\footnote{We can impose this assumption for all the players without loss of generality, to simplify the model. Further work to improve the model will be individualize this reaction parameter for each player.}. This is approximately the time it takes a player moving at maximum speed to come to a complete stop \autocite{Spearman}. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \(\vec{r}_{\text{react}}\)).
 \item
   After this time, we assume that the player runs directly towards the ball at his maximum speed of \(v_{\text{max,p}}\).
 \end{itemize}
 
-\begin{align}
+\begin{align*}
     \tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
-    \label{exp_arr_time}
-\end{align}
+\end{align*}
 
 \subsection{Control probability}\label{control-probability}
 
-Once we have computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do this, we assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate \(\lambda\). The inverse of such a free parameter, \(\lambda^{-1}\), can be thought of as the time it takes a player to gain control of the ball, in seconds. Modeling the process with a exponential distribution, we capture the fact that players who stay closer to the ball for longer are more able to control the ball, \eqref{eq:cdf} \citep{SpearmanFit}. Thus, for any differential time \(\Delta t\) that a player is near the ball, he has a probability of \(\lambda \cdot \Delta t\) of controlling the ball.
+Once we have computed the time it takes for the ball and the players to get to the target location, we need to look at how long it will take each player to control the ball. To do this, we assume that controlling the ball is a stochastic process that follows an exponential distribution with a fixed rate \(\lambda\). The inverse of such a free parameter, \(\lambda^{-1}\), can be thought of as the time it takes a player to gain control of the ball, in seconds. Modeling the process with a exponential distribution, we capture the fact that players who stay closer to the ball for longer are more able to control the ball, \eqref{eq:cdf} \autocite{SpearmanFit}. Thus, for any differential time \(\Delta t\) that a player is near the ball, he has a probability of \(\lambda \cdot \Delta t\) of controlling the ball.
 
 \begin{align}
 F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
 \label{eq:cdf}
 \end{align}
 
-So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled \(\sigma\), in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. To model that uncertainty, we will use a Logistic distribution. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution \citep{SpearmanFit} (See Fig. \ref{fig:lambda}).
+So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled \(\sigma\), in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. To model that uncertainty, we will use a Logistic distribution. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution \autocite{SpearmanFit} (See Fig. \ref{fig:lambda}).
 
-\begin{align}
+\begin{align*}
     F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
-    \label{sigmoid}
-\end{align}
+\end{align*}
 
 \begin{figure}[H]
 
@@ -638,27 +636,27 @@ So far, the model assumes that we know exactly when each player will arrive at t
 \caption{The cumulative distribution functions for the two components of the model. a) (left) the time to intercept and b) (right) the time to control the ball.    The parameters shown for each are from the global fit described below.}\label{fig:lambda}
 \end{figure}
 
-Both \(\lambda\) and \(\sigma\) has been selected according to \citep{SpearmanFit}, where they model passes as a Bernoulli trial, with probability mass function
+Both \(\lambda\) and \(\sigma\) has been selected according to \autocite{SpearmanFit}, where they model passes as a Bernoulli trial, with probability mass function
 
-\begin{align}
+\begin{align*}
 P(k \mid \sigma, \lambda, x)=\left\{\begin{array}{lr}
 1-p \text { for } \mathrm{k}=0 \\
 p & \text { for } \mathrm{k}=1
 \end{array}\right.
-\end{align}
+\end{align*}
 
 where \(k \in [0,1]\) is the outcome of the pass. Then, the likelihood of a set of\\
 parameters, \(\sigma\) and \(\lambda\), given outcome \(k\) and the start of the pass \(x\) is:
 
-\begin{align}
+\begin{align*}
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
-\end{align}
+\end{align*}
 
-Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at\footnote{See \citep{SpearmanFit} for further details} \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)
+Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at\footnote{See \autocite{SpearmanFit} for further details} \(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)
 
-\begin{align}
+\begin{align*}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
-\end{align}
+\end{align*}
 
 Using the above components, we recursively construct the partial derivative of the probability that player \(j\) controls a given location \(r\), at time t is
 
@@ -675,22 +673,15 @@ Now that we are able to generate the pitch control surface for a frame, we can e
 
 The \emph{Offside Control} was calculated for 100 matches from LaLiga (season 2018 - 2019) using tracking data. We calculated the OC every 2 frames per second of each match. In order to discretise the space efficiently, we decided to reduce our calculations to the half of the pitch of the team not in possession of the ball. We then detect the position of the offside line and calculate the pitch control after it. In this way, we significantly reduce the computation time of the model while maintaining a high spatial resolution (\(50 \times 32\)).
 
-\chapter{Reuslts}\label{reuslts}
+\chapter{Results}\label{results}
 
-The procedure for constructing the \emph{Offside Control (OC)} parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation. Additionally, depending on each player's position with respect to the offside line, we can evaluate a player's involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).
+The procedure for constructing the \emph{Offside Control (OC)} parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation.
 
-The concept of effective and ineffective Offside Control is illustrated in Fig. \ref{fig:eff}. Players from both teams are shown in blue (home team, attacking from left to right) and red (away team, attacking from right to left). Areas of the pitch controlled by the home team are shown in blue, while areas controlled by the away team in that particular match are shown in red. In this frame, the home team is in possession of the ball. The vertical dashed line indicates the position of the offside line. The areas surrounded by a broad grey line represent the areas controlled by the attacking team behind the offside line. We can see that the home player with the number \(11\) is behind the offside line, in an invalid position, and therefore generates IOC around him. On the contrary, player \(18\) is in a correct position and the Offside Control generated behind the offside line is classified as effective (EOC).
+Additionally, based on each player's location relative to the offside line, we can evaluate a player's involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).
 
-The \emph{Spatial Offside Control} generated by a team can be obtained by simply summing the Offside Control of each team during the match in each region of the pitch behind the offside line. We can also define the \emph{Percentage of Offside Control} accumulated by each team and obtain an indicator of which team gained more control over the opponent. Fig. \ref{fig:games} shows two examples of both spatial OC and percentage of OC for two different games (A and B) by a team called \(\alpha\). We have used a heatmap to show in red the spatial OC generated and received by team \(\alpha\), indicating which specific areas of the pitch were controlled behind the offside line. Note that only effective Offside Control is shown in this example. We can see that in match \(A\) the danger generated behind the offside line is deeper and closer to the box, while the EOC received is not as close to the own goal. On the other hand, in game \(B\), the EOC generated is more longitudinal and closer to the edge of the pitch, while the EOC generated by the opposing team is much deeper and therefore more dangerous. Beyond the spatial location, the bars on the right side of the figure \ref{fig:games} show the proportion of EOC accumulated by team \(\alpha\) and its opponents in both games. In both cases, team \(\alpha\) dominates the opposing team, accumulating a percentage higher than \(65\%\).
+\section{Offside Control}\label{offside-control}
 
-Offside Control can also be tracked over the course of a match. Fig. \ref{fig:oct} shows an example of \(OC(t)\) for the home team of a match, smoothed with a centred sliding window of 600 frames. In the figure we have also included the moments when goals were scored. This allows us to relate the \(OC(t)\) to the score. As we have plotted the home team's \(OC(t)\), we can see that it increases until a few minutes before the third goal is scored. However, it drops around minute 50, which shows that the home team is creating less danger behind the opponent's offside line, presumably trying to defend the goal advantage rather than create new scoring opportunities.
-
-After analysing the OC of the 99 games evaluated in the study, we can also analyse the OC performance of all teams in the competition. Fig. \ref{fig:ranking} shows a comparison between the generated and received OC per effective time unit, for all teams. In the figure, the size of the teams and their labels indicate the final ranking after the matches included in the analysis. The dashed line plotted (\(y=x\)) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents. We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient \(R^2=0.48\) is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place. For a better understanding of the figure, Table 6.1 of the Appendix contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking
-
-One of the advantages of our proposed metric is its versatility: it can be used to describe the general behavior of the team, as presented above, but it can also be more specific and focus on the performance of specific players. Fig. \ref{fig:forwards} shows the Effective Offside Control produced by two different strikers, identified as \(A\) and \(B\). The left panel shows the positions on the pitch where the EOC is produced by each striker. The EOC is normalized by the total time played over the matches analyzed. In this way, we have a heat map showing where a striker tends to create controlled areas behind the offside line, which is useful information for analyzing his performance. In addition, the right panel shows the corresponding probability distribution functions of the time spent by both players at a given distance from the offside line. The distances are referenced to the offside line and are negative when the striker is in a valid position and positive when he is offside. Interestingly, striker \(A\) spends more time in front of the offside line than striker \(B\) (see the percentages of time spent on each side of the offside line). This means that player \(A\) is more likely to generate more EOCs.
-
-In this work, the Offside Control of a total of 442 players was characterized. With all this data, we calculated the percentage of time that strikers spend close to the offside line and what percentage of that time the striker is in a valid position. We call this percentage a player's Offside Time Efficiency Ratio (OTER). Next, we relate the OTER to the percentage of OC that is effective, i.e.~\(EOC/IOC\), and we call this percentage the \emph{Offside Control Efficiency Ratio (OCER)}. In Fig. \ref{fig:forwardsglob} (A) we show the relationship between OTER and OCER for the \(50\) forwards\footnote{To ensure the statistical validity of the results, the study only included players who played at least 6 games.}. We have obtained a positive correlation between the two metrics, as indicated by the solid blue line. This suggests that the more time a striker spends in a valid position near the offside line, the higher the probability of generating effective Offside Control.
-However, the correlation coefficient between the two variables is low (\(R^2=0.2325\), \(p_{value} = 0.00039\)), indicating that their relationship is complex and suggesting the effects of alternative variables not considered in our analysis. Finally, Fig. \ref{fig:forwardsglob} (B) shows the probability distribution function of the values of the OCER. We can see that most of the Offside Control generated by the strikers is effective, indicated by a probability distribution mainly above \(0.5\) and a mean of \(\langle OTER \rangle=0.7506\). This result indicates that, in general, most of the pressure exerted by the strikers is effective.
+The concept of effective and ineffective Offside Control is illustrated in Fig. \ref{fig:eff}.
 
 \begin{figure}[H]
 
@@ -701,6 +692,22 @@ However, the correlation coefficient between the two variables is low (\(R^2=0.2
 \caption{Example of effective (EOC) and ineffective (IOC) Offside Control (areas surrounded by a thick grey line). Offside is indicated by the vertical dashed line. Note that player $11$ is offside (generating IOC), while player $18$ is not (generating EOC).}\label{fig:eff}
 \end{figure}
 
+Players from both teams are shown in blue (home team, attacking from left to right) and red (away team, attacking from right to left). Areas of the pitch controlled by the home team are shown in blue, while areas controlled by the away team in that particular match are shown in red. In this frame, the home team is in possession of the ball.
+
+A vertical dashed line shows the offside line's location, and the areas enclosed by a broad grey line represent zones controlled by the attacking team behind this line.
+
+Here, the home player wearing number \(11\) is behind the offside line in an invalid position, thereby generating IOC around him. In contrast, player \(18\) is correctly positioned, leading to effective Offside Control (EOC) behind the offside line.
+
+\section{Measurement of Offside Control}\label{measurement-of-offside-control}
+
+The \emph{Spatial Offside Control} generated by a team can be measured by simply adding up the Offside Control values of each team during the match within the regions behind the offside line.
+
+We have also computed the \emph{Percentage of Offside Control} accumulated by each team to measure which team achieved greater control over the opponent.
+
+Fig. \ref{fig:games} shows two examples of both spatial OC and percentage of OC for two different games (A and B) by a team called \(\alpha\).
+
+A heatmap highlights in red the spatial OC generated and received by team \(\alpha\), pinpointing specific pitch areas controlled behind the offside line.
+
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.8\linewidth,]{imagenes/Games_OC} 
@@ -709,6 +716,14 @@ However, the correlation coefficient between the two variables is low (\(R^2=0.2
 
 \caption{Spatial and percentage of effective offside control (EOC) over the course of two matches (A and B). The left plots show the EOC received by team $\alpha$ and the middle plots show the EOC generated by team $\alpha$. In all plots, the intensity of the red color is proportional to the accumulated EOC at each location on the field. The bars on the right show the percentage of EOC accumulated by team $\alpha$ and its opponents.}\label{fig:games}
 \end{figure}
+
+Note that only effective Offside Control is shown in this example. We can see that in match \(A\) the danger generated behind the offside line is deeper and closer to the box, while the EOC received is not as close to the own goal. On the other hand, in game \(B\), the EOC generated is more longitudinal and closer to the edge of the pitch, while the EOC generated by the opposing team is much deeper and therefore more dangerous. Beyond the spatial location, the bars on the right side of the figure \ref{fig:games} show the proportion of EOC accumulated by team \(\alpha\) and its opponents in both games. In both cases, team \(\alpha\) dominates the opposing team, accumulating a percentage higher than \(65\%\).
+
+\pagebreak
+
+\section{Dynamic Monitoring of Offside Control}\label{dynamic-monitoring-of-offside-control}
+
+Offside Control can also be monitored throughout a match. Fig. \ref{fig:oct} shows an example of \(OC(t)\) for the home team of a match, smoothed with a centered sliding window of 600 frames.
 
 \begin{figure}[H]
 
@@ -719,58 +734,30 @@ However, the correlation coefficient between the two variables is low (\(R^2=0.2
 \caption{Analysis of the home team's Offside Control over the course of a match. Each point of $OC(t)$ is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).}\label{fig:oct}
 \end{figure}
 
+The figure also marks moments when goals were scored, linking \(OC(t)\) to the game's score.
+
+As we have plotted the home team's \(OC(t)\), we can see that it increases until a few minutes before the third goal is scored. However, it drops around minute 50, which shows that the home team is creating less danger behind the opponent's offside line, presumably trying to defend the goal advantage rather than create new scoring opportunities.
+
+\section{Comprehensive Analysis}\label{comprehensive-analysis}
+
+After evaluating the OC of the 99 games in the study, we can also analyse the OC performance of all teams in the competition.
+
+Fig. \ref{fig:ranking} compares the generated and received OC per effective time unit, for all teams. In the figure, the size of the points and their labels indicate the final ranking after the matches analysed. The dashed line plotted (\(y=x\)) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents.
+
+\pagebreak
+
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.8\linewidth,]{imagenes/Mean_rival_OC_vs_team_norm_efftime} 
+{\centering \includegraphics[width=0.7\linewidth,]{imagenes/Mean_rival_OC_vs_team_norm_efftime} 
 
 }
 
 \caption{Generated vs. received Offside Control. The values correspond to the average accumulated OC per effective time unit. The size of the nodes (and their labels) correlates with the ranking corresponding to all the matches analysed. The dashed line corresponds to $y=x$. The linear regression is shown in blue and has the equation $y = -0.86x + 285.42$, with $R^2 = 0.48$ and $RMSE = 14.96$. Teams above the dashed line have accumulated more Offside Controls than their rivals.}\label{fig:ranking}
 \end{figure}
 
-\begin{figure}[H]
-
-{\centering \includegraphics[width=0.7\linewidth,]{imagenes/forwards_OC} 
-
-}
-
-\caption{Effective Offside Control (EOC) of two different strikers, A (upper plots) and B (lower plots). On the left, the positions on the pitch where the two players generate EOC. On the right, the probability distribution function of the time spent at a distance from the offside line. Negative values indicate that the player is in the correct position, while positive values indicate that the player is offside. The EOC is normalised to the time played. The values on the right plot indicate the proportion of time a player is in front of or behind the offside line.}\label{fig:forwards}
-\end{figure}
-
-\begin{figure}[H]
-
-{\centering \includegraphics[width=0.8\linewidth,]{imagenes/av_eff} 
-
-}
-
-\caption{Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the left (A), we show the OCER vs. OTER of the strikers. On the right (B), the p.d.f of the OCER}\label{fig:forwardsglob}
-\end{figure}
-
-\chapter{Conclusion}\label{conclusion}
-
-At its core, Pitch Control model provides a quantitative framework using tracking data to assess player movement, spatial control, and decision making on the football field. Based on such a framework, we introduced the concept of \emph{Offside Control} to analyze the performance of players with respect to the danger created behind the offside line of the opposing team.
-
-The introduction of the OC parameter, derived from the modification of the Potential Pitch Control Field methodology, has provided a framework for studying the dynamics of pitch control beyond the offside line. By identifying attacking players within permissible boundaries and calculating the OC metric, this study has characterized the effectiveness of teams or individual players in exerting control beyond the offside line.
-
-The results demonstrated the practical application of OC in various dimensions, from spatial distribution to temporal dynamics during matches. We also effectively characterized the distinction between effective and ineffective offside control, delineating between real surface control and ineffective control.
-
-Furthermore, the versatility of OC was highlighted by its applicability at both the team and player levels. From tracking team-level OC performance over multiple matches to characterizing individual player behavior, OC emerged as a multifaceted metric capable of capturing diverse aspects of football.
-
-The findings further underscored the potential utility of OC in assessing player efficiency and effectiveness near the offside line. The relationship between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER) provided insight into the interplay between player positioning and the generation of effective offside control. While a positive correlation between OTER and OCER was observed, the analysis also suggested the influence of additional variables, suggesting that the OC framework should be refined to capture such external influence.
-
-Further work to develop this metric would include consideration of external factors, as well as improvements in tracking data collection and pitch control models. One of the major drawbacks of this methodology is that it cannot be performed in real-time during the game, due to the lack of real-time tracking data and the computational cost of calculating a Potential Pitch Control Surface.
-
-We think that the development of both computer vision and the Pitch Control methodology will enable real-time analysis using tracking data, which is currently not possible. This will revolutionize data analysis in football, as all metrics and analyses previously defined in the literature for tracking data could be performed in real time, allowing for a broader understanding and control of football.
-
-Overall, our study contributes to the ongoing discourse on tactical analysis in football by introducing a novel metric that enriches our understanding of the dynamics of the offside play. By revealing the intricacies of offside control and its implications for team and player performance, this research lays the groundwork for future investigations aimed at improving strategic insight and decision-making in football.
-
-\chapter{Appendix}\label{appendix}
-
-In Table \ref{tab:ranking-tab}, we have gathered the Effective Offside Control, along with the efficiency percentage for each of the teams represented in Fig. \ref{fig:ranking}, in descending ranking order
-
 \begin{table}[!h]
 \centering
-\caption{\label{tab:ranking-tab}Average Effective Offside Control values and Efficiency for each team from the Spanish national league (LaLiga Santander) during the season 2019/2020, ordered by their ranking}
+\caption{\label{tab:rankingtab}Average Effective Offside Control values and Efficiency for each team from the Spanish national league (LaLiga Santander) during the season 2019/2020, ordered by their ranking}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{tabular}[t]{lrr}
@@ -804,6 +791,60 @@ Ranking & Effective OC & Efficiency (\%)\\
 \end{tabular}}
 \end{table}
 
-  \bibliography{bibliografia.bib}
+We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient \(R^2=0.48\) is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place.
+
+For a better understanding of the figure, Table 4.1 contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking
+
+One of the advantages of our proposed metric is its versatility: it can be used to describe the general behavior of the team, as presented above, but it can also be more specific and focus on the performance of specific players.
+
+\section{Performance measures using Offside Control}\label{performance-measures-using-offside-control}
+
+Fig. \ref{fig:forwards} shows the Effective Offside Control produced by two different strikers, identified as \(A\) and \(B\). The left panel shows the positions on the pitch where the EOC is produced by each striker. The EOC is normalized by the total time played over the matches analyzed. In this way, we have a heat map showing where a striker tends to create controlled areas behind the offside line, which is useful information for analyzing his performance. In addition, the right panel shows the corresponding probability distribution functions of the time spent by both players at a given distance from the offside line. The distances are referenced to the offside line and are negative when the striker is in a valid position and positive when he is offside. Interestingly, striker \(A\) spends more time in front of the offside line than striker \(B\) (see the percentages of time spent on each side of the offside line). This means that player \(A\) is more likely to generate more EOCs.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth,]{imagenes/forwards_OC} 
+
+}
+
+\caption{Effective Offside Control (EOC) of two different strikers, A (upper plots) and B (lower plots). On the left, the positions on the pitch where the two players generate EOC. On the right, the probability distribution function of the time spent at a distance from the offside line. Negative values indicate that the player is in the correct position, while positive values indicate that the player is offside. The EOC is normalised to the time played. The values on the right plot indicate the proportion of time a player is in front of or behind the offside line.}\label{fig:forwards}
+\end{figure}
+
+We have been able to characterize the Offside Control of a total of 442 players. With all this data, we calculated the percentage of time that strikers spend close to the offside line and what percentage of that time the striker is in a valid position. We call this percentage a player's Offside Time Efficiency Ratio (OTER).
+
+Next, we relate the OTER to the percentage of OC that is effective, i.e.~\(EOC/IOC\), and we call this percentage the \emph{Offside Control Efficiency Ratio (OCER)}.
+
+In Fig. \ref{fig:forwardsglob} (A) we show the relationship between OTER and OCER for the \(50\) forwards\footnote{To ensure the statistical validity of the results, the study only included players who played at least 6 games.}. We have obtained a positive correlation between the two metrics, as indicated by the solid blue line. This suggests that the more time a striker spends in a valid position near the offside line, the higher the probability of generating effective Offside Control.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,]{imagenes/av_eff} 
+
+}
+
+\caption{Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the left (A), we show the OCER vs. OTER of the strikers. On the right (B), the p.d.f of the OCER}\label{fig:forwardsglob}
+\end{figure}
+
+However, the correlation coefficient between the two variables is low (\(R^2=0.2325\), \(p_{value} = 0.00039\)), indicating that their relationship is complex and suggesting the effects of alternative variables not considered in our analysis. Finally, Fig. \ref{fig:forwardsglob} (B) shows the probability distribution function of the values of the OCER. We can see that most of the Offside Control generated by the strikers is effective, indicated by a probability distribution mainly above \(0.5\) and a mean of \(\langle OTER \rangle=0.7506\). This result indicates that, in general, most of the pressure exerted by the strikers is effective.
+
+\chapter{Conclusion}\label{conclusion}
+
+At its core, Pitch Control model provides a quantitative framework using tracking data to assess player movement, spatial control, and decision making on the football field. Based on such a framework, we introduced the concept of \emph{Offside Control} to analyze the performance of players with respect to the danger created behind the offside line of the opposing team.
+
+The introduction of the OC parameter, derived from the modification of the Potential Pitch Control Field methodology, has provided a framework for studying the dynamics of pitch control beyond the offside line. By identifying attacking players within permissible boundaries and calculating the OC metric, this study has characterized the effectiveness of teams or individual players in exerting control beyond the offside line.
+
+The results demonstrated the practical application of OC in various dimensions, from spatial distribution to temporal dynamics during matches. We also effectively characterized the distinction between effective and ineffective offside control, delineating between real surface control and ineffective control.
+
+Furthermore, the versatility of OC was highlighted by its applicability at both the team and player levels. From tracking team-level OC performance over multiple matches to characterizing individual player behavior, OC emerged as a multifaceted metric capable of capturing diverse aspects of football.
+
+The findings further underscored the potential utility of OC in assessing player efficiency and effectiveness near the offside line. The relationship between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER) provided insight into the interplay between player positioning and the generation of effective offside control. While a positive correlation between OTER and OCER was observed, the analysis also suggested the influence of additional variables, suggesting that the OC framework should be refined to capture such external influence.
+
+Further work to develop this metric would include consideration of external factors, as well as improvements in tracking data collection and pitch control models. One of the major drawbacks of this methodology is that it cannot be performed in real-time during the game, due to the lack of real-time tracking data and the computational cost of calculating a Potential Pitch Control Surface.
+
+We think that the development of both computer vision and the Pitch Control methodology will enable real-time analysis using tracking data, which is currently not possible. This will revolutionize data analysis in football, as all metrics and analyses previously defined in the literature for tracking data could be performed in real time, allowing for a broader understanding and control of football.
+
+Overall, our study contributes to the ongoing discourse on tactical analysis in football by introducing a novel metric that enriches our understanding of the dynamics of the offside play. By revealing the intricacies of offside control and its implications for team and player performance, this research lays the groundwork for future investigations aimed at improving strategic insight and decision-making in football.
+
+\printbibliography
 
 \end{document}

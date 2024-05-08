@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Results | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</title>
+  <meta name="description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Results | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/imagenes/cover-front.jpg" />
+  <meta property="og:description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Results | Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance" />
+  
+  <meta name="twitter:description" content="Master Thesis. Universidad Carlos III de Madrid." />
+  <meta name="twitter:image" content="/imagenes/cover-front.jpg" />
+
+<meta name="author" content="Álvaro Novillo Correas" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methodology.html"/>
+<link rel="next" href="conclusion.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Contents</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="dedication.html"><a href="dedication.html"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html"><i class="fa fa-check"></i><b>2</b> Data Analytics in football</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#events-data"><i class="fa fa-check"></i><b>2.1</b> Events data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-analytics-in-football.html"><a href="data-analytics-in-football.html#tracking-data"><i class="fa fa-check"></i><b>2.2</b> Tracking data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>3</b> Methodology</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="methodology.html"><a href="methodology.html#pitch-control-models"><i class="fa fa-check"></i><b>3.1</b> Pitch Control Models</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="methodology.html"><a href="methodology.html#model-assumptions"><i class="fa fa-check"></i><b>3.1.1</b> Model assumptions</a></li>
+<li class="chapter" data-level="3.1.2" data-path="methodology.html"><a href="methodology.html#control-probability"><i class="fa fa-check"></i><b>3.1.2</b> Control probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#offside-control"><i class="fa fa-check"></i><b>4.1</b> Offside Control</a></li>
+<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#measurement-of-offside-control"><i class="fa fa-check"></i><b>4.2</b> Measurement of Offside Control</a></li>
+<li class="chapter" data-level="4.3" data-path="results.html"><a href="results.html#dynamic-monitoring-of-offside-control"><i class="fa fa-check"></i><b>4.3</b> Dynamic Monitoring of Offside Control</a></li>
+<li class="chapter" data-level="4.4" data-path="results.html"><a href="results.html#comprehensive-analysis"><i class="fa fa-check"></i><b>4.4</b> Comprehensive Analysis</a></li>
+<li class="chapter" data-level="4.5" data-path="results.html"><a href="results.html#performance-measures-using-offside-control"><i class="fa fa-check"></i><b>4.5</b> Performance measures using Offside Control</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="divider"></li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+Licensed under <img alt="Creative Commons License" style="border-width:0;vertical-align:bottom" 
+src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Results<a href="results.html#results" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The procedure for constructing the <em>Offside Control (OC)</em> parameter involves first identifying the offside line, which is determined by the position of the second-last defender. Then we identify the attacking players who are within the allowed boundaries and in an offside position in each frame. Once properly identified, we compute the OC metric as a measure of the field control exerted by the attacking team or player after the offside demarcation.</p>
+<p>Additionally, based on each player’s location relative to the offside line, we can evaluate a player’s involvement in an offside position as a manifestation of ineffective offside control (IOC). Conversely, instances where a player is positioned beyond the offside line and maintains control of the ball are classified as effective offside control (EOC).</p>
+<div id="offside-control" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Offside Control<a href="results.html#offside-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The concept of effective and ineffective Offside Control is illustrated in Fig. <a href="results.html#fig:eff">4.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:eff"></span>
+<img src="imagenes/eff_inef_OC.png" alt="Example of effective (EOC) and ineffective (IOC) Offside Control (areas surrounded by a thick grey line). Offside is indicated by the vertical dashed line. Note that player $11$ is offside (generating IOC), while player $18$ is not (generating EOC)." width="80%"  />
+<p class="caption">
+Figure 4.1: Example of effective (EOC) and ineffective (IOC) Offside Control (areas surrounded by a thick grey line). Offside is indicated by the vertical dashed line. Note that player <span class="math inline">\(11\)</span> is offside (generating IOC), while player <span class="math inline">\(18\)</span> is not (generating EOC).
+</p>
+</div>
+<p>Players from both teams are shown in blue (home team, attacking from left to right) and red (away team, attacking from right to left). Areas of the pitch controlled by the home team are shown in blue, while areas controlled by the away team in that particular match are shown in red. In this frame, the home team is in possession of the ball.</p>
+<p>A vertical dashed line shows the offside line’s location, and the areas enclosed by a broad grey line represent zones controlled by the attacking team behind this line.</p>
+<p>Here, the home player wearing number <span class="math inline">\(11\)</span> is behind the offside line in an invalid position, thereby generating IOC around him. In contrast, player <span class="math inline">\(18\)</span> is correctly positioned, leading to effective Offside Control (EOC) behind the offside line.</p>
+</div>
+<div id="measurement-of-offside-control" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Measurement of Offside Control<a href="results.html#measurement-of-offside-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <em>Spatial Offside Control</em> generated by a team can be measured by simply adding up the Offside Control values of each team during the match within the regions behind the offside line.</p>
+<p>We have also computed the <em>Percentage of Offside Control</em> accumulated by each team to measure which team achieved greater control over the opponent.</p>
+<p>Fig. <a href="results.html#fig:games">4.2</a> shows two examples of both spatial OC and percentage of OC for two different games (A and B) by a team called <span class="math inline">\(\alpha\)</span>.</p>
+<p>A heatmap highlights in red the spatial OC generated and received by team <span class="math inline">\(\alpha\)</span>, pinpointing specific pitch areas controlled behind the offside line.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:games"></span>
+<img src="imagenes/Games_OC.png" alt="Spatial and percentage of effective offside control (EOC) over the course of two matches (A and B). The left plots show the EOC received by team $\alpha$ and the middle plots show the EOC generated by team $\alpha$. In all plots, the intensity of the red color is proportional to the accumulated EOC at each location on the field. The bars on the right show the percentage of EOC accumulated by team $\alpha$ and its opponents." width="80%"  />
+<p class="caption">
+Figure 4.2: Spatial and percentage of effective offside control (EOC) over the course of two matches (A and B). The left plots show the EOC received by team <span class="math inline">\(\alpha\)</span> and the middle plots show the EOC generated by team <span class="math inline">\(\alpha\)</span>. In all plots, the intensity of the red color is proportional to the accumulated EOC at each location on the field. The bars on the right show the percentage of EOC accumulated by team <span class="math inline">\(\alpha\)</span> and its opponents.
+</p>
+</div>
+<p>Note that only effective Offside Control is shown in this example. We can see that in match <span class="math inline">\(A\)</span> the danger generated behind the offside line is deeper and closer to the box, while the EOC received is not as close to the own goal. On the other hand, in game <span class="math inline">\(B\)</span>, the EOC generated is more longitudinal and closer to the edge of the pitch, while the EOC generated by the opposing team is much deeper and therefore more dangerous. Beyond the spatial location, the bars on the right side of the figure <a href="results.html#fig:games">4.2</a> show the proportion of EOC accumulated by team <span class="math inline">\(\alpha\)</span> and its opponents in both games. In both cases, team <span class="math inline">\(\alpha\)</span> dominates the opposing team, accumulating a percentage higher than <span class="math inline">\(65\%\)</span>.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="dynamic-monitoring-of-offside-control" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Dynamic Monitoring of Offside Control<a href="results.html#dynamic-monitoring-of-offside-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Offside Control can also be monitored throughout a match. Fig. <a href="results.html#fig:oct">4.3</a> shows an example of <span class="math inline">\(OC(t)\)</span> for the home team of a match, smoothed with a centered sliding window of 600 frames.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oct"></span>
+<img src="imagenes/cumulative_OC_evolution.png" alt="Analysis of the home team's Offside Control over the course of a match. Each point of $OC(t)$ is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team)." width="80%"  />
+<p class="caption">
+Figure 4.3: Analysis of the home team’s Offside Control over the course of a match. Each point of <span class="math inline">\(OC(t)\)</span> is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).
+</p>
+</div>
+<p>The figure also marks moments when goals were scored, linking <span class="math inline">\(OC(t)\)</span> to the game’s score.</p>
+<p>As we have plotted the home team’s <span class="math inline">\(OC(t)\)</span>, we can see that it increases until a few minutes before the third goal is scored. However, it drops around minute 50, which shows that the home team is creating less danger behind the opponent’s offside line, presumably trying to defend the goal advantage rather than create new scoring opportunities.</p>
+</div>
+<div id="comprehensive-analysis" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Comprehensive Analysis<a href="results.html#comprehensive-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After evaluating the OC of the 99 games in the study, we can also analyse the OC performance of all teams in the competition.</p>
+<p>Fig. <a href="results.html#fig:ranking">4.4</a> compares the generated and received OC per effective time unit, for all teams. In the figure, the size of the points and their labels indicate the final ranking after the matches analysed. The dashed line plotted (<span class="math inline">\(y=x\)</span>) separates the teams with positive and negative differences between the generated and received OC. Thus, teams below the dashed line generate less OC than their rivals, while teams above it accumulate more OC than their opponents.</p>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ranking"></span>
+<img src="imagenes/Mean_rival_OC_vs_team_norm_efftime.png" alt="Generated vs. received Offside Control. The values correspond to the average accumulated OC per effective time unit. The size of the nodes (and their labels) correlates with the ranking corresponding to all the matches analysed. The dashed line corresponds to $y=x$. The linear regression is shown in blue and has the equation $y = -0.86x + 285.42$, with $R^2 = 0.48$ and $RMSE = 14.96$. Teams above the dashed line have accumulated more Offside Controls than their rivals." width="70%"  />
+<p class="caption">
+Figure 4.4: Generated vs. received Offside Control. The values correspond to the average accumulated OC per effective time unit. The size of the nodes (and their labels) correlates with the ranking corresponding to all the matches analysed. The dashed line corresponds to <span class="math inline">\(y=x\)</span>. The linear regression is shown in blue and has the equation <span class="math inline">\(y = -0.86x + 285.42\)</span>, with <span class="math inline">\(R^2 = 0.48\)</span> and <span class="math inline">\(RMSE = 14.96\)</span>. Teams above the dashed line have accumulated more Offside Controls than their rivals.
+</p>
+</div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:rankingtab">Table 4.1: </span>Average Effective Offside Control values and Efficiency for each team from the Spanish national league (LaLiga Santander) during the season 2019/2020, ordered by their ranking
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Ranking
+</th>
+<th style="text-align:right;">
+Effective OC
+</th>
+<th style="text-align:right;">
+Efficiency (%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+#1
+</td>
+<td style="text-align:right;">
+160.23
+</td>
+<td style="text-align:right;">
+84.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#2
+</td>
+<td style="text-align:right;">
+161.42
+</td>
+<td style="text-align:right;">
+81.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#3
+</td>
+<td style="text-align:right;">
+137.31
+</td>
+<td style="text-align:right;">
+87.75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#4
+</td>
+<td style="text-align:right;">
+145.21
+</td>
+<td style="text-align:right;">
+84.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#5
+</td>
+<td style="text-align:right;">
+157.14
+</td>
+<td style="text-align:right;">
+82.97
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#6
+</td>
+<td style="text-align:right;">
+175.96
+</td>
+<td style="text-align:right;">
+78.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#7
+</td>
+<td style="text-align:right;">
+172.44
+</td>
+<td style="text-align:right;">
+81.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#8
+</td>
+<td style="text-align:right;">
+170.74
+</td>
+<td style="text-align:right;">
+78.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#9
+</td>
+<td style="text-align:right;">
+132.05
+</td>
+<td style="text-align:right;">
+84.32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#10
+</td>
+<td style="text-align:right;">
+158.53
+</td>
+<td style="text-align:right;">
+81.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#11
+</td>
+<td style="text-align:right;">
+142.67
+</td>
+<td style="text-align:right;">
+78.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#12
+</td>
+<td style="text-align:right;">
+214.47
+</td>
+<td style="text-align:right;">
+81.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#13
+</td>
+<td style="text-align:right;">
+126.55
+</td>
+<td style="text-align:right;">
+84.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#14
+</td>
+<td style="text-align:right;">
+153.58
+</td>
+<td style="text-align:right;">
+78.28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#15
+</td>
+<td style="text-align:right;">
+135.48
+</td>
+<td style="text-align:right;">
+81.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#16
+</td>
+<td style="text-align:right;">
+119.82
+</td>
+<td style="text-align:right;">
+84.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#17
+</td>
+<td style="text-align:right;">
+135.42
+</td>
+<td style="text-align:right;">
+81.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#18
+</td>
+<td style="text-align:right;">
+158.04
+</td>
+<td style="text-align:right;">
+83.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#19
+</td>
+<td style="text-align:right;">
+162.09
+</td>
+<td style="text-align:right;">
+82.75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+#20
+</td>
+<td style="text-align:right;">
+144.18
+</td>
+<td style="text-align:right;">
+86.11
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can also observe a slight negative correlation between the OC generated and the OC received, although the correlation coefficient <span class="math inline">\(R^2=0.48\)</span> is relatively low. Note that the team in second place generates more OC and receives less. In addition, the teams at the top of the ranking are above the dashed line, with the exception of the team in third place.</p>
+<p>For a better understanding of the figure, Table 4.1 contains the Effective OC generated for each team, and the efficiency generating Offside Control, in descending order in ranking</p>
+<p>One of the advantages of our proposed metric is its versatility: it can be used to describe the general behavior of the team, as presented above, but it can also be more specific and focus on the performance of specific players.</p>
+</div>
+<div id="performance-measures-using-offside-control" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Performance measures using Offside Control<a href="results.html#performance-measures-using-offside-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Fig. <a href="results.html#fig:forwards">4.5</a> shows the Effective Offside Control produced by two different strikers, identified as <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. The left panel shows the positions on the pitch where the EOC is produced by each striker. The EOC is normalized by the total time played over the matches analyzed. In this way, we have a heat map showing where a striker tends to create controlled areas behind the offside line, which is useful information for analyzing his performance. In addition, the right panel shows the corresponding probability distribution functions of the time spent by both players at a given distance from the offside line. The distances are referenced to the offside line and are negative when the striker is in a valid position and positive when he is offside. Interestingly, striker <span class="math inline">\(A\)</span> spends more time in front of the offside line than striker <span class="math inline">\(B\)</span> (see the percentages of time spent on each side of the offside line). This means that player <span class="math inline">\(A\)</span> is more likely to generate more EOCs.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:forwards"></span>
+<img src="imagenes/forwards_OC.png" alt="Effective Offside Control (EOC) of two different strikers, A (upper plots) and B (lower plots). On the left, the positions on the pitch where the two players generate EOC. On the right, the probability distribution function of the time spent at a distance from the offside line. Negative values indicate that the player is in the correct position, while positive values indicate that the player is offside. The EOC is normalised to the time played. The values on the right plot indicate the proportion of time a player is in front of or behind the offside line." width="70%"  />
+<p class="caption">
+Figure 4.5: Effective Offside Control (EOC) of two different strikers, A (upper plots) and B (lower plots). On the left, the positions on the pitch where the two players generate EOC. On the right, the probability distribution function of the time spent at a distance from the offside line. Negative values indicate that the player is in the correct position, while positive values indicate that the player is offside. The EOC is normalised to the time played. The values on the right plot indicate the proportion of time a player is in front of or behind the offside line.
+</p>
+</div>
+<p>We have been able to characterize the Offside Control of a total of 442 players. With all this data, we calculated the percentage of time that strikers spend close to the offside line and what percentage of that time the striker is in a valid position. We call this percentage a player’s Offside Time Efficiency Ratio (OTER).</p>
+<p>Next, we relate the OTER to the percentage of OC that is effective, i.e. <span class="math inline">\(EOC/IOC\)</span>, and we call this percentage the <em>Offside Control Efficiency Ratio (OCER)</em>.</p>
+<p>In Fig. <a href="results.html#fig:forwardsglob">4.6</a> (A) we show the relationship between OTER and OCER for the <span class="math inline">\(50\)</span> forwards<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>. We have obtained a positive correlation between the two metrics, as indicated by the solid blue line. This suggests that the more time a striker spends in a valid position near the offside line, the higher the probability of generating effective Offside Control.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:forwardsglob"></span>
+<img src="imagenes/av_eff.png" alt="Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the left (A), we show the OCER vs. OTER of the strikers. On the right (B), the p.d.f of the OCER" width="80%"  />
+<p class="caption">
+Figure 4.6: Interplay between Offside Time Efficiency Ratio (OTER) and Offside Control Efficiency Ratio (OCER). On the left (A), we show the OCER vs. OTER of the strikers. On the right (B), the p.d.f of the OCER
+</p>
+</div>
+<p>However, the correlation coefficient between the two variables is low (<span class="math inline">\(R^2=0.2325\)</span>, <span class="math inline">\(p_{value} = 0.00039\)</span>), indicating that their relationship is complex and suggesting the effects of alternative variables not considered in our analysis. Finally, Fig. <a href="results.html#fig:forwardsglob">4.6</a> (B) shows the probability distribution function of the values of the OCER. We can see that most of the Offside Control generated by the strikers is effective, indicated by a probability distribution mainly above <span class="math inline">\(0.5\)</span> and a mean of <span class="math inline">\(\langle OTER \rangle=0.7506\)</span>. This result indicates that, in general, most of the pressure exerted by the strikers is effective.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="10">
+<li id="fn10"><p>To ensure the statistical validity of the results, the study only included players who played at least 6 games.<a href="results.html#fnref10" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methodology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/alvaronovillo/master_thesis/edit/main/04-Offside_Control.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/alvaronovillo/master_thesis/blob/main/04-Offside_Control.Rmd",
+"text": null
+},
+"download": ["master_thesis.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

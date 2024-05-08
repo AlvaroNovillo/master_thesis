@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="data-analytics-in-football.html"/>
-<link rel="next" href="reuslts.html"/>
+<link rel="next" href="results.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -116,9 +116,15 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.2" data-path="methodology.html"><a href="methodology.html#control-probability"><i class="fa fa-check"></i><b>3.1.2</b> Control probability</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="reuslts.html"><a href="reuslts.html"><i class="fa fa-check"></i><b>4</b> Reuslts</a></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#offside-control"><i class="fa fa-check"></i><b>4.1</b> Offside Control</a></li>
+<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#measurement-of-offside-control"><i class="fa fa-check"></i><b>4.2</b> Measurement of Offside Control</a></li>
+<li class="chapter" data-level="4.3" data-path="results.html"><a href="results.html#dynamic-monitoring-of-offside-control"><i class="fa fa-check"></i><b>4.3</b> Dynamic Monitoring of Offside Control</a></li>
+<li class="chapter" data-level="4.4" data-path="results.html"><a href="results.html#comprehensive-analysis"><i class="fa fa-check"></i><b>4.4</b> Comprehensive Analysis</a></li>
+<li class="chapter" data-level="4.5" data-path="results.html"><a href="results.html#performance-measures-using-offside-control"><i class="fa fa-check"></i><b>4.5</b> Performance measures using Offside Control</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
-<li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
@@ -184,10 +190,9 @@ Figure 3.2: p.d.f of the players speed over a 100 matches from LaLiga 2019-2020 
 <li>There is an initial <em>reaction time</em>, assumed to be of <span class="math inline">\(t_{r} = 0.7\)</span> seconds for every player<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>. This is approximately the time it takes a player moving at maximum speed to come to a complete stop <span class="citation">(<a href="#ref-Spearman">Spearman 2018</a>)</span>. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position <span class="math inline">\(\vec{r}_{\text{react}}\)</span>).</li>
 <li>After this time, we assume that the player runs directly towards the ball at his maximum speed of <span class="math inline">\(v_{\text{max,p}}\)</span>.</li>
 </ul>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
     \tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
-    \label{exp_arr_time}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 </div>
 <div id="control-probability" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Control probability<a href="methodology.html#control-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -197,10 +202,9 @@ F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
 \tag{3.1}
 \end{align}\]</span></p>
 <p>So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled <span class="math inline">\(\sigma\)</span>, in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. To model that uncertainty, we will use a Logistic distribution. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span> (See Fig. <a href="methodology.html#fig:lambda">3.3</a>).</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
     F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
-    \label{sigmoid}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lambda"></span>
 <img src="imagenes/sigmoid_poster.png" alt="The cumulative distribution functions for the two components of the model. a) (left) the time to intercept and b) (right) the time to control the ball. The parameters shown for each are from the global fit described below." width="45%"  /><img src="imagenes/exp_poster.png" alt="The cumulative distribution functions for the two components of the model. a) (left) the time to intercept and b) (right) the time to control the ball.  The parameters shown for each are from the global fit described below." width="45%"  />
 <p class="caption">
@@ -208,21 +212,21 @@ Figure 3.3: The cumulative distribution functions for the two components of the 
 </p>
 </div>
 <p>Both <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\sigma\)</span> has been selected according to <span class="citation">(<a href="#ref-SpearmanFit">Spearman et al. 2017</a>)</span>, where they model passes as a Bernoulli trial, with probability mass function</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 P(k \mid \sigma, \lambda, x)=\left\{\begin{array}{lr}
 1-p \text { for } \mathrm{k}=0 \\
 p &amp; \text { for } \mathrm{k}=1
 \end{array}\right.
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>where <span class="math inline">\(k \in [0,1]\)</span> is the outcome of the pass. Then, the likelihood of a set of<br />
 parameters, <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\lambda\)</span>, given outcome <span class="math inline">\(k\)</span> and the start of the pass <span class="math inline">\(x\)</span> is:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Then, maximizing the product of the likelihood for each pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> <span class="math inline">\(\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}\)</span></p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Using the above components, we recursively construct the partial derivative of the probability that player <span class="math inline">\(j\)</span> controls a given location <span class="math inline">\(r\)</span>, at time t is</p>
 <p><span class="math display" id="eq:PC">\[\begin{align}
 \frac{d P P C F_j}{d t}\left(T, \vec{r} , \sigma, \lambda_j, t_r\right)=\left(1-\sum_k P P C F_k\left(t, \vec{r} , \sigma, \lambda_k\right)\right) F_{int,j}(t, \vec{r}  , \sigma, t_r) \lambda_j
@@ -260,7 +264,7 @@ Spearman, William, Austin Basye, Greg Dick, Ryan Hotovy, and Paul Pop. 2017. <sp
         </div>
       </div>
 <a href="data-analytics-in-football.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reuslts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

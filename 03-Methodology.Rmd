@@ -44,10 +44,9 @@ To compute the player's expected arrival time, $\tau_{exp}(\vec{r};t_r)$ , we us
 - There is an initial *reaction time*, assumed to be of \( t_{r} = 0.7 \) seconds for every player[^4]. This is approximately the time it takes a player moving at maximum speed to come to a complete stop [@Spearman]. During this reaction time, we assume that players continue to move along their current trajectory without changing speed or direction (reaching a position \( \vec{r}_{\text{react}} \)).
 - After this time, we assume that the player runs directly towards the ball at his maximum speed of \( v_{\text{max,p}} \).
 
-\begin{align}
+\begin{align*}
     \tau_{exp}(\vec{r} ; t_r) = t_r + \frac{|\vec{r} - \vec{r}_{react}|}{v_{max,p}}
-    \label{exp_arr_time}
-\end{align}
+\end{align*}
 
 ### Control probability
 
@@ -60,10 +59,9 @@ F(\Delta t ; \lambda)=1-e^{-\lambda \Delta t}
 
 So far, the model assumes that we know exactly when each player will arrive at the target location. However, we introduce some uncertainty, labelled $\sigma$, in the arrival time of the players. The reason for including such temporal variability in our model is to account for some effects that have not been explicitly modeled, such as player effort. To model that uncertainty, we will use a Logistic distribution. Thus, the probability of a player intercepting the ball at time T is given by the cumulative distribution function of the sigmoid distribution [@SpearmanFit] (See Fig. \@ref(fig:lambda)).
 
-\begin{align}
+\begin{align*}
     F_{\text {int }}(\vec{r},T;\sigma, t_r)=\frac{1}{1+e^{-\frac{T- \tau_{exp}(\vec{r} ; t_r)}{\sqrt{3} \sigma / \pi}}}
-    \label{sigmoid}
-\end{align}
+\end{align*}
 
 
 ```{r lambda, fig.show="hold", out.width='45%', fig.align='center', fig.cap= "The cumulative distribution functions for the two components of the model. a) (left) the time to intercept and b) (right) the time to control the ball.	The parameters shown for each are from the global fit described below.",echo = FALSE}
@@ -73,25 +71,25 @@ knitr::include_graphics("imagenes/exp_poster.png")
 
 Both $\lambda$ and $\sigma$ has been selected according to [@SpearmanFit], where they model passes as a Bernoulli	trial, with probability	mass function
 
-\begin{align}
+\begin{align*}
 P(k \mid \sigma, \lambda, x)=\left\{\begin{array}{lr}
 1-p \text { for } \mathrm{k}=0 \\
 p & \text { for } \mathrm{k}=1
 \end{array}\right.
-\end{align}
+\end{align*}
 
 where $k \in [0,1]$ is the outcome of the pass. Then, the	likelihood	of	a	set	of	
 parameters,	$\sigma$ and $\lambda$, given outcome	$k$ and	the start of the pass $x$ is:
 
-\begin{align}
+\begin{align*}
 \mathcal{L}(\sigma, \lambda \mid k, x)=P(k \mid \sigma, \lambda, x)
-\end{align}
+\end{align*}
 
 Then,	maximizing	the	product	of	the	likelihood	for	each	pass for a training sample P from tracking and event data from the 2015-2016 Premier League season, the best fit is found at[^5] $\sigma=0.45 \pm 0.05 \mathrm{~s} \text { and } \lambda=4.30 \pm 1.14 \mathrm{~s}^{-1}$ 
 
-\begin{align}
+\begin{align*}
 \min _{\sigma, \lambda \in\{\mathbb{R}, \mathbb{R}\}}\left\{-\sum_{i \in P} \log \left[\mathcal{L}\left(\sigma, \lambda \mid k_i, x_i\right)\right]\right\}
-\end{align}
+\end{align*}
 
 Using	the	above	components, we recursively construct	the	partial	derivative	of	the	probability	that player $j$ controls a given location $r$, at	time t is
 

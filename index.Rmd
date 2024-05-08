@@ -8,7 +8,7 @@ fontsize: 10pt
 cover-image: imagenes/cover-front.jpg
 classoption: twoside,nohyper
 bibliography: bibliografia.bib
-biblio-style: abbrvnat
+biblio-style: apa
 link-citations: yes
 description: "Master Thesis. Universidad Carlos III de Madrid. \n"
 

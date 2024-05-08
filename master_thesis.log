@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  29 APR 2024 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  8 MAY 2024 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -856,19 +856,278 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen285
 \c@nlinenum=\count342
 \TeXr@lab=\toks53
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip98
-\bibsep=\skip99
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count343
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count343
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count344
+\c@listtotal=\count345
+\c@listcount=\count346
+\c@liststart=\count347
+\c@liststop=\count348
+\c@citecount=\count349
+\c@citetotal=\count350
+\c@multicitecount=\count351
+\c@multicitetotal=\count352
+\c@instcount=\count353
+\c@maxnames=\count354
+\c@minnames=\count355
+\c@maxitems=\count356
+\c@minitems=\count357
+\c@citecounter=\count358
+\c@maxcitecounter=\count359
+\c@savedcitecounter=\count360
+\c@uniquelist=\count361
+\c@uniquename=\count362
+\c@refsection=\count363
+\c@refsegment=\count364
+\c@maxextratitle=\count365
+\c@maxextratitleyear=\count366
+\c@maxextraname=\count367
+\c@maxextradate=\count368
+\c@maxextraalpha=\count369
+\c@abbrvpenalty=\count370
+\c@highnamepenalty=\count371
+\c@lownamepenalty=\count372
+\c@maxparens=\count373
+\c@parenlevel=\count374
+\blx@tempcnta=\count375
+\blx@tempcntb=\count376
+\blx@tempcntc=\count377
+\c@blx@maxsection=\count378
+\blx@maxsegment@0=\count379
+\blx@notetype=\count380
+\blx@parenlevel@text=\count381
+\blx@parenlevel@foot=\count382
+\blx@sectionciteorder@0=\count383
+\blx@sectionciteorderinternal@0=\count384
+\blx@entrysetcounter=\count385
+\blx@biblioinstance=\count386
+\labelnumberwidth=\skip98
+\labelalphawidth=\skip99
+\biblabelsep=\skip100
+\bibitemsep=\skip101
+\bibnamesep=\skip102
+\bibinitsep=\skip103
+\bibparsep=\skip104
+\bibhang=\skip105
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language80
+\c@mincomprange=\count387
+\c@maxcomprange=\count388
+\c@mincompwidth=\count389
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.dbx
+File: apa.dbx 2023/03/20 v9.17 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count390
+\c@savedafterword=\count391
+\c@annotator=\count392
+\c@savedannotator=\count393
+\c@author=\count394
+\c@savedauthor=\count395
+\c@bookauthor=\count396
+\c@savedbookauthor=\count397
+\c@commentator=\count398
+\c@savedcommentator=\count399
+\c@editor=\count400
+\c@savededitor=\count401
+\c@editora=\count402
+\c@savededitora=\count403
+\c@editorb=\count404
+\c@savededitorb=\count405
+\c@editorc=\count406
+\c@savededitorc=\count407
+\c@foreword=\count408
+\c@savedforeword=\count409
+\c@holder=\count410
+\c@savedholder=\count411
+\c@introduction=\count412
+\c@savedintroduction=\count413
+\c@namea=\count414
+\c@savednamea=\count415
+\c@nameb=\count416
+\c@savednameb=\count417
+\c@namec=\count418
+\c@savednamec=\count419
+\c@translator=\count420
+\c@savedtranslator=\count421
+\c@shortauthor=\count422
+\c@savedshortauthor=\count423
+\c@shorteditor=\count424
+\c@savedshorteditor=\count425
+\c@narrator=\count426
+\c@savednarrator=\count427
+\c@execproducer=\count428
+\c@savedexecproducer=\count429
+\c@execdirector=\count430
+\c@savedexecdirector=\count431
+\c@with=\count432
+\c@savedwith=\count433
+\c@labelname=\count434
+\c@savedlabelname=\count435
+\c@institution=\count436
+\c@savedinstitution=\count437
+\c@lista=\count438
+\c@savedlista=\count439
+\c@listb=\count440
+\c@savedlistb=\count441
+\c@listc=\count442
+\c@savedlistc=\count443
+\c@listd=\count444
+\c@savedlistd=\count445
+\c@liste=\count446
+\c@savedliste=\count447
+\c@listf=\count448
+\c@savedlistf=\count449
+\c@location=\count450
+\c@savedlocation=\count451
+\c@organization=\count452
+\c@savedorganization=\count453
+\c@origlocation=\count454
+\c@savedoriglocation=\count455
+\c@origpublisher=\count456
+\c@savedorigpublisher=\count457
+\c@publisher=\count458
+\c@savedpublisher=\count459
+\c@language=\count460
+\c@savedlanguage=\count461
+\c@origlanguage=\count462
+\c@savedoriglanguage=\count463
+\c@citation=\count464
+\c@savedcitation=\count465
+\c@pageref=\count466
+\c@savedpageref=\count467
+\shorthandwidth=\skip106
+\shortjournalwidth=\skip107
+\shortserieswidth=\skip108
+\shorttitlewidth=\skip109
+\shortauthorwidth=\skip110
+\shorteditorwidth=\skip111
+\locallabelnumberwidth=\skip112
+\locallabelalphawidth=\skip113
+\localshorthandwidth=\skip114
+\localshortjournalwidth=\skip115
+\localshortserieswidth=\skip116
+\localshorttitlewidth=\skip117
+\localshortauthorwidth=\skip118
+\localshorteditorwidth=\skip119
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count468
+\c@textcitetotal=\count469
+\c@textcitemaxnames=\count470
+\c@biburlbigbreakpenalty=\count471
+\c@biburlbreakpenalty=\count472
+\c@biburlnumpenalty=\count473
+\c@biburlucpenalty=\count474
+\c@biburllcpenalty=\count475
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count476
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.bbx
+File: apa.bbx 2023/03/20 v9.17 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count477
+\c@bbx:relatedtotal=\count478
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
+ed, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
+efined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
+ined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
+ defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.cbx
+File: apa.cbx 2023/03/20 v9.17 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
+, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-11-01 L3 programming layer (loader) 
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
+.def
+File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count479
+\l__pdf_internal_box=\box80
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2023-11-01 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.st
+y
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.s
+ty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+)) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count344
+\BKM@id=\count480
 )) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
+xurl: Set penalties for biblatex
 )
 
 Package hyperref Warning: Option `pdftitle' has already been used,
@@ -884,13 +1143,6 @@ Package hyperref Warning: Option `pdfcreator' has already been used,
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-
-(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
-.def
-File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count345
-\l__pdf_internal_box=\box80
-)
 
 LaTeX Warning: Unused global option(s):
     [nohyper].
@@ -957,16 +1209,16 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
+\scratchcounter=\count481
 \scratchdimen=\dimen286
 \scratchbox=\box81
-\nofMPsegments=\count347
-\nofMParguments=\count348
+\nofMPsegments=\count482
+\nofMParguments=\count483
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count349
+\MPscratchCnt=\count484
 \MPscratchDim=\dimen287
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
+\MPnumerator=\count485
+\makeMPintoPDFobject=\count486
 \everyMPtoPDFconversion=\toks55
 )
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
@@ -1026,9 +1278,82 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
 \flrow@LT@lasthead=\box82
 \flrow@LT@prelastfoot=\box83
-\c@FBLTpage=\count352
+\c@FBLTpage=\count487
 )
-\c@lstlisting=\count353
+\c@lstlisting=\count488
+Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
+Package biblatex Info: ... file 'english-apa.lbx' found.
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\english-apa.l
+bx
+File: english-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
+Package biblatex Info: ... file 'american-apa.lbx' found.
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\american-apa.
+lbx
+File: american-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\american.lbx
+File: american.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `master_thesis.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'master_thesis.bbl' found.
+(master_thesis.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with '1':
+(biblatex)                - online entry '1' (bibliografia.bib): Invalid format
+ 'Date Accessed' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'opta':
+(biblatex)                - online entry 'opta' (bibliografia.bib): Invalid for
+mat 'Date Accessed' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'wyscout':
+(biblatex)                - online entry 'wyscout' (bibliografia.bib): Invalid 
+format 'Date Accessed' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with '1':
+(biblatex)                - online entry '1' (bibliografia.bib): Invalid format
+ 'Date Accessed' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'opta':
+(biblatex)                - online entry 'opta' (bibliografia.bib): Invalid for
+mat 'Date Accessed' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'wyscout':
+(biblatex)                - online entry 'wyscout' (bibliografia.bib): Invalid 
+format 'Date Accessed' of date field 'urldate' - ignoring.
+
+)
+Package biblatex Info: Reference section=0 on input line 313.
+Package biblatex Info: Reference segment=0 on input line 313.
 LaTeX Font Info:    Trying to load font information for T1+txss on input line 3
 14.
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txss.fd
@@ -1113,15 +1438,15 @@ enes/Portada_Logo.png> <./imagenes/creativecommons.png>] [2
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 318.
 (master_thesis.toc)
-\tf@toc=\write4
-\openout4 = `master_thesis.toc'.
+\tf@toc=\write5
+\openout5 = `master_thesis.toc'.
 
 [3] [4
 
 ] [5] [6
 
 ]
-<imagenes/sign.png, id=81, 1154.06157pt x 1204.5pt>
+<imagenes/sign.png, id=93, 1154.06157pt x 1204.5pt>
 File: imagenes/sign.png Graphic file (type png)
 <use imagenes/sign.png>
 Package pdftex.def Info: imagenes/sign.png  used on input line 328.
@@ -1132,12 +1457,12 @@ Package pdftex.def Info: imagenes/sign.png  used on input line 328.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [9])
-\tf@lof=\write5
-\openout5 = `master_thesis.lof'.
+\tf@lof=\write6
+\openout6 = `master_thesis.lof'.
 
 [10] (master_thesis.lot)
-\tf@lot=\write6
-\openout6 = `master_thesis.lot'.
+\tf@lot=\write7
+\openout7 = `master_thesis.lot'.
 
 [11
 
@@ -1147,7 +1472,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 1.
 [13] [14]
 Chapter 2.
-<imagenes/xg_evol.png, id=222, 962.81708pt x 423.38174pt>
+<imagenes/xg_evol.png, id=227, 962.81708pt x 423.38174pt>
 File: imagenes/xg_evol.png Graphic file (type png)
 <use imagenes/xg_evol.png>
 Package pdftex.def Info: imagenes/xg_evol.png  used on input line 393.
@@ -1157,12 +1482,12 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
 [15
 
  <./imagenes/xg_evol.png>]
-<imagenes/home_shot_map.png, id=231, 941.76843pt x 1208.26407pt>
+<imagenes/home_shot_map.png, id=236, 941.76843pt x 1208.26407pt>
 File: imagenes/home_shot_map.png Graphic file (type png)
 <use imagenes/home_shot_map.png>
 Package pdftex.def Info: imagenes/home_shot_map.png  used on input line 409.
 (pdftex.def)             Requested size: 192.04349pt x 246.38673pt.
-<imagenes/away_shot_map.png, id=232, 941.76843pt x 1208.26407pt>
+<imagenes/away_shot_map.png, id=237, 941.76843pt x 1208.26407pt>
 File: imagenes/away_shot_map.png Graphic file (type png)
 <use imagenes/away_shot_map.png>
 Package pdftex.def Info: imagenes/away_shot_map.png  used on input line 409.
@@ -1176,13 +1501,13 @@ File: t1txtt.fd 2000/12/15 v3.1
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <./imagenes/home_shot_map.png> <./imagenes/away_shot_map.png>]
-<imagenes/home_pass_network.jpg, id=252, 992.9898pt x 665.3658pt>
+<imagenes/home_pass_network.jpg, id=253, 992.9898pt x 665.3658pt>
 File: imagenes/home_pass_network.jpg Graphic file (type jpg)
 <use imagenes/home_pass_network.jpg>
 Package pdftex.def Info: imagenes/home_pass_network.jpg  used on input line 479
 .
 (pdftex.def)             Requested size: 213.38258pt x 142.97978pt.
-<imagenes/away_pass_network.jpg, id=253, 989.1354pt x 665.3658pt>
+<imagenes/away_pass_network.jpg, id=254, 989.1354pt x 665.3658pt>
 File: imagenes/away_pass_network.jpg Graphic file (type jpg)
 <use imagenes/away_pass_network.jpg>
 Package pdftex.def Info: imagenes/away_pass_network.jpg  used on input line 479
@@ -1202,12 +1527,12 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) [18 <./imagenes/scat-xG-xGa.png>]
-<imagenes/Frame.png, id=275, 505.89pt x 361.35pt>
+<imagenes/Frame.png, id=274, 505.89pt x 361.35pt>
 File: imagenes/Frame.png Graphic file (type png)
 <use imagenes/Frame.png>
 Package pdftex.def Info: imagenes/Frame.png  used on input line 519.
 (pdftex.def)             Requested size: 341.43785pt x 243.88419pt.
-<imagenes/Heatmap.jpg, id=280, 505.89pt x 361.35pt>
+<imagenes/Heatmap.jpg, id=278, 505.89pt x 361.35pt>
 File: imagenes/Heatmap.jpg Graphic file (type jpg)
 <use imagenes/Heatmap.jpg>
 Package pdftex.def Info: imagenes/Heatmap.jpg  used on input line 532.
@@ -1217,7 +1542,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [19 <./imagenes/Frame.png>] [20 <./imagenes/Heatmap.jpg>]
 Chapter 3.
-<imagenes/ball.jpg, id=300, 605.6226pt x 213.9192pt>
+<imagenes/ball.jpg, id=296, 605.6226pt x 213.9192pt>
 File: imagenes/ball.jpg Graphic file (type jpg)
 <use imagenes/ball.jpg>
 Package pdftex.def Info: imagenes/ball.jpg  used on input line 579.
@@ -1225,112 +1550,98 @@ Package pdftex.def Info: imagenes/ball.jpg  used on input line 579.
 [21
 
  <./imagenes/ball.jpg>]
-<imagenes/vel.png, id=310, 1390.44469pt x 526.96875pt>
+<imagenes/vel.png, id=305, 1390.44469pt x 526.96875pt>
 File: imagenes/vel.png Graphic file (type png)
 <use imagenes/vel.png>
 Package pdftex.def Info: imagenes/vel.png  used on input line 594.
 (pdftex.def)             Requested size: 341.41512pt x 129.39392pt.
 [22 <./imagenes/vel.png>]
-<imagenes/sigmoid_poster.png, id=331, 433.62pt x 289.08pt>
+<imagenes/sigmoid_poster.png, id=322, 433.62pt x 289.08pt>
 File: imagenes/sigmoid_poster.png Graphic file (type png)
 <use imagenes/sigmoid_poster.png>
-Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 634.
+Package pdftex.def Info: imagenes/sigmoid_poster.png  used on input line 632.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
-<imagenes/exp_poster.png, id=332, 433.62pt x 289.08pt>
+<imagenes/exp_poster.png, id=323, 433.62pt x 289.08pt>
 File: imagenes/exp_poster.png Graphic file (type png)
 <use imagenes/exp_poster.png>
-Package pdftex.def Info: imagenes/exp_poster.png  used on input line 634.
+Package pdftex.def Info: imagenes/exp_poster.png  used on input line 632.
 (pdftex.def)             Requested size: 192.05714pt x 128.03809pt.
 [23 <./imagenes/sigmoid_poster.png> <./imagenes/exp_poster.png>] [24]
 Chapter 4.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[25
-
-]
-<imagenes/eff_inef_OC.png, id=374, 914.106pt x 896.805pt>
+<imagenes/eff_inef_OC.png, id=346, 914.106pt x 896.805pt>
 File: imagenes/eff_inef_OC.png Graphic file (type png)
 <use imagenes/eff_inef_OC.png>
-Package pdftex.def Info: imagenes/eff_inef_OC.png  used on input line 697.
+Package pdftex.def Info: imagenes/eff_inef_OC.png  used on input line 688.
 (pdftex.def)             Requested size: 341.43594pt x 334.97368pt.
+[25
+
+ <./imagenes/eff_inef_OC.png>]
+<imagenes/Games_OC.png, id=354, 1351.449pt x 751.827pt>
+File: imagenes/Games_OC.png Graphic file (type png)
+<use imagenes/Games_OC.png>
+Package pdftex.def Info: imagenes/Games_OC.png  used on input line 713.
+(pdftex.def)             Requested size: 341.42892pt x 189.94093pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26]
-<imagenes/Games_OC.png, id=380, 1351.449pt x 751.827pt>
-File: imagenes/Games_OC.png Graphic file (type png)
-<use imagenes/Games_OC.png>
-Package pdftex.def Info: imagenes/Games_OC.png  used on input line 706.
-(pdftex.def)             Requested size: 341.42892pt x 189.94093pt.
-<imagenes/cumulative_OC_evolution.pdf, id=381, 433.62pt x 289.08pt>
+[26 <./imagenes/Games_OC.png>]
+<imagenes/cumulative_OC_evolution.pdf, id=362, 433.62pt x 289.08pt>
 File: imagenes/cumulative_OC_evolution.pdf Graphic file (type pdf)
 <use imagenes/cumulative_OC_evolution.pdf>
 Package pdftex.def Info: imagenes/cumulative_OC_evolution.pdf  used on input li
-ne 715.
+ne 730.
 (pdftex.def)             Requested size: 341.4511pt x 227.63405pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[27 <./imagenes/eff_inef_OC.png> <./imagenes/Games_OC.png>]
-<imagenes/Mean_rival_OC_vs_team_norm_efftime.png, id=388, 453.2935pt x 283.459p
+[27 <./imagenes/cumulative_OC_evolution.pdf>]
+<imagenes/Mean_rival_OC_vs_team_norm_efftime.png, id=394, 453.2935pt x 283.459p
 t>
 File: imagenes/Mean_rival_OC_vs_team_norm_efftime.png Graphic file (type png)
 <use imagenes/Mean_rival_OC_vs_team_norm_efftime.png>
 Package pdftex.def Info: imagenes/Mean_rival_OC_vs_team_norm_efftime.png  used 
-on input line 724.
-(pdftex.def)             Requested size: 341.44254pt x 213.51498pt.
-<imagenes/forwards_OC.png, id=389, 881.475pt x 865.269pt>
+on input line 751.
+(pdftex.def)             Requested size: 298.75963pt x 186.82399pt.
+[28 <./imagenes/Mean_rival_OC_vs_team_norm_efftime.png>]
+<imagenes/forwards_OC.png, id=401, 881.475pt x 865.269pt>
 File: imagenes/forwards_OC.png Graphic file (type png)
 <use imagenes/forwards_OC.png>
-Package pdftex.def Info: imagenes/forwards_OC.png  used on input line 733.
+Package pdftex.def Info: imagenes/forwards_OC.png  used on input line 806.
 (pdftex.def)             Requested size: 298.74257pt x 293.25015pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[28 <./imagenes/cumulative_OC_evolution.pdf> <./imagenes/Mean_rival_OC_vs_team_
-norm_efftime.png>]
-<imagenes/av_eff.png, id=421, 1115.367pt x 425.298pt>
+[29 <./imagenes/forwards_OC.png>]
+<imagenes/av_eff.png, id=409, 1115.367pt x 425.298pt>
 File: imagenes/av_eff.png Graphic file (type png)
 <use imagenes/av_eff.png>
-Package pdftex.def Info: imagenes/av_eff.png  used on input line 742.
+Package pdftex.def Info: imagenes/av_eff.png  used on input line 821.
 (pdftex.def)             Requested size: 341.43735pt x 130.19267pt.
-[29 <./imagenes/forwards_OC.png> <./imagenes/av_eff.png>] [30
-
-]
+[30 <./imagenes/av_eff.png>]
 Chapter 5.
-[31] [32
+[31
+
+] [32
 
 ]
-Chapter 6.
-
-LaTeX Warning: Reference `tab:ranking-tab' on page 33 undefined on input line 7
-69.
-
-(master_thesis.bbl [33] [34
-
-])
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 225.
 See the caption package documentation for explanation.
 
-[35] (master_thesis.aux)
+[33] (master_thesis.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
-
-LaTeX Warning: There were undefined references.
+Package logreq Info: Writing requests to 'master_thesis.run.xml'.
+\openout1 = `master_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26815 strings out of 474592
- 420704 string characters out of 5747215
- 1952533 words of memory out of 5000000
- 47773 multiletter control sequences out of 15000+600000
- 665768 words of font info for 587 fonts, out of 8000000 for 9000
+ 34390 strings out of 474592
+ 578727 string characters out of 5747215
+ 1950533 words of memory out of 5000000
+ 55315 multiletter control sequences out of 15000+600000
+ 664680 words of font info for 571 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,17n,108p,1441b,2554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,17n,104p,1364b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxi.p
@@ -1346,9 +1657,9 @@ a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
 a.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master_thesis.pdf (35 pages, 16358907 bytes).
+Output written on master_thesis.pdf (33 pages, 16356796 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
- 131278 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 573 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 131310 words of extra memory for PDF output out of 154059 (max. 10000000)
 
