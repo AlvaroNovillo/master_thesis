@@ -35,6 +35,14 @@ The master thesis explores the application of data analytics in football, with a
 
 # Dedication {#dedication .unnumbered}
 
+To Prof. J.M. Buldú, whose trust and belief in my abilities opened doors I could never have imagined.
+
+To my dearest friends and family, for always trusting and believing in me much more than I do.
+
+
+And to Prof. J.M. Marín, whose dedication and guidance illuminated the path of this thesis. The thesis felt lighter under the laughs we had in the way.
+
+With sincere gratitude,
 
 ```{r sign_pdf, out.width='17%', fig.align='right', echo = FALSE,include=knitr::is_latex_output()}
 knitr::include_graphics("imagenes/sign.png")
