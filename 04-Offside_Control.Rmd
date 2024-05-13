@@ -40,9 +40,9 @@ Note that only effective Offside Control is shown in this example. We can see th
 \pagebreak
 ## Dynamic Monitoring of Offside Control
 
-Offside Control can also be monitored throughout a match. Fig. \@ref(fig:oct)  shows an example of $OC(t)$ for the home team of a match, smoothed with a centered sliding window of 600 frames. 
+Offside Control can also be monitored throughout a match. Fig. \@ref(fig:oct)  shows an example of $OC(t)$ for the home team of a match, smoothed with a centered sliding window of 5 minutes. 
 
-```{r oct, out.width='80%', fig.align='center', fig.cap= "Analysis of the home team's Offside Control over the course of a match. Each point of $OC(t)$ is calculated using a centred sliding window of 600 frames. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).",echo = FALSE}
+```{r oct, out.width='80%', fig.align='center', fig.cap= "Analysis of the home team's Offside Control over the course of a match. Each point of $OC(t)$ is calculated using a centred sliding window of 5 minutes. The vertical dashed lines indicate the moments when a goal was scored (blue for the home team and red for the away team).",echo = FALSE}
 knitr::include_graphics("imagenes/cumulative_OC_evolution.png")
 ```
 
