@@ -34,7 +34,8 @@ Our proposed methodology aims to contribute to this growing body of knowledge. A
 
 We presented this metric at *OptaForum 2023*, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work[^7].
 
-All data processing and modeling in this project has been made using python. You can find the source code of the project inside the following GitHub repository: https://github.com/AlvaroNovillo/master_thesis.git
+All data processing and modeling in this project has been made using python. You can find the source code of the project inside the following GitHub repository: 
+
 
 
 [^7]: You can check the rest of the proposals accepted here https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/

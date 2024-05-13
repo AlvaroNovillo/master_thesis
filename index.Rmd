@@ -61,3 +61,4 @@ knitr::include_graphics("imagenes/sign.png")
 \listoffigures
 \listoftables
 
+[^1]: All the source code is inside the code folder at https://github.com/AlvaroNovillo/master_thesis.git
