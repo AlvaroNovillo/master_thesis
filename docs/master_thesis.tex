@@ -239,7 +239,7 @@
 			\begin{center}
 				\includegraphics[width=16cm]{imagenes/Portada_Logo.png}\\[1cm]
 				\begin{Large}
-					Master Degree in Stadistics for Data Science\\			
+					MASTER IN STATISTICS FOR DATA SCIENCE\\			
 					2023-2024\\
 					\vspace{1cm}		
 					\textsl{Master Thesis}\\
@@ -308,7 +308,7 @@
 
 \title{Introducing Offside Control: a Football Analytics Parameter to Evaluate Offside Performance}
 \author{Álvaro Novillo Correas}
-\date{Last modified on 2024-05-13}
+\date{Last modified on 2024-06-09}
 
 \begin{document}
 \maketitle
@@ -320,7 +320,7 @@
 \chapter*{Abstract}\label{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The master thesis explores the application of data analytics in football, with a focus on enhancing understanding and performance through a data driven approach. The study reviews the history and evolution of data analytics in sports, particularly football, and introduces a new methodology for quantifying the effectiveness of offside strategies using Pitch Control models, \emph{Offside Control}. We analize 1,251,934 frames from 100 matches to characterize the Offside Control of 442 players. The methodology combines physical metrics and tactical models derived from tracking datasets, offering insights into the tactical nuances of successful offside strategies. The project's data processing and modeling are conducted using Python, with the source code available in a GitHub repository\footnote{All the source code is inside the code folder at \url{https://github.com/AlvaroNovillo/master_thesis.git}}.
+This master thesis explores the application of data analytics in football, with a focus on enhancing understanding and performance through a data driven approach. The study reviews the history and evolution of data analytics in sports, particularly football, and introduces a new methodology for quantifying the effectiveness of offside strategies using Pitch Control models, \emph{Offside Control}. We analyze 1,251,934 frames from 100 matches to characterize the Offside Control of 442 players. The methodology combines physical metrics and tactical models derived from tracking datasets, offering insights into the tactical nuances of successful offside strategies. The project's data processing and modeling are conducted using Python, with the source code available in a GitHub repository\footnote{All the source code is inside the code folder at \url{https://github.com/AlvaroNovillo/master_thesis.git}}.
 
 \chapter*{Dedication}\label{dedication}
 \addcontentsline{toc}{chapter}{Dedication}
@@ -359,13 +359,13 @@ applied to sports. Teams use data to analyze player performance, identify streng
 
 In the case of football, the practice of data analytics has a long history, dating
 back to the post-World War II era, when data collection and analysis was
-undertaken manually using pencil and paper \autocite{1}. It wasn't until
+undertaken manually using pencil and paper \autocite{1}. It was not until
 Moneyball was published in 2003 that significant progress began to
 emerge: The book, "The Art of Winning an Unfair Game" introduced
 sports analytics to a broader audience. It illustrated the use of data
 analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
-component of sport, football inclusive \autocite{1}.
+component of sport \autocite{1}.
 
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced
@@ -377,7 +377,7 @@ In the study, we will compute both effective and ineffective Offside Control at 
 
 Our proposed methodology aims to contribute to this growing body of knowledge. Analyzing vast amounts of tracking data from LaLiga matches, we seek to uncover patterns in player and team behavior, shedding light on the tactical nuances that underlie successful offside strategies.
 
-We presented this metric at \emph{OptaForum 2023}, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work\footnote{You can check the rest of the proposals accepted here \url{https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/}}.
+We presented this metric at \emph{OptaForum 2023}, which took place in central London on Tuesday \(21^{st}\) of March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work\footnote{You can check the rest of the proposals accepted here \url{https://www.statsperform.com/resource/first-presentations-announced-for-the-2023-opta-forums-pro-track/}}.
 
 All data processing and modeling in this project has been made using python. You can find the source code of the project inside the following GitHub repository: \url{https://github.com/AlvaroNovillo/master_thesis.git}
 
@@ -405,12 +405,11 @@ offering a comprehensive overview of the evolving scoring opportunities and outc
 \caption{Cumulative development of expected goals (xG) during the Eibar-Malaga match, held on January 15th in Spain’s second division. Each point denotes a shot made by both teams throughout the game. Vertical dashed lines indicate the goal scored, displaying the player and the corresponding score at that specific moment of the match.}\label{fig:xg}
 \end{figure}
 
-Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport. Using the game presented earlier as an example, the next chapter will introduce the broad field of football analytics.
+Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport.
 
 Looking at an xG evolution figure, such as Fig. \ref{fig:xg}, and solely focusing on shot probabilities while disregarding the spatial distribution of shots and occasions feels like merely scratching the surface of what sport analytics can offer to football.
 
-To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. \ref{fig:shotmap}, the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with straight lines, indicating the trajectory the ball followed as it found its way into the opponent's net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common
-source of data in football: \textbf{Events} datasets.
+To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. \ref{fig:shotmap}, the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with a ball marker, and straight lines indicating the trajectory the ball followed as it found its way into the opponent's net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common source of data in football: \textbf{Events} datasets.
 
 \begin{figure}[H]
 
@@ -439,7 +438,9 @@ output of the entire match. This process is based on analysis of the
 tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
-additional, specific attributes or a quick review \autocite{3}.
+additional, specific attributes or a quick review \autocite{3}
+
+Table 2.1 displays some rows of an event record for a game. Each event is tagged with a code, and the \((x,y)\) coordinates of the starting position of the event are given, as well as the time at which it occurred and the player who performed the event.
 
 \begin{table}[!h]
 \centering
@@ -508,7 +509,7 @@ Fig. \ref{fig:xg-xga} presents the expected goals (xG) produced by Eibar in all 
 \caption{Expected Goals (xG) and Expected Goals Against (xGA) per match. Codes: Home Matches (Diamonds), Away Matches (Circles), Wins (Green), Draws (Blue), Losses (Red). Matches above the dashed lines represent those matches where Eibar has generated more xG than the opponent.}\label{fig:xg-xga}
 \end{figure}
 
-We have discussed some of the statistics that can be inferred from this data source to characterize team performance, such as possession, pressure, duels, and fouls. These datasets are easily manageable and provide teams with useful information. However, due to limitations in space and scope, we cannot provide a more in-depth analysis of these measures.
+So far, we have discussed some of the statistics that can be inferred from this data source to characterize team performance, such as possession, pressure, duels, and fouls. These datasets are easily manageable and provide teams with useful information. However, due to limitations in space and scope, we cannot provide a more in-depth analysis of these measures.
 
 Although event datasets supply beneficial information regarding the team's overall performance, deeper scrutiny can be conducted via tracking data, which consists of the players' and ball's position and movement during the match. Tracking data can offer additional insight into both the physical and tactical aspects of the game.
 
@@ -548,7 +549,7 @@ Thus, tracking datasets are crucial for developing new ways of measuring team an
 
 This data-driven approach enhances the understanding of the sport and its strategic nuances, fostering a deeper appreciation of the game's intricacies. As a result, tracking data has become a valuable tool in football analysis, providing insights into player performance and team strategy. It can be applied to specific games, as in the analysis presented earlier (Fig. \ref{fig:heatmap}), or to an ensemble of them to provide a comprehensive view of general player behavior under different physical and tactical metrics, constructed using tracking datasets.
 
-In the next chapter, after the initial review of the state of art of football analytics, we will combine both physical metrics and tactical models derived from Tracking datasets to build our proposed metric to characterize offside strategy's effectiveness: \emph{Offside Control}
+In the next chapter, after this initial review of the state of art of football analytics, we will combine both physical metrics and tactical models derived from Tracking datasets to build our proposed metric to characterize offside strategy's effectiveness: \emph{Offside Control}
 
 \chapter{Methodology}\label{methodology}
 
@@ -560,7 +561,7 @@ match.
 
 \emph{Pitch Control} is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a football match. It combines player position and speed with mathematical models that simulate ball and player movement \autocite{Spearman}.
 
-This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define Pitch Control Models, including their construction and implementation.
+This thesis proposes to use Pitch Control Models to evaluate how soccer teams interact with the offside line when attacking and defending. Before doing so, we first need to define Pitch Control Models, including their construction and implementation.
 
 \section{Pitch Control Models}\label{pitch-control-models}
 

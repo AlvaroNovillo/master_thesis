@@ -8,7 +8,7 @@ match.
 
 *Pitch Control* is one of the most relevant tactical metrics used to analyse player positioning, decision-making, and team dynamics during a football match. It combines player position and speed with mathematical models that simulate ball and player movement [@Spearman].
 
-This master's thesis proposes using Pitch Control Models to evaluate how football teams interact with the offside line when attacking and defending. Before that, we need first to define Pitch Control Models, including their construction and implementation. 
+This thesis proposes to use Pitch Control Models to evaluate how soccer teams interact with the offside line when attacking and defending. Before doing so, we first need to define Pitch Control Models, including their construction and implementation. 
 
 ## Pitch Control Models
 

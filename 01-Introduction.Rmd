@@ -14,13 +14,13 @@ applied to sports. Teams use data to analyze player performance, identify streng
 
 In the case of football, the practice of data analytics has a long history, dating
 back to the post-World War II era, when data collection and analysis was
-undertaken manually using pencil and paper [@1]. It wasn't until
+undertaken manually using pencil and paper [@1]. It was not until
 Moneyball was published in 2003 that significant progress began to
 emerge: The book, \"The Art of Winning an Unfair Game\" introduced
 sports analytics to a broader audience. It illustrated the use of data
 analytics in identifying undervalued players and constructing a
 successful team. Since then, data analytics has become an integral
-component of sport, football inclusive [@1].
+component of sport [@1].
 
 Over the last years, football analytics has gained significant
 popularity, aiming to delve deeper into the game by utilizing advanced
@@ -32,7 +32,7 @@ In the study, we will compute both effective and ineffective Offside Control at 
 
 Our proposed methodology aims to contribute to this growing body of knowledge. Analyzing vast amounts of tracking data from LaLiga matches, we seek to uncover patterns in player and team behavior, shedding light on the tactical nuances that underlie successful offside strategies.
 
-We presented this metric at *OptaForum 2023*, which took place in central London on Tuesday 21 March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work[^7].
+We presented this metric at *OptaForum 2023*, which took place in central London on Tuesday $21^{st}$ of March. Our proposal was one of only 5 selected to be included in the congress. It was a privilege to learn from other leading experts in the field, and also generated fruitful conversations that were fundamental to the development of the work[^7].
 
 All data processing and modeling in this project has been made using python. You can find the source code of the project inside the following GitHub repository: https://github.com/AlvaroNovillo/master_thesis.git
 

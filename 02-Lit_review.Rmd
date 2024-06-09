@@ -17,12 +17,11 @@ knitr::include_graphics("imagenes/xg_evol.png")
 ```
 
 
-Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport. Using the game presented earlier as an example, the next chapter will introduce the broad field of football analytics.
+Expected Goals (xG) have revolutionized the analysis of football by quantifying the quality of scoring opportunities. However, it is important to consider other variables such as player positioning, velocity, passing accuracy, defensive pressure, and tactical formations to gain a broader understanding of the sport.
 
 Looking at an xG evolution figure, such as Fig. \@ref(fig:xg), and solely focusing on shot probabilities while disregarding the spatial distribution of shots and occasions feels like merely scratching the surface of what sport analytics can offer to football.
 
-To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. \@ref(fig:shotmap), the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with straight lines, indicating the trajectory the ball followed as it found its way into the opponent's net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common
-source of data in football: **Events** datasets.
+To illustrate the spatial distribution of shot locations taken by both teams during the game, we can create a shot map for each shot. In Fig. \@ref(fig:shotmap), the size of each data point corresponds to the expected goals (xG) generated for the respective shots, providing insights into the perceived scoring potential. Goals scored are visually highlighted with a ball marker, and straight lines indicating the trajectory the ball followed as it found its way into the opponent's net. Bellow each shot map, a plot of the net can be also found, where goals are represented by football balls, and blocked shots by shadowed points. This detailed analysis not only enhances our understanding of scoring opportunities but also sheds light on the tactical strategies employed by both teams, player positioning, and defensive vulnerabilities. Analyses such as the one above are carried out using the most common source of data in football: **Events** datasets.
 
 ```{r shotmap, fig.show="hold", out.width = "45%", fig.align = "center", fig.cap= "Shot map of the Eibar (blue, left) - Malaga (red, right) football match. The locations of the points indicate where shots were taken. The size of each point is proportional to the expected goals (xG) generated. Shots that resulted in goals are depicted with a straight line, representing the path the ball took to enter the opponent’s net.",echo = FALSE}
 
@@ -47,7 +46,9 @@ output of the entire match. This process is based on analysis of the
 tagger and football match videos. When near-live data delivery is
 necessary, a team of four operators may be utilized, with one operator
 dedicated to hastening the collection of complex events that require
-additional, specific attributes or a quick review [@3].
+additional, specific attributes or a quick review [@3]
+
+Table 2.1 displays some rows of an event record for a game. Each event is tagged with a code, and the $(x,y)$ coordinates of the starting position of the event are given, as well as the time at which it occurred and the player who performed the event.
 
 ```{r event,echo = FALSE}
 library("kableExtra")
@@ -71,7 +72,7 @@ understand the passing structure of both teams.
 
 
 Figs. \@ref(fig:homepass) illustrate the
-passing networks observed in the Eibar versus Málaga football match,
+passing networks observed in the Eibar versus Málaga football     match,
 providing insight into the passing interactions and tactical strategies
 used by both teams. The nodes in the graphs represent individual players
 who participated in the match for each team. The nodes are sized
@@ -101,7 +102,7 @@ knitr::include_graphics("imagenes/scat-xG-xGa.png")
 ```
 
 
-We have discussed some of the statistics that can be inferred from this data source to characterize team performance, such as possession, pressure, duels, and fouls. These datasets are easily manageable and provide teams with useful information. However, due to limitations in space and scope, we cannot provide a more in-depth analysis of these measures.
+So far, we have discussed some of the statistics that can be inferred from this data source to characterize team performance, such as possession, pressure, duels, and fouls. These datasets are easily manageable and provide teams with useful information. However, due to limitations in space and scope, we cannot provide a more in-depth analysis of these measures.
 
 Although event datasets supply beneficial information regarding the team's overall performance, deeper scrutiny can be conducted via tracking data, which consists of the players' and ball's position and movement during the match. Tracking data can offer additional insight into both the physical and tactical aspects of the game. 
 
@@ -132,7 +133,7 @@ Thus, tracking datasets are crucial for developing new ways of measuring team an
 
 This data-driven approach enhances the understanding of the sport and its strategic nuances, fostering a deeper appreciation of the game's intricacies. As a result, tracking data has become a valuable tool in football analysis, providing insights into player performance and team strategy. It can be applied to specific games, as in the analysis presented earlier (Fig. \@ref(fig:heatmap)), or to an ensemble of them to provide a comprehensive view of general player behavior under different physical and tactical metrics, constructed using tracking datasets.
 
-In the next chapter, after the initial review of the state of art of football analytics, we will combine both physical metrics and tactical models derived from Tracking datasets to build our proposed metric to characterize offside strategy's effectiveness: *Offside Control*
+In the next chapter, after this initial review of the state of art of football analytics, we will combine both physical metrics and tactical models derived from Tracking datasets to build our proposed metric to characterize offside strategy's effectiveness: *Offside Control*
 
 [^2]: Opta [@opta] uses a combination of human annotation, computer vision, and AI modelling to offer real-time data at various levels of detail based on customer requirements. In our situation, the data feed updates itself when an event such as a goal, foul or pass occurs. Otherwise, it updates every 90 seconds. 
     
